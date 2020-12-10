@@ -15,4 +15,4 @@ def getAssociatedNote(fr, stri):
     return pitch
 
 # Testing the function with a note
-print(getAssociatedNote(3, 0))
+print("As a test, (12, 3) --> "+str(getAssociatedNote(12, 3)))
