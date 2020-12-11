@@ -31,8 +31,5 @@ D|---------------------|
 A|---------------------|
 E|---------------------|
 """
-    
-    
-    #file = open("/test/tab_test.tab", "r")
-    #content = file.read()
+
     return content
