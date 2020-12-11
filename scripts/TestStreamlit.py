@@ -25,7 +25,7 @@ But no worries, you can still try some functionalities!""")
 st.header("First experiment: upload MIDI file and get a tablature")
 st.subheader("This part doesn't work in reality. But it's a kind of mock-up.")
 
-def file_selector(folder_path='../Midi/'):
+def file_selector(folder_path=''):
     filenames = os.listdir(folder_path)
     selected_filename = st.selectbox('Select a MIDI file', filenames)
     if selected_filename.lower().endswith('.mid'):
