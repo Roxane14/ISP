@@ -6,6 +6,6 @@ Created on Thu Dec 10 22:39:32 2020
 """
 
 def getTabFromPitches(pitches):
-    file = open("./test/tab_test.tab", "r")
+    file = open("/test/tab_test.tab", "r")
     content = file.read()
     return content
