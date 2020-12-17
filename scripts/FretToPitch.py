@@ -6,7 +6,8 @@ Created on Thu Dec  3 16:46:34 2020
 """
 from music21 import tablature
 
-def getAssociatedNote(stri, fr):
+def getAssociatedNote(strif, fr):
+    stri = 7-strif
     note = tablature.FretNote(string=stri, fret=fr)
     gfb = tablature.GuitarFretBoard(fretNotes=[note])
     pitches = gfb.getPitches()
@@ -16,4 +17,4 @@ def getAssociatedNote(stri, fr):
 
 if __name__ == "__main__":
     # Testing the function with a note
-    print("As a test, (12, 3) --> "+str(getAssociatedNote(12, 3)))
+    print("As a test, (3, 12) --> "+str(getAssociatedNote(3, 12)))
