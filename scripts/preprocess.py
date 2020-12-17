@@ -1,18 +1,11 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Dec  3 22:43:25 2020
-
-@author: Paul Bruneau
-"""
-
-
-
 #function extractTuples
 #input : file
 #output : all the tuples(string, fret) of the file
 
-def extractTuples(file):
+def getSingleVec(vecset, i):
+    return[row[i] for row in vecset]
 
+def extractTuples(file):
     #file = open('D:\\Documents\\Ensim\\S9b\\ISP\\tg tab\\tab_test.tab')
     Lines = file.readlines()
                 
@@ -51,6 +44,3 @@ def extractTuples(file):
         i += 1
         
     return tuples
-
-def getSingleVec(vecset, i):
-    return[row[i] for row in vecset]
