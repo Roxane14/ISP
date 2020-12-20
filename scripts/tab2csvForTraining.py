@@ -13,7 +13,6 @@ from FretToPitch import getAssociatedNote
 from PitchToFrets import getPossibleTuples
 from preprocess import extractTuples
 from collections import Counter
-import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -104,17 +103,12 @@ for i in range(len(globSeq)-seqLength - 1 ): # last note is part of the answers
     inputsSeq[noteToPredictId].append(seq)
     outputsSeq[noteToPredictId].append(posToPredict)
 
-# print(inputsSeq)
-# print("\n")
-# print(outputsSeq)
-
-# Id like to show histogram of number of apparition per position per note played
-from collections import Counter
 for nID in range(nbOfNote):
-    nboccur = Counter(outputsSeq[nID])
-    plt.bar(nboccur.keys(), nboccur.values())
-    plt.savefig(f"../outputresources/posdistrib/{nID}_{id2notename[nID]}posDistrib.png", dpi=300)
-    plt.close()
+    df = pd.DataFrame(np.matrix(inputsSeq[nID]))
+    if len(df.index) == len(outputsSeq[nID]):
+        df['output'] = outputsSeq[nID]
+        df.to_csv(f"../outputresources/csvs/{nID}.csv")
+
 
 ###########
 # train
