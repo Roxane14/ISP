@@ -12,6 +12,7 @@ from preprocess import extractTuples
 from FretToPitch import getAssociatedNote
 
 folder = "D:\\Documents\\Ensim\\S9b\\ISP\\git_isp\\ISP\\Tab\\onlytab\\"
+
 files = os.listdir(folder)
 
 histogram = np.zeros(49, dtype=int)
@@ -35,4 +36,5 @@ for name_file in files:
         histogram[list_notes.index(note)] += 1
         
 
-
+for i in range(len(histogram)):
+    print(histogram[i])
