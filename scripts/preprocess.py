@@ -35,9 +35,10 @@ def extractTuples(file):
         vec2 = getSingleVec(vecset2, i+1)
         if (vec1.count('-') == 5):
             for element in range(6):
-                if (vec1[element] != '-'):
-                    if (vec2[element] != '-'):
-                        tuples.append([6-element, int(vec1[element]+vec2[element])])
+                if (vec1[element].isnumeric()):
+                    if (vec2[element].isnumeric()):
+                        if int(vec1[element]+vec2[element]) <= 24:
+                            tuples.append([6-element, int(vec1[element]+vec2[element])])
                         i += 1
                     else:
                         tuples.append([6-element, int(vec1[element])])
