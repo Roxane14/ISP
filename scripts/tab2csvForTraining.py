@@ -88,8 +88,15 @@ for f in glob.glob(trainDir+"*.tab"):
 allNotePosSet = set(globSeq)
 tuple2id = {t:i for i,t in enumerate(allNotePosSet)}
 id2tuple = {v:u for (u,v) in tuple2id.items()}
-
 globSeqIds = [tuple2id[t] for t in globSeq]
+
+print(f"{len(allNotePosSet)=}")
+
+with open("../outputresources/globseqIds.txt", "w") as f:
+    for item in globSeqIds:
+        f.write(f"{item} ")
+
+
     
 ###########
 # prepare sequences
