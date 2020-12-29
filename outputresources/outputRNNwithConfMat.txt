@@ -1,0 +1,1453 @@
+elairra@LAPTOP-2L5S26NL:/mnt/c/Users/delai/Desktop/root/Cours/FIB/ISP/gitrepo/ISP/scripts$ python3 trainingModelsFromCsv.py
+2020-12-29 17:35:53.375183: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2020-12-29 17:35:53.377111: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+not enough case of posiiton nb 0 in dataset for 6
+not enough case of posiiton nb 0 in dataset for 11
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+For 5 nbtrain = 1488, nbtest = 372
+Dummy note
+For 7 nbtrain = 423, nbtest = 107
+For 8 nbtrain = 189, nbtest = 48
+For 9 nbtrain = 153, nbtest = 40
+For 10 nbtrain = 355, nbtest = 89
+Dummy note
+For 12 nbtrain = 326, nbtest = 82
+For 13 nbtrain = 146, nbtest = 38
+For 14 nbtrain = 244, nbtest = 62
+For 15 nbtrain = 322, nbtest = 82
+For 16 nbtrain = 107, nbtest = 28
+For 17 nbtrain = 280, nbtest = 71
+For 18 nbtrain = 94, nbtest = 25
+For 19 nbtrain = 401, nbtest = 102
+For 20 nbtrain = 191, nbtest = 50
+For 21 nbtrain = 113, nbtest = 30
+For 22 nbtrain = 224, nbtest = 58
+For 23 nbtrain = 101, nbtest = 26
+For 24 nbtrain = 294, nbtest = 75
+For 25 nbtrain = 115, nbtest = 29
+For 26 nbtrain = 177, nbtest = 47
+For 27 nbtrain = 297, nbtest = 75
+For 28 nbtrain = 107, nbtest = 28
+For 29 nbtrain = 313, nbtest = 80
+For 30 nbtrain = 80, nbtest = 22
+For 31 nbtrain = 294, nbtest = 75
+For 32 nbtrain = 101, nbtest = 26
+For 33 nbtrain = 164, nbtest = 42
+For 34 nbtrain = 193, nbtest = 50
+For 35 nbtrain = 38, nbtest = 10
+For 36 nbtrain = 146, nbtest = 38
+Dummy note
+For 38 nbtrain = 92, nbtest = 24
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+trainingshape 5
+(1488, 7)
+(1488, 7, 1)
+testingshape 5
+(372, 7)
+(372, 7, 1)
+2020-12-29 17:35:56.567896: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2020-12-29 17:35:56.568461: W tensorflow/stream_executor/cuda/cuda_driver.cc:312] failed call to cuInit: UNKNOWN ERROR (303)
+2020-12-29 17:35:56.569212: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (LAPTOP-2L5S26NL): /proc/driver/nvidia/version does not exist
+2020-12-29 17:35:56.573010: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2020-12-29 17:35:56.607572: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2100000000 Hz
+2020-12-29 17:35:56.611000: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x699ef40 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-12-29 17:35:56.611526: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Epoch 1/10
+186/186 [==============================] - 0s 2ms/step - loss: 0.8049 - accuracy: 0.3992
+Epoch 2/10
+186/186 [==============================] - 1s 3ms/step - loss: 0.5364 - accuracy: 0.7157
+Epoch 3/10
+186/186 [==============================] - 1s 3ms/step - loss: 0.4826 - accuracy: 0.7473
+Epoch 4/10
+186/186 [==============================] - 0s 3ms/step - loss: 0.4614 - accuracy: 0.7473
+Epoch 5/10
+186/186 [==============================] - 0s 2ms/step - loss: 0.4434 - accuracy: 0.7473
+Epoch 6/10
+186/186 [==============================] - 0s 2ms/step - loss: 0.4268 - accuracy: 0.7473
+Epoch 7/10
+186/186 [==============================] - 0s 2ms/step - loss: 0.4101 - accuracy: 0.7473
+Epoch 8/10
+186/186 [==============================] - 0s 2ms/step - loss: 0.3926 - accuracy: 0.7473
+Epoch 9/10
+186/186 [==============================] - 0s 2ms/step - loss: 0.3756 - accuracy: 0.7372
+Epoch 10/10
+186/186 [==============================] - 0s 2ms/step - loss: 0.3581 - accuracy: 0.8145
+47/47 [==============================] - 0s 1ms/step - loss: 0.3495 - accuracy: 0.8871
+
+
+For 5: Test ACC=[0.3494656980037689, 0.8870967626571655]
+Confusion Matrix
+[[ 76  18]
+ [ 24 254]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.76      0.81      0.78        94
+           1       0.93      0.91      0.92       278
+
+    accuracy                           0.89       372
+   macro avg       0.85      0.86      0.85       372
+weighted avg       0.89      0.89      0.89       372
+
+trainingshape 7
+(423, 7)
+(423, 7, 1)
+testingshape 7
+(107, 7)
+(107, 7, 1)
+Epoch 1/10
+53/53 [==============================] - 0s 4ms/step - loss: 0.6197 - accuracy: 0.6856
+Epoch 2/10
+53/53 [==============================] - 0s 6ms/step - loss: 0.6087 - accuracy: 0.6903
+Epoch 3/10
+53/53 [==============================] - 0s 4ms/step - loss: 0.6003 - accuracy: 0.7069
+Epoch 4/10
+53/53 [==============================] - 0s 3ms/step - loss: 0.5929 - accuracy: 0.7069
+Epoch 5/10
+53/53 [==============================] - 0s 3ms/step - loss: 0.5858 - accuracy: 0.7069
+Epoch 6/10
+53/53 [==============================] - 0s 3ms/step - loss: 0.5787 - accuracy: 0.7069
+Epoch 7/10
+53/53 [==============================] - 0s 3ms/step - loss: 0.5700 - accuracy: 0.7045
+Epoch 8/10
+53/53 [==============================] - 0s 3ms/step - loss: 0.5607 - accuracy: 0.7021
+Epoch 9/10
+53/53 [==============================] - 0s 3ms/step - loss: 0.5517 - accuracy: 0.7021
+Epoch 10/10
+53/53 [==============================] - 0s 3ms/step - loss: 0.5448 - accuracy: 0.6998
+14/14 [==============================] - 0s 2ms/step - loss: 0.5208 - accuracy: 0.7570
+
+
+For 7: Test ACC=[0.5207816958427429, 0.7570093274116516]
+Confusion Matrix
+[[72  1]
+ [25  9]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.74      0.99      0.85        73
+           1       0.90      0.26      0.41        34
+
+    accuracy                           0.76       107
+   macro avg       0.82      0.63      0.63       107
+weighted avg       0.79      0.76      0.71       107
+
+trainingshape 8
+(189, 7)
+(189, 7, 1)
+testingshape 8
+(48, 7)
+(48, 7, 1)
+Epoch 1/10
+24/24 [==============================] - 0s 4ms/step - loss: 0.6307 - accuracy: 0.6931
+Epoch 2/10
+24/24 [==============================] - 0s 3ms/step - loss: 0.6163 - accuracy: 0.6667
+Epoch 3/10
+24/24 [==============================] - 0s 3ms/step - loss: 0.6123 - accuracy: 0.6720
+Epoch 4/10
+24/24 [==============================] - 0s 3ms/step - loss: 0.6079 - accuracy: 0.6931
+Epoch 5/10
+24/24 [==============================] - 0s 3ms/step - loss: 0.6053 - accuracy: 0.6931
+Epoch 6/10
+24/24 [==============================] - 0s 4ms/step - loss: 0.6029 - accuracy: 0.7513
+Epoch 7/10
+24/24 [==============================] - 0s 3ms/step - loss: 0.5975 - accuracy: 0.7407
+Epoch 8/10
+24/24 [==============================] - 0s 3ms/step - loss: 0.5931 - accuracy: 0.7672
+Epoch 9/10
+24/24 [==============================] - 0s 3ms/step - loss: 0.5897 - accuracy: 0.7672
+Epoch 10/10
+24/24 [==============================] - 0s 3ms/step - loss: 0.5869 - accuracy: 0.7672
+6/6 [==============================] - 0s 2ms/step - loss: 0.5699 - accuracy: 0.7917
+
+
+For 8: Test ACC=[0.5699235200881958, 0.7916666865348816]
+Confusion Matrix
+[[32  0]
+ [10  6]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.76      1.00      0.86        32
+           1       1.00      0.38      0.55        16
+
+    accuracy                           0.79        48
+   macro avg       0.88      0.69      0.71        48
+weighted avg       0.84      0.79      0.76        48
+
+trainingshape 9
+(153, 7)
+(153, 7, 1)
+testingshape 9
+(40, 7)
+(40, 7, 1)
+Epoch 1/10
+20/20 [==============================] - 0s 4ms/step - loss: 0.5659 - accuracy: 0.7124
+Epoch 2/10
+20/20 [==============================] - 0s 3ms/step - loss: 0.5150 - accuracy: 0.7124
+Epoch 3/10
+20/20 [==============================] - 0s 3ms/step - loss: 0.4943 - accuracy: 0.6797
+Epoch 4/10
+20/20 [==============================] - 0s 3ms/step - loss: 0.4825 - accuracy: 0.7124
+Epoch 5/10
+20/20 [==============================] - 0s 3ms/step - loss: 0.4696 - accuracy: 0.7124
+Epoch 6/10
+20/20 [==============================] - 0s 3ms/step - loss: 0.4559 - accuracy: 0.6993
+Epoch 7/10
+20/20 [==============================] - 0s 3ms/step - loss: 0.4427 - accuracy: 0.6993
+Epoch 8/10
+20/20 [==============================] - 0s 3ms/step - loss: 0.4305 - accuracy: 0.7516
+Epoch 9/10
+20/20 [==============================] - 0s 4ms/step - loss: 0.4214 - accuracy: 0.7451
+Epoch 10/10
+20/20 [==============================] - 0s 4ms/step - loss: 0.4107 - accuracy: 0.7582
+5/5 [==============================] - 0s 2ms/step - loss: 0.3704 - accuracy: 0.8000
+
+
+For 9: Test ACC=[0.3704250752925873, 0.800000011920929]
+Confusion Matrix
+[[28  0]
+ [ 8  4]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.78      1.00      0.88        28
+           1       1.00      0.33      0.50        12
+
+    accuracy                           0.80        40
+   macro avg       0.89      0.67      0.69        40
+weighted avg       0.84      0.80      0.76        40
+
+trainingshape 10
+(355, 7)
+(355, 7, 1)
+testingshape 10
+(89, 7)
+(89, 7, 1)
+Epoch 1/10
+45/45 [==============================] - 0s 3ms/step - loss: 0.5787 - accuracy: 0.8282
+Epoch 2/10
+45/45 [==============================] - 0s 3ms/step - loss: 0.4542 - accuracy: 0.8873
+Epoch 3/10
+45/45 [==============================] - 0s 3ms/step - loss: 0.3581 - accuracy: 0.8873
+Epoch 4/10
+45/45 [==============================] - 0s 3ms/step - loss: 0.3217 - accuracy: 0.8873
+Epoch 5/10
+45/45 [==============================] - 0s 4ms/step - loss: 0.3121 - accuracy: 0.8873
+Epoch 6/10
+45/45 [==============================] - 0s 4ms/step - loss: 0.3067 - accuracy: 0.8873
+Epoch 7/10
+45/45 [==============================] - 0s 3ms/step - loss: 0.3028 - accuracy: 0.8873
+Epoch 8/10
+45/45 [==============================] - 0s 3ms/step - loss: 0.2989 - accuracy: 0.8873
+Epoch 9/10
+45/45 [==============================] - 0s 3ms/step - loss: 0.2970 - accuracy: 0.8873
+Epoch 10/10
+45/45 [==============================] - 0s 3ms/step - loss: 0.2950 - accuracy: 0.8873
+12/12 [==============================] - 0s 1ms/step - loss: 0.3075 - accuracy: 0.8876
+
+
+For 10: Test ACC=[0.3075467348098755, 0.8876404762268066]
+WARNING:tensorflow:5 out of the last 21 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4eb0695b80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0 10]
+ [ 0 79]]
+Classification Report
+/home/delairra/.local/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00        10
+           1       0.89      1.00      0.94        79
+
+    accuracy                           0.89        89
+   macro avg       0.44      0.50      0.47        89
+weighted avg       0.79      0.89      0.83        89
+
+trainingshape 12
+(326, 7)
+(326, 7, 1)
+testingshape 12
+(82, 7)
+(82, 7, 1)
+Epoch 1/10
+41/41 [==============================] - 0s 3ms/step - loss: 0.7622 - accuracy: 0.3252
+Epoch 2/10
+41/41 [==============================] - 0s 3ms/step - loss: 0.7177 - accuracy: 0.4663
+Epoch 3/10
+41/41 [==============================] - 0s 4ms/step - loss: 0.6969 - accuracy: 0.5583
+Epoch 4/10
+41/41 [==============================] - 0s 3ms/step - loss: 0.6824 - accuracy: 0.5706
+Epoch 5/10
+41/41 [==============================] - 0s 3ms/step - loss: 0.6695 - accuracy: 0.6350
+Epoch 6/10
+41/41 [==============================] - 0s 3ms/step - loss: 0.6552 - accuracy: 0.6840
+Epoch 7/10
+41/41 [==============================] - 0s 3ms/step - loss: 0.6214 - accuracy: 0.6748
+Epoch 8/10
+41/41 [==============================] - 0s 3ms/step - loss: 0.6023 - accuracy: 0.6748
+Epoch 9/10
+41/41 [==============================] - 0s 4ms/step - loss: 0.5958 - accuracy: 0.6748
+Epoch 10/10
+41/41 [==============================] - 0s 4ms/step - loss: 0.5914 - accuracy: 0.6748
+11/11 [==============================] - 0s 2ms/step - loss: 0.5896 - accuracy: 0.6707
+
+
+For 12: Test ACC=[0.5896124243736267, 0.6707317233085632]
+WARNING:tensorflow:5 out of the last 12 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4eb00943a0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0 27]
+ [ 0 55]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00        27
+           1       0.67      1.00      0.80        55
+
+    accuracy                           0.67        82
+   macro avg       0.34      0.50      0.40        82
+weighted avg       0.45      0.67      0.54        82
+
+trainingshape 13
+(146, 7)
+(146, 7, 1)
+testingshape 13
+(38, 7)
+(38, 7, 1)
+Epoch 1/10
+19/19 [==============================] - 0s 4ms/step - loss: 0.6933 - accuracy: 0.5274
+Epoch 2/10
+19/19 [==============================] - 0s 4ms/step - loss: 0.6926 - accuracy: 0.5479
+Epoch 3/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6920 - accuracy: 0.5479
+Epoch 4/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6915 - accuracy: 0.5479
+Epoch 5/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6909 - accuracy: 0.5479
+Epoch 6/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6904 - accuracy: 0.5479
+Epoch 7/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6898 - accuracy: 0.5479
+Epoch 8/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6895 - accuracy: 0.5479
+Epoch 9/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6891 - accuracy: 0.5479
+Epoch 10/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6885 - accuracy: 0.5479
+5/5 [==============================] - 0s 5ms/step - loss: 0.6914 - accuracy: 0.5526
+
+
+For 13: Test ACC=[0.691357433795929, 0.5526315569877625]
+WARNING:tensorflow:5 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e8c291ca0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0 17]
+ [ 0 21]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00        17
+           1       0.55      1.00      0.71        21
+
+    accuracy                           0.55        38
+   macro avg       0.28      0.50      0.36        38
+weighted avg       0.31      0.55      0.39        38
+
+trainingshape 14
+(244, 7)
+(244, 7, 1)
+testingshape 14
+(62, 7)
+(62, 7, 1)
+Epoch 1/10
+31/31 [==============================] - 0s 4ms/step - loss: 0.6967 - accuracy: 0.3730
+Epoch 2/10
+31/31 [==============================] - 0s 3ms/step - loss: 0.6885 - accuracy: 0.5902
+Epoch 3/10
+31/31 [==============================] - 0s 3ms/step - loss: 0.6815 - accuracy: 0.5902
+Epoch 4/10
+31/31 [==============================] - 0s 3ms/step - loss: 0.6746 - accuracy: 0.5902
+Epoch 5/10
+31/31 [==============================] - 0s 3ms/step - loss: 0.6677 - accuracy: 0.5902
+Epoch 6/10
+31/31 [==============================] - 0s 3ms/step - loss: 0.6524 - accuracy: 0.5902
+Epoch 7/10
+31/31 [==============================] - 0s 3ms/step - loss: 0.6444 - accuracy: 0.5902
+Epoch 8/10
+31/31 [==============================] - 0s 3ms/step - loss: 0.6373 - accuracy: 0.5902
+Epoch 9/10
+31/31 [==============================] - 0s 3ms/step - loss: 0.6321 - accuracy: 0.5902
+Epoch 10/10
+31/31 [==============================] - 0s 4ms/step - loss: 0.6278 - accuracy: 0.5902
+8/8 [==============================] - 0s 2ms/step - loss: 0.6237 - accuracy: 0.5968
+
+
+For 14: Test ACC=[0.623656690120697, 0.5967742204666138]
+WARNING:tensorflow:5 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e6d37c940> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0 25]
+ [ 0 37]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00        25
+           1       0.60      1.00      0.75        37
+
+    accuracy                           0.60        62
+   macro avg       0.30      0.50      0.37        62
+weighted avg       0.36      0.60      0.45        62
+
+trainingshape 15
+(322, 7)
+(322, 7, 1)
+testingshape 15
+(82, 7)
+(82, 7, 1)
+Epoch 1/10
+41/41 [==============================] - 0s 4ms/step - loss: 1.3046 - accuracy: 0.3137
+Epoch 2/10
+41/41 [==============================] - 0s 3ms/step - loss: 1.2471 - accuracy: 0.3137
+Epoch 3/10
+41/41 [==============================] - 0s 3ms/step - loss: 1.1929 - accuracy: 0.3137
+Epoch 4/10
+41/41 [==============================] - 0s 3ms/step - loss: 1.0536 - accuracy: 0.4348
+Epoch 5/10
+41/41 [==============================] - 0s 4ms/step - loss: 0.9808 - accuracy: 0.5807
+Epoch 6/10
+41/41 [==============================] - 0s 4ms/step - loss: 0.9045 - accuracy: 0.7112
+Epoch 7/10
+41/41 [==============================] - 0s 3ms/step - loss: 0.8609 - accuracy: 0.6770
+Epoch 8/10
+41/41 [==============================] - 0s 3ms/step - loss: 0.8482 - accuracy: 0.6739
+Epoch 9/10
+41/41 [==============================] - 0s 3ms/step - loss: 0.8396 - accuracy: 0.6739
+Epoch 10/10
+41/41 [==============================] - 0s 3ms/step - loss: 0.8332 - accuracy: 0.6770
+11/11 [==============================] - 0s 2ms/step - loss: 0.8532 - accuracy: 0.6341
+
+
+For 15: Test ACC=[0.8531525731086731, 0.6341463327407837]
+WARNING:tensorflow:5 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e4f6139d0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0  8  2]
+ [ 0 42  4]
+ [ 0 16 10]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00        10
+           1       0.64      0.91      0.75        46
+           2       0.62      0.38      0.48        26
+
+    accuracy                           0.63        82
+   macro avg       0.42      0.43      0.41        82
+weighted avg       0.56      0.63      0.57        82
+
+trainingshape 16
+(107, 7)
+(107, 7, 1)
+testingshape 16
+(28, 7)
+(28, 7, 1)
+Epoch 1/10
+14/14 [==============================] - 0s 5ms/step - loss: 0.6377 - accuracy: 0.6075
+Epoch 2/10
+14/14 [==============================] - 0s 4ms/step - loss: 0.6252 - accuracy: 0.7103
+Epoch 3/10
+14/14 [==============================] - 0s 3ms/step - loss: 0.6181 - accuracy: 0.7103
+Epoch 4/10
+14/14 [==============================] - 0s 3ms/step - loss: 0.6164 - accuracy: 0.6822
+Epoch 5/10
+14/14 [==============================] - 0s 3ms/step - loss: 0.6116 - accuracy: 0.6822
+Epoch 6/10
+14/14 [==============================] - 0s 3ms/step - loss: 0.6097 - accuracy: 0.6822
+Epoch 7/10
+14/14 [==============================] - 0s 3ms/step - loss: 0.6086 - accuracy: 0.6822
+Epoch 8/10
+14/14 [==============================] - 0s 3ms/step - loss: 0.6088 - accuracy: 0.6822
+Epoch 9/10
+14/14 [==============================] - 0s 3ms/step - loss: 0.6054 - accuracy: 0.6729
+Epoch 10/10
+14/14 [==============================] - 0s 3ms/step - loss: 0.6057 - accuracy: 0.6822
+4/4 [==============================] - 0s 2ms/step - loss: 0.6588 - accuracy: 0.6429
+
+
+For 16: Test ACC=[0.6587709188461304, 0.6428571343421936]
+WARNING:tensorflow:5 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e4d79f8b0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 3  7]
+ [ 3 15]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.50      0.30      0.37        10
+           1       0.68      0.83      0.75        18
+
+    accuracy                           0.64        28
+   macro avg       0.59      0.57      0.56        28
+weighted avg       0.62      0.64      0.62        28
+
+trainingshape 17
+(280, 7)
+(280, 7, 1)
+testingshape 17
+(71, 7)
+(71, 7, 1)
+Epoch 1/10
+35/35 [==============================] - 0s 3ms/step - loss: 1.4686 - accuracy: 0.0571
+Epoch 2/10
+35/35 [==============================] - 0s 3ms/step - loss: 1.3682 - accuracy: 0.0571
+Epoch 3/10
+35/35 [==============================] - 0s 2ms/step - loss: 1.2249 - accuracy: 0.1143
+Epoch 4/10
+35/35 [==============================] - 0s 2ms/step - loss: 1.0219 - accuracy: 0.6250
+Epoch 5/10
+35/35 [==============================] - 0s 2ms/step - loss: 0.9618 - accuracy: 0.6714
+Epoch 6/10
+35/35 [==============================] - 0s 2ms/step - loss: 0.9272 - accuracy: 0.6714
+Epoch 7/10
+35/35 [==============================] - 0s 2ms/step - loss: 0.8985 - accuracy: 0.6714
+Epoch 8/10
+35/35 [==============================] - 0s 2ms/step - loss: 0.8744 - accuracy: 0.6714
+Epoch 9/10
+35/35 [==============================] - 0s 2ms/step - loss: 0.8509 - accuracy: 0.6714
+Epoch 10/10
+35/35 [==============================] - 0s 2ms/step - loss: 0.8275 - accuracy: 0.6714
+9/9 [==============================] - 0s 2ms/step - loss: 0.8074 - accuracy: 0.6620
+
+
+For 17: Test ACC=[0.8073959946632385, 0.6619718074798584]
+WARNING:tensorflow:6 out of the last 12 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e4c1c40d0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0 20  0]
+ [ 0 47  0]
+ [ 0  4  0]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00        20
+           1       0.66      1.00      0.80        47
+           2       0.00      0.00      0.00         4
+
+    accuracy                           0.66        71
+   macro avg       0.22      0.33      0.27        71
+weighted avg       0.44      0.66      0.53        71
+
+trainingshape 18
+(94, 7)
+(94, 7, 1)
+testingshape 18
+(25, 7)
+(25, 7, 1)
+Epoch 1/10
+12/12 [==============================] - 0s 4ms/step - loss: 0.6311 - accuracy: 0.7021
+Epoch 2/10
+12/12 [==============================] - 0s 3ms/step - loss: 0.6286 - accuracy: 0.7021
+Epoch 3/10
+12/12 [==============================] - 0s 3ms/step - loss: 0.6270 - accuracy: 0.7021
+Epoch 4/10
+12/12 [==============================] - 0s 3ms/step - loss: 0.6254 - accuracy: 0.7021
+Epoch 5/10
+12/12 [==============================] - 0s 3ms/step - loss: 0.6239 - accuracy: 0.7021
+Epoch 6/10
+12/12 [==============================] - 0s 5ms/step - loss: 0.6225 - accuracy: 0.7021
+Epoch 7/10
+12/12 [==============================] - 0s 4ms/step - loss: 0.6210 - accuracy: 0.7021
+Epoch 8/10
+12/12 [==============================] - 0s 3ms/step - loss: 0.6194 - accuracy: 0.7021
+Epoch 9/10
+12/12 [==============================] - 0s 3ms/step - loss: 0.6181 - accuracy: 0.7021
+Epoch 10/10
+12/12 [==============================] - 0s 3ms/step - loss: 0.6166 - accuracy: 0.7021
+4/4 [==============================] - 0s 2ms/step - loss: 0.6432 - accuracy: 0.6800
+
+
+For 18: Test ACC=[0.6431686878204346, 0.6800000071525574]
+WARNING:tensorflow:6 out of the last 12 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e35b6c550> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0  8]
+ [ 0 17]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00         8
+           1       0.68      1.00      0.81        17
+
+    accuracy                           0.68        25
+   macro avg       0.34      0.50      0.40        25
+weighted avg       0.46      0.68      0.55        25
+
+trainingshape 19
+(401, 7)
+(401, 7, 1)
+testingshape 19
+(102, 7)
+(102, 7, 1)
+Epoch 1/10
+51/51 [==============================] - 0s 3ms/step - loss: 1.3541 - accuracy: 0.2868
+Epoch 2/10
+51/51 [==============================] - 0s 3ms/step - loss: 1.1639 - accuracy: 0.2943
+Epoch 3/10
+51/51 [==============================] - 0s 3ms/step - loss: 1.1032 - accuracy: 0.3491
+Epoch 4/10
+51/51 [==============================] - 0s 4ms/step - loss: 1.0467 - accuracy: 0.5087
+Epoch 5/10
+51/51 [==============================] - 0s 3ms/step - loss: 1.0044 - accuracy: 0.5561
+Epoch 6/10
+51/51 [==============================] - 0s 3ms/step - loss: 0.9857 - accuracy: 0.5686
+Epoch 7/10
+51/51 [==============================] - 0s 3ms/step - loss: 0.9778 - accuracy: 0.5686
+Epoch 8/10
+51/51 [==============================] - 0s 3ms/step - loss: 0.9716 - accuracy: 0.5711
+Epoch 9/10
+51/51 [==============================] - 0s 5ms/step - loss: 0.9567 - accuracy: 0.5885
+Epoch 10/10
+51/51 [==============================] - 0s 5ms/step - loss: 0.9497 - accuracy: 0.6334
+13/13 [==============================] - 0s 2ms/step - loss: 0.9284 - accuracy: 0.6569
+
+
+For 19: Test ACC=[0.9283899068832397, 0.656862735748291]
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e3461f0d0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[37  7  1]
+ [ 2 27  0]
+ [21  4  3]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.62      0.82      0.70        45
+           1       0.71      0.93      0.81        29
+           2       0.75      0.11      0.19        28
+
+    accuracy                           0.66       102
+   macro avg       0.69      0.62      0.57       102
+weighted avg       0.68      0.66      0.59       102
+
+trainingshape 20
+(191, 7)
+(191, 7, 1)
+testingshape 20
+(50, 7)
+(50, 7, 1)
+Epoch 1/10
+24/24 [==============================] - 0s 4ms/step - loss: 1.1775 - accuracy: 0.0681
+Epoch 2/10
+24/24 [==============================] - 0s 3ms/step - loss: 1.1186 - accuracy: 0.1885
+Epoch 3/10
+24/24 [==============================] - 0s 3ms/step - loss: 1.0742 - accuracy: 0.6073
+Epoch 4/10
+24/24 [==============================] - 0s 3ms/step - loss: 1.0370 - accuracy: 0.7173
+Epoch 5/10
+24/24 [==============================] - 0s 3ms/step - loss: 1.0055 - accuracy: 0.7225
+Epoch 6/10
+24/24 [==============================] - 0s 3ms/step - loss: 0.9747 - accuracy: 0.7277
+Epoch 7/10
+24/24 [==============================] - 0s 3ms/step - loss: 0.9489 - accuracy: 0.7382
+Epoch 8/10
+24/24 [==============================] - 0s 3ms/step - loss: 0.9234 - accuracy: 0.7277
+Epoch 9/10
+24/24 [==============================] - 0s 3ms/step - loss: 0.9036 - accuracy: 0.7068
+Epoch 10/10
+24/24 [==============================] - 0s 4ms/step - loss: 0.8842 - accuracy: 0.7016
+7/7 [==============================] - 0s 2ms/step - loss: 0.9455 - accuracy: 0.5600
+
+
+For 20: Test ACC=[0.945533812046051, 0.5600000023841858]
+WARNING:tensorflow:6 out of the last 13 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e29f47430> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[15  6  0]
+ [13 13  0]
+ [ 2  1  0]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.50      0.71      0.59        21
+           1       0.65      0.50      0.57        26
+           2       0.00      0.00      0.00         3
+
+    accuracy                           0.56        50
+   macro avg       0.38      0.40      0.38        50
+weighted avg       0.55      0.56      0.54        50
+
+trainingshape 21
+(113, 7)
+(113, 7, 1)
+testingshape 21
+(30, 7)
+(30, 7, 1)
+Epoch 1/10
+15/15 [==============================] - 0s 4ms/step - loss: 0.7137 - accuracy: 0.5310
+Epoch 2/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.7023 - accuracy: 0.5575
+Epoch 3/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.6905 - accuracy: 0.5575
+Epoch 4/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.6796 - accuracy: 0.5929
+Epoch 5/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.6685 - accuracy: 0.7788
+Epoch 6/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.6586 - accuracy: 0.7876
+Epoch 7/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.6488 - accuracy: 0.7876
+Epoch 8/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.6385 - accuracy: 0.7876
+Epoch 9/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.6290 - accuracy: 0.7788
+Epoch 10/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.6188 - accuracy: 0.7788
+4/4 [==============================] - 0s 1ms/step - loss: 0.6283 - accuracy: 0.7667
+
+
+For 21: Test ACC=[0.628280758857727, 0.7666666507720947]
+WARNING:tensorflow:5 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e280ec3a0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0  7]
+ [ 0 23]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00         7
+           1       0.77      1.00      0.87        23
+
+    accuracy                           0.77        30
+   macro avg       0.38      0.50      0.43        30
+weighted avg       0.59      0.77      0.67        30
+
+trainingshape 22
+(224, 7)
+(224, 7, 1)
+testingshape 22
+(58, 7)
+(58, 7, 1)
+Epoch 1/10
+28/28 [==============================] - 0s 3ms/step - loss: 1.0371 - accuracy: 0.3884
+Epoch 2/10
+28/28 [==============================] - 0s 2ms/step - loss: 1.0115 - accuracy: 0.3884
+Epoch 3/10
+28/28 [==============================] - 0s 2ms/step - loss: 0.9901 - accuracy: 0.4018
+Epoch 4/10
+28/28 [==============================] - 0s 2ms/step - loss: 0.9701 - accuracy: 0.4866
+Epoch 5/10
+28/28 [==============================] - 0s 3ms/step - loss: 0.9525 - accuracy: 0.5268
+Epoch 6/10
+28/28 [==============================] - 0s 3ms/step - loss: 0.9371 - accuracy: 0.5580
+Epoch 7/10
+28/28 [==============================] - 0s 3ms/step - loss: 0.9207 - accuracy: 0.5580
+Epoch 8/10
+28/28 [==============================] - 0s 3ms/step - loss: 0.9070 - accuracy: 0.5580
+Epoch 9/10
+28/28 [==============================] - 0s 3ms/step - loss: 0.8942 - accuracy: 0.5580
+Epoch 10/10
+28/28 [==============================] - 0s 3ms/step - loss: 0.8839 - accuracy: 0.5580
+8/8 [==============================] - 0s 2ms/step - loss: 0.8972 - accuracy: 0.5517
+
+
+For 22: Test ACC=[0.8972341418266296, 0.5517241358757019]
+WARNING:tensorflow:6 out of the last 12 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e22322790> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0 22  0]
+ [ 0 32  0]
+ [ 0  4  0]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00        22
+           1       0.55      1.00      0.71        32
+           2       0.00      0.00      0.00         4
+
+    accuracy                           0.55        58
+   macro avg       0.18      0.33      0.24        58
+weighted avg       0.30      0.55      0.39        58
+
+trainingshape 23
+(101, 7)
+(101, 7, 1)
+testingshape 23
+(26, 7)
+(26, 7, 1)
+Epoch 1/10
+13/13 [==============================] - 0s 4ms/step - loss: 0.6693 - accuracy: 0.5842
+Epoch 2/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.6674 - accuracy: 0.7129
+Epoch 3/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.6660 - accuracy: 0.7228
+Epoch 4/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.6638 - accuracy: 0.7228
+Epoch 5/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.6619 - accuracy: 0.7228
+Epoch 6/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.6597 - accuracy: 0.7228
+Epoch 7/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.6574 - accuracy: 0.7228
+Epoch 8/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.6546 - accuracy: 0.7228
+Epoch 9/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.6519 - accuracy: 0.7228
+Epoch 10/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.6489 - accuracy: 0.7228
+4/4 [==============================] - 0s 1ms/step - loss: 0.6368 - accuracy: 0.7308
+
+
+For 23: Test ACC=[0.6367842555046082, 0.7307692170143127]
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e20f471f0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[13  0]
+ [ 7  6]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.65      1.00      0.79        13
+           1       1.00      0.46      0.63        13
+
+    accuracy                           0.73        26
+   macro avg       0.82      0.73      0.71        26
+weighted avg       0.83      0.73      0.71        26
+
+trainingshape 24
+(294, 7)
+(294, 7, 1)
+testingshape 24
+(75, 7)
+(75, 7, 1)
+Epoch 1/10
+37/37 [==============================] - 0s 4ms/step - loss: 1.4140 - accuracy: 0.1701
+Epoch 2/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.4017 - accuracy: 0.3197
+Epoch 3/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.3911 - accuracy: 0.3299
+Epoch 4/10
+37/37 [==============================] - 0s 4ms/step - loss: 1.3815 - accuracy: 0.3469
+Epoch 5/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.3719 - accuracy: 0.3776
+Epoch 6/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.3644 - accuracy: 0.4116
+Epoch 7/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.3578 - accuracy: 0.4082
+Epoch 8/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.3520 - accuracy: 0.4082
+Epoch 9/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.3469 - accuracy: 0.4082
+Epoch 10/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.3419 - accuracy: 0.4184
+10/10 [==============================] - 0s 2ms/step - loss: 1.3537 - accuracy: 0.3467
+
+
+For 24: Test ACC=[1.353689193725586, 0.3466666638851166]
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e1e7a3160> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 8 14  0  0]
+ [ 9 18  0  0]
+ [ 3 14  0  0]
+ [ 1  8  0  0]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.38      0.36      0.37        22
+           1       0.33      0.67      0.44        27
+           2       0.00      0.00      0.00        17
+           3       0.00      0.00      0.00         9
+
+    accuracy                           0.35        75
+   macro avg       0.18      0.26      0.20        75
+weighted avg       0.23      0.35      0.27        75
+
+trainingshape 25
+(115, 7)
+(115, 7, 1)
+testingshape 25
+(29, 7)
+(29, 7, 1)
+Epoch 1/10
+15/15 [==============================] - 0s 4ms/step - loss: 0.6917 - accuracy: 0.5304
+Epoch 2/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.6716 - accuracy: 0.6087
+Epoch 3/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.6519 - accuracy: 0.7217
+Epoch 4/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.6321 - accuracy: 0.7304
+Epoch 5/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.6167 - accuracy: 0.7304
+Epoch 6/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.6027 - accuracy: 0.7304
+Epoch 7/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.5962 - accuracy: 0.7304
+Epoch 8/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.5892 - accuracy: 0.7304
+Epoch 9/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.5853 - accuracy: 0.7304
+Epoch 10/10
+15/15 [==============================] - 0s 3ms/step - loss: 0.5821 - accuracy: 0.7304
+4/4 [==============================] - 0s 2ms/step - loss: 0.5921 - accuracy: 0.7241
+
+
+For 25: Test ACC=[0.5921329855918884, 0.7241379022598267]
+WARNING:tensorflow:7 out of the last 14 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e1c9754c0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0  8]
+ [ 0 21]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00         8
+           1       0.72      1.00      0.84        21
+
+    accuracy                           0.72        29
+   macro avg       0.36      0.50      0.42        29
+weighted avg       0.52      0.72      0.61        29
+
+trainingshape 26
+(177, 7)
+(177, 7, 1)
+testingshape 26
+(47, 7)
+(47, 7, 1)
+Epoch 1/10
+23/23 [==============================] - 0s 4ms/step - loss: 1.4069 - accuracy: 0.1582
+Epoch 2/10
+23/23 [==============================] - 0s 4ms/step - loss: 1.3808 - accuracy: 0.1186
+Epoch 3/10
+23/23 [==============================] - 0s 4ms/step - loss: 1.3561 - accuracy: 0.3220
+Epoch 4/10
+23/23 [==============================] - 0s 4ms/step - loss: 1.3294 - accuracy: 0.4068
+Epoch 5/10
+23/23 [==============================] - 0s 7ms/step - loss: 1.3043 - accuracy: 0.5028
+Epoch 6/10
+23/23 [==============================] - 0s 3ms/step - loss: 1.2838 - accuracy: 0.5706
+Epoch 7/10
+23/23 [==============================] - 0s 3ms/step - loss: 1.2646 - accuracy: 0.5706
+Epoch 8/10
+23/23 [==============================] - 0s 3ms/step - loss: 1.2471 - accuracy: 0.5706
+Epoch 9/10
+23/23 [==============================] - 0s 3ms/step - loss: 1.2315 - accuracy: 0.5706
+Epoch 10/10
+23/23 [==============================] - 0s 3ms/step - loss: 1.2159 - accuracy: 0.5706
+6/6 [==============================] - 0s 2ms/step - loss: 1.2189 - accuracy: 0.5532
+
+
+For 26: Test ACC=[1.2188541889190674, 0.5531914830207825]
+WARNING:tensorflow:7 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e1aaa13a0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0  5  0  0]
+ [ 0 26  0  0]
+ [ 0  9  0  0]
+ [ 0  7  0  0]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00         5
+           1       0.55      1.00      0.71        26
+           2       0.00      0.00      0.00         9
+           3       0.00      0.00      0.00         7
+
+    accuracy                           0.55        47
+   macro avg       0.14      0.25      0.18        47
+weighted avg       0.31      0.55      0.39        47
+
+trainingshape 27
+(297, 7)
+(297, 7, 1)
+testingshape 27
+(75, 7)
+(75, 7, 1)
+Epoch 1/10
+38/38 [==============================] - 0s 4ms/step - loss: 1.3312 - accuracy: 0.4175
+Epoch 2/10
+38/38 [==============================] - 0s 3ms/step - loss: 1.3184 - accuracy: 0.4175
+Epoch 3/10
+38/38 [==============================] - 0s 3ms/step - loss: 1.3085 - accuracy: 0.4175
+Epoch 4/10
+38/38 [==============================] - 0s 3ms/step - loss: 1.3005 - accuracy: 0.4175
+Epoch 5/10
+38/38 [==============================] - 0s 4ms/step - loss: 1.2943 - accuracy: 0.4175
+Epoch 6/10
+38/38 [==============================] - 0s 4ms/step - loss: 1.2896 - accuracy: 0.4175
+Epoch 7/10
+38/38 [==============================] - 0s 4ms/step - loss: 1.2853 - accuracy: 0.4175
+Epoch 8/10
+38/38 [==============================] - 0s 3ms/step - loss: 1.2819 - accuracy: 0.4175
+Epoch 9/10
+38/38 [==============================] - 0s 4ms/step - loss: 1.2787 - accuracy: 0.4175
+Epoch 10/10
+38/38 [==============================] - 0s 4ms/step - loss: 1.2755 - accuracy: 0.4175
+10/10 [==============================] - 0s 1ms/step - loss: 1.2871 - accuracy: 0.4133
+
+
+For 27: Test ACC=[1.2871274948120117, 0.41333332657814026]
+WARNING:tensorflow:7 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e18c7e700> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0 18  0  0]
+ [ 0 31  0  0]
+ [ 0 19  0  0]
+ [ 0  7  0  0]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00        18
+           1       0.41      1.00      0.58        31
+           2       0.00      0.00      0.00        19
+           3       0.00      0.00      0.00         7
+
+    accuracy                           0.41        75
+   macro avg       0.10      0.25      0.15        75
+weighted avg       0.17      0.41      0.24        75
+
+trainingshape 28
+(107, 7)
+(107, 7, 1)
+testingshape 28
+(28, 7)
+(28, 7, 1)
+Epoch 1/10
+14/14 [==============================] - 0s 5ms/step - loss: 1.0793 - accuracy: 0.3645
+Epoch 2/10
+14/14 [==============================] - 0s 3ms/step - loss: 1.0653 - accuracy: 0.3364
+Epoch 3/10
+14/14 [==============================] - 0s 3ms/step - loss: 1.0511 - accuracy: 0.3551
+Epoch 4/10
+14/14 [==============================] - 0s 3ms/step - loss: 1.0382 - accuracy: 0.4953
+Epoch 5/10
+14/14 [==============================] - 0s 3ms/step - loss: 1.0241 - accuracy: 0.5421
+Epoch 6/10
+14/14 [==============================] - 0s 3ms/step - loss: 1.0108 - accuracy: 0.5421
+Epoch 7/10
+14/14 [==============================] - 0s 3ms/step - loss: 0.9988 - accuracy: 0.5421
+Epoch 8/10
+14/14 [==============================] - 0s 3ms/step - loss: 0.9859 - accuracy: 0.5421
+Epoch 9/10
+14/14 [==============================] - 0s 3ms/step - loss: 0.9738 - accuracy: 0.5421
+Epoch 10/10
+14/14 [==============================] - 0s 3ms/step - loss: 0.9610 - accuracy: 0.5421
+4/4 [==============================] - 0s 2ms/step - loss: 0.9586 - accuracy: 0.5357
+
+
+For 28: Test ACC=[0.9586001634597778, 0.5357142686843872]
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e8c59d5e0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0 10  0]
+ [ 0 15  0]
+ [ 0  3  0]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00        10
+           1       0.54      1.00      0.70        15
+           2       0.00      0.00      0.00         3
+
+    accuracy                           0.54        28
+   macro avg       0.18      0.33      0.23        28
+weighted avg       0.29      0.54      0.37        28
+
+trainingshape 29
+(313, 7)
+(313, 7, 1)
+testingshape 29
+(80, 7)
+(80, 7, 1)
+Epoch 1/10
+40/40 [==============================] - 0s 4ms/step - loss: 1.1779 - accuracy: 0.3706
+Epoch 2/10
+40/40 [==============================] - 0s 3ms/step - loss: 1.2728 - accuracy: 0.3738
+Epoch 3/10
+40/40 [==============================] - 0s 3ms/step - loss: 1.1980 - accuracy: 0.3898
+Epoch 4/10
+40/40 [==============================] - 0s 3ms/step - loss: 1.1348 - accuracy: 0.3706
+Epoch 5/10
+40/40 [==============================] - 0s 3ms/step - loss: 1.1028 - accuracy: 0.4409
+Epoch 6/10
+40/40 [==============================] - 0s 3ms/step - loss: 1.0804 - accuracy: 0.4633
+Epoch 7/10
+40/40 [==============================] - 0s 3ms/step - loss: 1.0617 - accuracy: 0.4728
+Epoch 8/10
+40/40 [==============================] - 0s 4ms/step - loss: 1.0450 - accuracy: 0.4633
+Epoch 9/10
+40/40 [==============================] - 0s 3ms/step - loss: 1.0325 - accuracy: 0.4696
+Epoch 10/10
+40/40 [==============================] - 0s 3ms/step - loss: 1.0254 - accuracy: 0.4760
+10/10 [==============================] - 0s 2ms/step - loss: 1.0459 - accuracy: 0.4500
+
+
+For 29: Test ACC=[1.0459107160568237, 0.44999998807907104]
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e1561a820> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[11 19  0]
+ [ 5 25  0]
+ [ 4 16  0]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.55      0.37      0.44        30
+           1       0.42      0.83      0.56        30
+           2       0.00      0.00      0.00        20
+
+    accuracy                           0.45        80
+   macro avg       0.32      0.40      0.33        80
+weighted avg       0.36      0.45      0.37        80
+
+trainingshape 30
+(80, 7)
+(80, 7, 1)
+testingshape 30
+(22, 7)
+(22, 7, 1)
+Epoch 1/10
+10/10 [==============================] - 0s 3ms/step - loss: 0.6367 - accuracy: 0.7750
+Epoch 2/10
+10/10 [==============================] - 0s 3ms/step - loss: 0.6274 - accuracy: 0.7750
+Epoch 3/10
+10/10 [==============================] - 0s 2ms/step - loss: 0.6180 - accuracy: 0.7500
+Epoch 4/10
+10/10 [==============================] - 0s 3ms/step - loss: 0.6095 - accuracy: 0.7500
+Epoch 5/10
+10/10 [==============================] - 0s 2ms/step - loss: 0.5980 - accuracy: 0.7500
+Epoch 6/10
+10/10 [==============================] - 0s 2ms/step - loss: 0.5874 - accuracy: 0.7500
+Epoch 7/10
+10/10 [==============================] - 0s 2ms/step - loss: 0.5680 - accuracy: 0.7500
+Epoch 8/10
+10/10 [==============================] - 0s 2ms/step - loss: 0.5510 - accuracy: 0.7500
+Epoch 9/10
+10/10 [==============================] - 0s 2ms/step - loss: 0.5347 - accuracy: 0.7500
+Epoch 10/10
+10/10 [==============================] - 0s 2ms/step - loss: 0.5234 - accuracy: 0.7500
+3/3 [==============================] - 0s 1ms/step - loss: 0.5418 - accuracy: 0.7273
+
+
+For 30: Test ACC=[0.5418258309364319, 0.7272727489471436]
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e130065e0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[16  0]
+ [ 6  0]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.73      1.00      0.84        16
+           1       0.00      0.00      0.00         6
+
+    accuracy                           0.73        22
+   macro avg       0.36      0.50      0.42        22
+weighted avg       0.53      0.73      0.61        22
+
+trainingshape 31
+(294, 7)
+(294, 7, 1)
+testingshape 31
+(75, 7)
+(75, 7, 1)
+Epoch 1/10
+37/37 [==============================] - 0s 4ms/step - loss: 1.2672 - accuracy: 0.2279
+Epoch 2/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.1870 - accuracy: 0.2551
+Epoch 3/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.1485 - accuracy: 0.2585
+Epoch 4/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.1251 - accuracy: 0.3095
+Epoch 5/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.1055 - accuracy: 0.3912
+Epoch 6/10
+37/37 [==============================] - 0s 4ms/step - loss: 1.0853 - accuracy: 0.4048
+Epoch 7/10
+37/37 [==============================] - 0s 4ms/step - loss: 1.0650 - accuracy: 0.3878
+Epoch 8/10
+37/37 [==============================] - 0s 4ms/step - loss: 1.0566 - accuracy: 0.3946
+Epoch 9/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.0528 - accuracy: 0.4286
+Epoch 10/10
+37/37 [==============================] - 0s 3ms/step - loss: 1.0493 - accuracy: 0.3980
+10/10 [==============================] - 0s 2ms/step - loss: 1.0478 - accuracy: 0.4000
+
+
+For 31: Test ACC=[1.0477713346481323, 0.4000000059604645]
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e111af280> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[30  1  2]
+ [25  0  0]
+ [16  1  0]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.42      0.91      0.58        33
+           1       0.00      0.00      0.00        25
+           2       0.00      0.00      0.00        17
+
+    accuracy                           0.40        75
+   macro avg       0.14      0.30      0.19        75
+weighted avg       0.19      0.40      0.25        75
+
+trainingshape 32
+(101, 7)
+(101, 7, 1)
+testingshape 32
+(26, 7)
+(26, 7, 1)
+Epoch 1/10
+13/13 [==============================] - 0s 4ms/step - loss: 0.5595 - accuracy: 0.8020
+Epoch 2/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.5528 - accuracy: 0.8020
+Epoch 3/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.5474 - accuracy: 0.8020
+Epoch 4/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.5419 - accuracy: 0.8020
+Epoch 5/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.5376 - accuracy: 0.8020
+Epoch 6/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.5334 - accuracy: 0.8020
+Epoch 7/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.5298 - accuracy: 0.8020
+Epoch 8/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.5265 - accuracy: 0.8020
+Epoch 9/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.5230 - accuracy: 0.8020
+Epoch 10/10
+13/13 [==============================] - 0s 3ms/step - loss: 0.5199 - accuracy: 0.8020
+4/4 [==============================] - 0s 1ms/step - loss: 0.5171 - accuracy: 0.8077
+
+
+For 32: Test ACC=[0.5171499848365784, 0.807692289352417]
+WARNING:tensorflow:6 out of the last 12 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e0f30d790> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[21  0]
+ [ 5  0]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.81      1.00      0.89        21
+           1       0.00      0.00      0.00         5
+
+    accuracy                           0.81        26
+   macro avg       0.40      0.50      0.45        26
+weighted avg       0.65      0.81      0.72        26
+
+trainingshape 33
+(164, 7)
+(164, 7, 1)
+testingshape 33
+(42, 7)
+(42, 7, 1)
+Epoch 1/10
+21/21 [==============================] - 0s 4ms/step - loss: 1.0667 - accuracy: 0.4268
+Epoch 2/10
+21/21 [==============================] - 0s 3ms/step - loss: 1.0473 - accuracy: 0.4695
+Epoch 3/10
+21/21 [==============================] - 0s 3ms/step - loss: 1.0303 - accuracy: 0.4695
+Epoch 4/10
+21/21 [==============================] - 0s 3ms/step - loss: 1.0154 - accuracy: 0.4817
+Epoch 5/10
+21/21 [==============================] - 0s 3ms/step - loss: 1.0024 - accuracy: 0.4878
+Epoch 6/10
+21/21 [==============================] - 0s 3ms/step - loss: 0.9902 - accuracy: 0.5000
+Epoch 7/10
+21/21 [==============================] - 0s 4ms/step - loss: 0.9785 - accuracy: 0.5061
+Epoch 8/10
+21/21 [==============================] - 0s 4ms/step - loss: 0.9676 - accuracy: 0.5000
+Epoch 9/10
+21/21 [==============================] - 0s 3ms/step - loss: 0.9569 - accuracy: 0.5122
+Epoch 10/10
+21/21 [==============================] - 0s 3ms/step - loss: 0.9422 - accuracy: 0.5427
+6/6 [==============================] - 0s 2ms/step - loss: 0.9365 - accuracy: 0.6429
+
+
+For 33: Test ACC=[0.9365416169166565, 0.6428571343421936]
+WARNING:tensorflow:7 out of the last 13 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e0d4ab430> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[14  2  0]
+ [10 13  0]
+ [ 2  1  0]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.54      0.88      0.67        16
+           1       0.81      0.57      0.67        23
+           2       0.00      0.00      0.00         3
+
+    accuracy                           0.64        42
+   macro avg       0.45      0.48      0.44        42
+weighted avg       0.65      0.64      0.62        42
+
+trainingshape 34
+(193, 7)
+(193, 7, 1)
+testingshape 34
+(50, 7)
+(50, 7, 1)
+Epoch 1/10
+25/25 [==============================] - 0s 4ms/step - loss: 0.7321 - accuracy: 0.4404
+Epoch 2/10
+25/25 [==============================] - 0s 3ms/step - loss: 0.6755 - accuracy: 0.5648
+Epoch 3/10
+25/25 [==============================] - 0s 3ms/step - loss: 0.6497 - accuracy: 0.6736
+Epoch 4/10
+25/25 [==============================] - 0s 3ms/step - loss: 0.6242 - accuracy: 0.7254
+Epoch 5/10
+25/25 [==============================] - 0s 3ms/step - loss: 0.5982 - accuracy: 0.7254
+Epoch 6/10
+25/25 [==============================] - 0s 3ms/step - loss: 0.5861 - accuracy: 0.7254
+Epoch 7/10
+25/25 [==============================] - 0s 3ms/step - loss: 0.5796 - accuracy: 0.7254
+Epoch 8/10
+25/25 [==============================] - 0s 5ms/step - loss: 0.5744 - accuracy: 0.7254
+Epoch 9/10
+25/25 [==============================] - 0s 5ms/step - loss: 0.5708 - accuracy: 0.7254
+Epoch 10/10
+25/25 [==============================] - 0s 5ms/step - loss: 0.5673 - accuracy: 0.7254
+7/7 [==============================] - 0s 2ms/step - loss: 0.5556 - accuracy: 0.7200
+
+
+For 34: Test ACC=[0.5555875897407532, 0.7200000286102295]
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e0be9b9d0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0 14]
+ [ 0 36]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00        14
+           1       0.72      1.00      0.84        36
+
+    accuracy                           0.72        50
+   macro avg       0.36      0.50      0.42        50
+weighted avg       0.52      0.72      0.60        50
+
+trainingshape 35
+(38, 7)
+(38, 7, 1)
+testingshape 35
+(10, 7)
+(10, 7, 1)
+Epoch 1/10
+5/5 [==============================] - 0s 3ms/step - loss: 0.9160 - accuracy: 0.2632
+Epoch 2/10
+5/5 [==============================] - 0s 4ms/step - loss: 0.8980 - accuracy: 0.2632
+Epoch 3/10
+5/5 [==============================] - 0s 3ms/step - loss: 0.8831 - accuracy: 0.2632
+Epoch 4/10
+5/5 [==============================] - 0s 4ms/step - loss: 0.8704 - accuracy: 0.2368
+Epoch 5/10
+5/5 [==============================] - 0s 3ms/step - loss: 0.8570 - accuracy: 0.3158
+Epoch 6/10
+5/5 [==============================] - 0s 3ms/step - loss: 0.8464 - accuracy: 0.3158
+Epoch 7/10
+5/5 [==============================] - 0s 4ms/step - loss: 0.8371 - accuracy: 0.2632
+Epoch 8/10
+5/5 [==============================] - 0s 3ms/step - loss: 0.8264 - accuracy: 0.3158
+Epoch 9/10
+5/5 [==============================] - 0s 3ms/step - loss: 0.8172 - accuracy: 0.3421
+Epoch 10/10
+5/5 [==============================] - 0s 3ms/step - loss: 0.8092 - accuracy: 0.3421
+2/2 [==============================] - 0s 3ms/step - loss: 0.7739 - accuracy: 0.4000
+
+
+For 35: Test ACC=[0.7739059329032898, 0.4000000059604645]
+WARNING:tensorflow:7 out of the last 13 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e0a44b670> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[1 6]
+ [0 3]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       1.00      0.14      0.25         7
+           1       0.33      1.00      0.50         3
+
+    accuracy                           0.40        10
+   macro avg       0.67      0.57      0.38        10
+weighted avg       0.80      0.40      0.33        10
+
+trainingshape 36
+(146, 7)
+(146, 7, 1)
+testingshape 36
+(38, 7)
+(38, 7, 1)
+Epoch 1/10
+19/19 [==============================] - 0s 4ms/step - loss: 0.6953 - accuracy: 0.4247
+Epoch 2/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6867 - accuracy: 0.7260
+Epoch 3/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6784 - accuracy: 0.7397
+Epoch 4/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6700 - accuracy: 0.7397
+Epoch 5/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6628 - accuracy: 0.7397
+Epoch 6/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6560 - accuracy: 0.7397
+Epoch 7/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6494 - accuracy: 0.7397
+Epoch 8/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6435 - accuracy: 0.7397
+Epoch 9/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6381 - accuracy: 0.7397
+Epoch 10/10
+19/19 [==============================] - 0s 3ms/step - loss: 0.6331 - accuracy: 0.7397
+5/5 [==============================] - 0s 2ms/step - loss: 0.6333 - accuracy: 0.7368
+
+
+For 36: Test ACC=[0.6333129405975342, 0.7368420958518982]
+WARNING:tensorflow:7 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e07b80700> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[ 0 10]
+ [ 0 28]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00        10
+           1       0.74      1.00      0.85        28
+
+    accuracy                           0.74        38
+   macro avg       0.37      0.50      0.42        38
+weighted avg       0.54      0.74      0.63        38
+
+trainingshape 38
+(92, 7)
+(92, 7, 1)
+testingshape 38
+(24, 7)
+(24, 7, 1)
+Epoch 1/10
+12/12 [==============================] - 0s 5ms/step - loss: 0.9736 - accuracy: 0.1848
+Epoch 2/10
+12/12 [==============================] - 0s 4ms/step - loss: 0.8233 - accuracy: 0.2609
+Epoch 3/10
+12/12 [==============================] - 0s 4ms/step - loss: 0.6645 - accuracy: 0.5326
+Epoch 4/10
+12/12 [==============================] - 0s 4ms/step - loss: 0.5401 - accuracy: 0.9130
+Epoch 5/10
+12/12 [==============================] - 0s 4ms/step - loss: 0.4423 - accuracy: 0.9130
+Epoch 6/10
+12/12 [==============================] - 0s 4ms/step - loss: 0.3898 - accuracy: 0.9130
+Epoch 7/10
+12/12 [==============================] - 0s 3ms/step - loss: 0.3635 - accuracy: 0.9130
+Epoch 8/10
+12/12 [==============================] - 0s 4ms/step - loss: 0.3529 - accuracy: 0.9130
+Epoch 9/10
+12/12 [==============================] - 0s 4ms/step - loss: 0.3426 - accuracy: 0.9130
+Epoch 10/10
+12/12 [==============================] - 0s 4ms/step - loss: 0.3368 - accuracy: 0.9130
+3/3 [==============================] - 0s 3ms/step - loss: 0.3901 - accuracy: 0.8750
+
+
+For 38: Test ACC=[0.3901306688785553, 0.875]
+WARNING:tensorflow:7 out of the last 12 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f4e05d1a430> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Confusion Matrix
+[[21  0]
+ [ 3  0]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.88      1.00      0.93        21
+           1       0.00      0.00      0.00         3
+
+    accuracy                           0.88        24
+   macro avg       0.44      0.50      0.47        24
+weighted avg       0.77      0.88      0.82        24

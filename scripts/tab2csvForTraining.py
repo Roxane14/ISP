@@ -117,13 +117,19 @@ for nID in range(nbOfNote):
     if len(df.index) == len(outputsSeq[nID]):
         df['output'] = outputsSeq[nID]
         if remove_outlier:
-            val_count = df['output'].value_counts()
-            pos_to_rm = val_count[val_count<10].values
-            print(f"{nID} a {pos_to_rm} parceque {val_count} ")
+            # val_count = df['output'].value_counts()
+            # pos_to_rm = val_count[val_count<10].values
+            # print(f"{nID} a {pos_to_rm} parceque {val_count} ")
             #  dff[dff[:][0].isin(vc<10)]
-            df = df[df['output'].isin(val_count<10)]
+            # df = df[df['output'].isin(val_count<10)]
             # df.drop(df.loc[df[0]==0].index, inplace=True)
-        df.to_csv(f"../outputresources/csvs_no_outliers/{nID}.csv")
+            print(f"\n\n{nID}")
+            print(df['output'].value_counts())
+            df['count'] = df.groupby('output')['output'].transform('count')
+            df.drop(df.loc[df['count']<=10].index, inplace=True)
+            print(df['output'].value_counts())
+            del df['count']
+        df.to_csv(f"../outputresources/csvs_no_outliers2/{nID}.csv")
 
 
 ###########

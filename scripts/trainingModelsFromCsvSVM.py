@@ -32,7 +32,7 @@ inputsSeq=[None for i in range(nbOfNote)]
 outputsSeq=[None for i in range(nbOfNote)]
 inputsSeq_test=[None for i in range(nbOfNote)]
 outputsSeq_test=[None for i in range(nbOfNote)]
-csvDir = "../outputresources/csvs_no_outliers/"
+csvDir = "../outputresources/csvs_no_outliers2/"
 nbPossiblePosPerNote = [None for i in range (nbOfNote)]
 
 # load input and output sequences
@@ -172,7 +172,7 @@ for i in range(nbOfNote):
                                  cmap=plt.cm.Blues,
                                  normalize=None)
         disp.ax_.set_title(title)    
-        plt.savefig("../outputresources/svmconfmat2/" + title+".png")
+        plt.savefig("../outputresources/svmconfmat3betteroutliersremovallinkedtoCsvs_no_outliers2/" + title+".png")
         print(title)
         print(disp.confusion_matrix)
 
