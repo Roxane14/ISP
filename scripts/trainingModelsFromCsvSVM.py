@@ -16,9 +16,11 @@ from tensorflow.keras.layers import LSTM, GRU
 from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.utils import to_categorical
 
+from sklearn import svm
+
 #########
 # Useful data from converting to csv
-dummies = [0,1,2,3,4,42,43,44,45,46,47,48]
+dummies = [0,1,2,3,4,5,42,43,44,45,46,47,48] # 7,8,40,41 7,8,5,40 and 41 has only the position 0 used
 test_split = 0.2
 val_split = 0.2
 
@@ -30,7 +32,7 @@ inputsSeq=[None for i in range(nbOfNote)]
 outputsSeq=[None for i in range(nbOfNote)]
 inputsSeq_test=[None for i in range(nbOfNote)]
 outputsSeq_test=[None for i in range(nbOfNote)]
-csvDir = "../outputresources/csvs/"
+csvDir = "../outputresources/csvs_no_outliers/"
 nbPossiblePosPerNote = [None for i in range (nbOfNote)]
 
 # load input and output sequences
@@ -68,9 +70,12 @@ for i in range(nbOfNote):
 
         inputsSeq[i] = inputs[training_idx.astype(int),:]
         outputsSeq[i] = outputs[training_idx.astype(int)]
+        if len(np.unique(outputsSeq[i])) <=1:
+                dummies.append(i)
         inputsSeq_test[i] = inputs[test_idx.astype(int),:]
         outputsSeq_test[i] = outputs[test_idx.astype(int)]
 
+print(f"Dummies : {dummies}")
 
 # Show part of train and test for each note
 for i in range(nbOfNote):
@@ -97,16 +102,16 @@ numTuple = len(allNotePosSet) #123
 models = [None for i in range(nbOfNote)]
 for i in range(nbOfNote):
     if not i in dummies:
-        model = Sequential()
-        # model.add(Embedding(numTuple + 1, 32, input_length=seqLength))
-        model.add(LSTM(4 ,input_shape=(seqLength, )))
-        model.add(Dense(nbPossiblePosPerNote[i]))
-        model.add(Activation('softmax'))
-        # learning_rate = 0.01
-        # optimizer = SGD(lr=learning_rate, momentum=0.95)
-        # model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics=['accuracy'])
-        model.compile(loss='categorical_crossentropy', optimizer="adam")
-        models[i] = model
+        # model = Sequential()
+        # # model.add(Embedding(numTuple + 1, 32, input_length=seqLength))
+        # model.add(LSTM(4 ,input_shape=(seqLength, )))
+        # model.add(Dense(nbPossiblePosPerNote[i]))
+        # model.add(Activation('softmax'))
+        # # learning_rate = 0.01
+        # # optimizer = SGD(lr=learning_rate, momentum=0.95)
+        # # model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics=['accuracy'])
+        # model.compile(loss='categorical_crossentropy', optimizer="adam")
+        models[i] = svm.SVC()
 
 ##########
 # Training models
@@ -116,35 +121,58 @@ epoch_it = 10
 for i in range(nbOfNote):
     if not i in dummies:
         # creation of validation data
-        nbInput = inputsSeq[i].shape[0]
-        indices = np.random.permutation(nbInput)
-        splitIndiceMax = int(val_split * nbInput)
-        training_idx, test_idx = indices[:splitIndiceMax], indices[splitIndiceMax:]
-        training, test = inputsSeq[i][training_idx,:], inputsSeq[i][test_idx,:]
-        training_output, test_output = outputsSeq[i][training_idx], outputsSeq[i][test_idx]
-        # categorize output values
-        y_train = to_categorical(training_output, nbPossiblePosPerNote[i])
-        y_val = to_categorical(test_output, nbPossiblePosPerNote[i])
-        # training
-        print("REGARDE " + training)
-        training = np.reshape(training, (len(training_idx), seqLength, 1))
-        print("REGARDEx2 " + training.shape)
-        models[i].fit(training,  y_train,
-                        batch_size=bsize,
-                        epochs=epoch_it,
-                        validation_data=(test, y_val))
+        # nbInput = inputsSeq[i].shape[0]
+        # indices = np.random.permutation(nbInput)
+        # splitIndiceMax = int(val_split * nbInput)
+        # training_idx, test_idx = indices[:splitIndiceMax], indices[splitIndiceMax:]
+        # training, test = inputsSeq[i][training_idx,:], inputsSeq[i][test_idx,:]
+        # training_output, test_output = outputsSeq[i][training_idx], outputsSeq[i][test_idx]
+        # # categorize output values
+        # y_train = to_categorical(training_output, nbPossiblePosPerNote[i])
+        # y_val = to_categorical(test_output, nbPossiblePosPerNote[i])
+        # # training
+        # print("REGARDE " + training)
+        # training = np.reshape(training, (len(training_idx), seqLength, 1))
+        # print("REGARDEx2 " + training.shape)
+        # models[i].fit(training,  y_train,
+        #                 batch_size=bsize,
+        #                 epochs=epoch_it,
+        #                 validation_data=(test, y_val))
+        print(i, " " , inputsSeq[i].shape, " ", outputsSeq[i].shape, " ", np.unique(outputsSeq[i]))
+        models[i].fit(inputsSeq[i], outputsSeq[i])
 
 
 #############
 # Results
 
+import matplotlib.pyplot as plt
+from sklearn.metrics import plot_confusion_matrix
+
+
 for i in range(nbOfNote):
     if not i in dummies:
         test_x = inputsSeq_test[i]
         test_y = to_categorical(outputsSeq_test[i], nbPossiblePosPerNote[i])
-        score = models[i].evaluate(test_x, test_y,
-                                    batch_size=bsize)
-        print()
-        print(f'For {i}: Test ACC={score}')
-
+        c = 0
+        diffs = []
+        for j in range(len(test_x)):
+            predicted_out = models[i].predict([test_x[j]])
+            if predicted_out != outputsSeq_test[i][j]:
+                c = c+1
+                diffs.append((predicted_out, outputsSeq_test[i][j] ))
+        # score = models[i].evaluate(test_x, test_y,
+        #                             batch_size=bsize)
+        # print()
+        # print(f"{i=} il y a eu {c} differences : \n{diffs}")
+        title = f"note {i}"
+        # print(f'For {i}: Test ACC={score}')
+        print("AAA", np.unique(outputsSeq_test[i]))
+        disp = plot_confusion_matrix(models[i], inputsSeq_test[i], outputsSeq_test[i],
+                                 #display_labels=[],
+                                 cmap=plt.cm.Blues,
+                                 normalize=None)
+        disp.ax_.set_title(title)    
+        plt.savefig("../outputresources/svmconfmat2/" + title+".png")
+        print(title)
+        print(disp.confusion_matrix)
 
