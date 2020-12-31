@@ -16,6 +16,9 @@ from collections import Counter
 import matplotlib.pyplot as plt
 import pandas as pd
 
+
+from joblib import dump, load
+
 def getAllNotes():
     notes = set()
     for fret in range(0,25):
@@ -64,31 +67,47 @@ print(notename2id)
 # we do not differentiate each songs as overlapping sequence betweens 2 different scores 
 # will be less present in the data than notes inside the score 
 globSeq = []
+stringFretList=None
+sf2tuple = {}
 
 for f in glob.glob(trainDir+"*.tab"): 
     with open(f) as ftab:
-        stringFretList=None
         try:
             stringFretList = extractTuples(ftab)
         except:
             print(f"Error found in {f} while extracting tuples")
             break
-        nbNote = len(stringFretList)
-        for i in range(nbNote):
+        for i in range(len(stringFretList)):
             [st,fr] = stringFretList[i]
             noteName = str(getAssociatedNote(st, fr))
             if noteName in notename2id.keys():
                 noteId = notename2id[noteName]
                 posId = getPosId(noteId, st, fr)
                 globSeq.append((noteId, posId))
+                if not (st,fr) in sf2tuple.keys():
+                    sf2tuple[(st,fr)] = (noteId, posId)
             else:
                 print(f"Error {noteName} not found in dic, for file {f}")
-            
 
 allNotePosSet = set(globSeq)
+tuple2sf = {v:u for (u,v) in sf2tuple.items()}
 tuple2id = {t:i for i,t in enumerate(allNotePosSet)}
 id2tuple = {v:u for (u,v) in tuple2id.items()}
 globSeqIds = [tuple2id[t] for t in globSeq]
+
+id2sf = {i:tuple2sf[t] for (i,t) in id2tuple.items()}
+sf2id = {v:u for (u,v) in id2sf.items()}
+dump(id2sf, "id2sfcsvs_no_outliers2.joblib")
+dump(sf2id, "sf2idcsvs_no_outliers2.joblib")
+
+dump(tuple2sf, "tuple2sfcsvs_no_outliers2.joblib")
+dump(sf2tuple, "sf2tuplecsvs_no_outliers2.joblib")
+dump(tuple2id, "tuple2idcsvs_no_outliers2.joblib")
+dump(id2tuple, "id2tuplecsvs_no_outliers2.joblib")
+dump(id2notename, "id2notenamecsvs_no_outliers2.joblib")
+dump(notename2id, "notename2idcsvs_no_outliers2.joblib")
+
+dump(possiblePosPerNote, "possiblePosPerNote.joblib")
 
 print(f"{len(allNotePosSet)=}")
 
@@ -96,8 +115,6 @@ with open("../outputresources/globseqIds.txt", "w") as f:
     for item in globSeqIds:
         f.write(f"{item} ")
 
-
-    
 ###########
 # prepare sequences
 seqLength = 7 

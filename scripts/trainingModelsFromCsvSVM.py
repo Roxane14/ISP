@@ -17,6 +17,7 @@ from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.utils import to_categorical
 
 from sklearn import svm
+from joblib import dump, load
 
 #########
 # Useful data from converting to csv
@@ -175,4 +176,9 @@ for i in range(nbOfNote):
         plt.savefig("../outputresources/svmconfmat3betteroutliersremovallinkedtoCsvs_no_outliers2/" + title+".png")
         print(title)
         print(disp.confusion_matrix)
+
+
+for i in range(nbOfNote):
+    if not i in dummies:
+        dump(models[i], f"../outputresources/modelsSVMs_fromCsvs_no_outliers2/{i}.joblib")
 
