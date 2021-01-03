@@ -1,0 +1,546 @@
+len(allNotePosSet)=150
+
+
+0
+0    159418
+Name: output, dtype: int64
+0    159418
+Name: output, dtype: int64
+
+
+1
+0    29838
+Name: output, dtype: int64
+0    29838
+Name: output, dtype: int64
+
+
+2
+0    39036
+Name: output, dtype: int64
+0    39036
+Name: output, dtype: int64
+
+
+3
+0    66590
+Name: output, dtype: int64
+0    66590
+Name: output, dtype: int64
+
+
+4
+0    22300
+Name: output, dtype: int64
+0    22300
+Name: output, dtype: int64
+
+
+5
+0    73822
+1    43382
+Name: output, dtype: int64
+0    73822
+1    43382
+Name: output, dtype: int64
+
+
+6
+0    18076
+1    11994
+Name: output, dtype: int64
+0    18076
+1    11994
+Name: output, dtype: int64
+
+
+7
+0    49406
+1    23571
+Name: output, dtype: int64
+0    49406
+1    23571
+Name: output, dtype: int64
+
+
+8
+0    56164
+1    14884
+Name: output, dtype: int64
+0    56164
+1    14884
+Name: output, dtype: int64
+
+
+9
+0    21417
+1     5997
+Name: output, dtype: int64
+0    21417
+1     5997
+Name: output, dtype: int64
+
+
+10
+0    54267
+1    51717
+2     6180
+Name: output, dtype: int64
+0    54267
+1    51717
+2     6180
+Name: output, dtype: int64
+
+
+11
+1    14073
+0    11199
+2     2293
+Name: output, dtype: int64
+1    14073
+0    11199
+2     2293
+Name: output, dtype: int64
+
+
+12
+0    59191
+1    40464
+2     5164
+Name: output, dtype: int64
+0    59191
+1    40464
+2     5164
+Name: output, dtype: int64
+
+
+13
+0    29952
+1    11138
+2     1633
+Name: output, dtype: int64
+0    29952
+1    11138
+2     1633
+Name: output, dtype: int64
+
+
+14
+0    32175
+1    14486
+2     1462
+Name: output, dtype: int64
+0    32175
+1    14486
+2     1462
+Name: output, dtype: int64
+
+
+15
+0    53461
+1    41137
+2    10150
+3     1946
+Name: output, dtype: int64
+0    53461
+1    41137
+2    10150
+3     1946
+Name: output, dtype: int64
+
+
+16
+1    13877
+0    12443
+2     3067
+3      524
+Name: output, dtype: int64
+1    13877
+0    12443
+2     3067
+3      524
+Name: output, dtype: int64
+
+
+17
+0    60199
+1    37308
+2     6808
+3      763
+Name: output, dtype: int64
+0    60199
+1    37308
+2     6808
+3      763
+Name: output, dtype: int64
+
+
+18
+0    19970
+1     9904
+2     1845
+3      728
+Name: output, dtype: int64
+0    19970
+1     9904
+2     1845
+3      728
+Name: output, dtype: int64
+
+
+19
+0    48421
+1    33617
+2    23262
+3     3934
+4      586
+Name: output, dtype: int64
+0    48421
+1    33617
+2    23262
+3     3934
+4      586
+Name: output, dtype: int64
+
+
+20
+0    35200
+1    31440
+2    12659
+3     2925
+4      132
+Name: output, dtype: int64
+0    35200
+1    31440
+2    12659
+3     2925
+4      132
+Name: output, dtype: int64
+
+
+21
+0    19310
+1    15330
+2     5016
+3     1569
+4      110
+Name: output, dtype: int64
+0    19310
+1    15330
+2     5016
+3     1569
+4      110
+Name: output, dtype: int64
+
+
+22
+0    54563
+1    36791
+2    10508
+3     1784
+4      327
+Name: output, dtype: int64
+0    54563
+1    36791
+2    10508
+3     1784
+4      327
+Name: output, dtype: int64
+
+
+23
+0    16651
+1    12095
+2     3047
+3      577
+4      107
+Name: output, dtype: int64
+0    16651
+1    12095
+2     3047
+3      577
+4      107
+Name: output, dtype: int64
+
+
+24
+0    53311
+1    35211
+2    29213
+3     7943
+4     1105
+5       61
+Name: output, dtype: int64
+0    53311
+1    35211
+2    29213
+3     7943
+4     1105
+5       61
+Name: output, dtype: int64
+
+
+25
+0    19165
+1    17038
+2    11554
+3     3434
+4      199
+Name: output, dtype: int64
+0    19165
+1    17038
+2    11554
+3     3434
+4      199
+Name: output, dtype: int64
+
+
+26
+0    27133
+1    21967
+2    10440
+3     2599
+4      472
+Name: output, dtype: int64
+0    27133
+1    21967
+2    10440
+3     2599
+4      472
+Name: output, dtype: int64
+
+
+27
+0    37196
+1    27178
+2    16595
+3     3877
+4      218
+Name: output, dtype: int64
+0    37196
+1    27178
+2    16595
+3     3877
+4      218
+Name: output, dtype: int64
+
+
+28
+0    13455
+1     9328
+2     4853
+3      986
+4      111
+Name: output, dtype: int64
+0    13455
+1     9328
+2     4853
+3      986
+4      111
+Name: output, dtype: int64
+
+
+29
+0    44105
+1    21493
+2    14085
+3     1379
+4      275
+Name: output, dtype: int64
+0    44105
+1    21493
+2    14085
+3     1379
+4      275
+Name: output, dtype: int64
+
+
+30
+0    15507
+1     6075
+2     4298
+3      488
+Name: output, dtype: int64
+0    15507
+1     6075
+2     4298
+3      488
+Name: output, dtype: int64
+
+
+31
+0    34056
+1    19797
+2     6531
+3      579
+Name: output, dtype: int64
+0    34056
+1    19797
+2     6531
+3      579
+Name: output, dtype: int64
+
+
+32
+0    27688
+1    12789
+2     4364
+3      271
+Name: output, dtype: int64
+0    27688
+1    12789
+2     4364
+3      271
+Name: output, dtype: int64
+
+
+33
+0    14148
+1     6791
+2     1500
+3       90
+Name: output, dtype: int64
+0    14148
+1     6791
+2     1500
+3       90
+Name: output, dtype: int64
+
+
+34
+0    30778
+1    16025
+2     2993
+3       68
+Name: output, dtype: int64
+0    30778
+1    16025
+2     2993
+3       68
+Name: output, dtype: int64
+
+
+35
+0    10024
+1     3295
+2      687
+Name: output, dtype: int64
+0    10024
+1     3295
+2      687
+Name: output, dtype: int64
+
+
+36
+0    30066
+1     9890
+2     1184
+Name: output, dtype: int64
+0    30066
+1     9890
+2     1184
+Name: output, dtype: int64
+
+
+37
+0    12750
+1     3287
+2      252
+Name: output, dtype: int64
+0    12750
+1     3287
+2      252
+Name: output, dtype: int64
+
+
+38
+0    14564
+1     2931
+2      222
+Name: output, dtype: int64
+0    14564
+1     2931
+2      222
+Name: output, dtype: int64
+
+
+39
+0    21363
+1     3056
+2      142
+Name: output, dtype: int64
+0    21363
+1     3056
+2      142
+Name: output, dtype: int64
+
+
+40
+0    5926
+1     829
+Name: output, dtype: int64
+0    5926
+1     829
+Name: output, dtype: int64
+
+
+41
+0    14951
+1     1222
+Name: output, dtype: int64
+0    14951
+1     1222
+Name: output, dtype: int64
+
+
+42
+0    4457
+1     267
+Name: output, dtype: int64
+0    4457
+1     267
+Name: output, dtype: int64
+
+
+43
+0    8218
+1     527
+Name: output, dtype: int64
+0    8218
+1     527
+Name: output, dtype: int64
+
+
+44
+0    5693
+Name: output, dtype: int64
+0    5693
+Name: output, dtype: int64
+
+
+45
+0    2436
+Name: output, dtype: int64
+0    2436
+Name: output, dtype: int64
+
+
+46
+0    4698
+Name: output, dtype: int64
+0    4698
+Name: output, dtype: int64
+
+
+47
+0    907
+Name: output, dtype: int64
+0    907
+Name: output, dtype: int64
+
+
+48
+0    1792
+Name: output, dtype: int64
+0    1792
+Name: output, dtype: int64

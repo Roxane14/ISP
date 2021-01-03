@@ -69,6 +69,7 @@ print(noteIDs_midi)
 #########
 # PREDICTING
 # We initialize first seq to lowest note (no fingers needed)
+# seq = [ sf2id[(1,0)] , sf2id[(4,7)], sf2id[(6,5)], sf2id[(5,8)], sf2id[(5,5)], sf2id[(4,7)],sf2id[(3,7)]]
 seq = [ sf2id[(1,0)] for i in range(seqLength)]
 output_sfs = [] #list of string frets predicted
 for i in range(len(noteIDs_midi)):

@@ -15,16 +15,19 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 import pandas as pd
 
+import keras
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation, Embedding
 from tensorflow.keras.layers import LSTM, GRU
 from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.utils import to_categorical
 
+from keras.models import model_from_json
+
 
 # Plot the training and validation loss + accuracy
 def plot_training(history):
-    outdir = "../outputresources/trainingrnn1/"
+    outdir = "../outputresources/trainingrnn2/"
     matplotlib.use('Agg')
 
     #Accuracy plot
@@ -62,7 +65,7 @@ inputsSeq=[None for i in range(nbOfNote)]
 outputsSeq=[None for i in range(nbOfNote)]
 inputsSeq_test=[None for i in range(nbOfNote)]
 outputsSeq_test=[None for i in range(nbOfNote)]
-csvDir = "../outputresources/csvs_no_outliers2/"
+csvDir = "../outputresources/csvs_no_outliers2DATAFIX/"
 nbPossiblePosPerNote = [None for i in range (nbOfNote)]
 
 # load input and output sequences
@@ -85,6 +88,7 @@ for i in range(nbOfNote):
             # the main position will be attributed for each position to predict
             if nbPossiblePosPerNote[i] <= 1:
                 dummies.append(i)
+            print(f"nb different output for {i} is {nbPossiblePosPerNote[i]}")
         else:
             print(f"No positions for {i}")
             nbPossiblePosPerNote[i] = 0
@@ -119,7 +123,7 @@ for i in range(nbOfNote):
 
 # Load full sequence of all songs
 globseqIds = []
-with open("../outputresources/globseqIds.txt", 'r') as f:
+with open("../outputresources/globseqIdsDATAFIX.txt", 'r') as f:
     lines = f.readlines()
     for l in lines:
         ids = [int(x) for x in l.split()]
@@ -140,7 +144,7 @@ models = [None for i in range(nbOfNote)]
 
 ##########
 # Training models
-bsize = 8
+bsize = 64
 epoch_it = 10
 
 for i in range(nbOfNote):
@@ -187,7 +191,8 @@ for i in range(nbOfNote):
         # learning_rate = 0.01
         # optimizer = SGD(lr=learning_rate, momentum=0.95)
         # model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics=['accuracy'])
-        model.compile(loss='categorical_crossentropy', optimizer="adam", metrics=["accuracy"])
+        opt = keras.optimizers.Adam(learning_rate=0.001)
+        model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=["accuracy"])
 
         ##########
         # trianing
@@ -224,6 +229,17 @@ for i in range(nbOfNote):
         # print(disp.confusion_matrix)
 
         models[i] = model
+
+        #############
+        # SAVING model
+        
+        # Saving model and weights
+        model_json = model.to_json()
+        with open(f'../outputresources/modelsLSTMlr001epoch20bs16/model{i}.json', 'w') as json_file:
+                json_file.write(model_json)
+        weights_file = f"../outputresources/modelsLSTMlr001epoch20bs16/weights{i}.hdf5" #f"../outputresources/modelsSVMs_fromCsvs_no_outliers2/{i}.joblib"
+        model.save_weights(weights_file,overwrite=True)
+
 
 
 #############

@@ -11,7 +11,7 @@ import numpy as np
 from preprocess import extractTuples
 from FretToPitch import getAssociatedNote
 
-folder = "D:\\Documents\\Ensim\\S9b\\ISP\\git_isp\\ISP\\Tab\\onlytab\\"
+folder = "../Tab/onlytab/"
 
 files = os.listdir(folder)
 
@@ -23,13 +23,21 @@ for fret in range(0,23+1):
     list_notes.append(str(getAssociatedNote(1,fret)))
 for fret in range(0,24+1):
     list_notes.append(str(getAssociatedNote(6,fret)))
+
+print(len(list_notes))
+print(list_notes)
     
 
 for name_file in files:
+    tuples = None
+    try:
+        file = open(folder + name_file)
+        tuples = extractTuples(file)
+    except:
+        print(f"Error found in {name_file} while extracting tuples")
+        continue
+
     print(name_file)
-    
-    file = open(folder + name_file)
-    tuples = extractTuples(file)
     
     for tpl in tuples:
         note = str(getAssociatedNote(tpl[0], tpl[1]))

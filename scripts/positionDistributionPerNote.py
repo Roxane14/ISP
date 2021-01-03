@@ -73,7 +73,7 @@ for f in glob.glob(trainDir+"*.tab"):
             stringFretList = extractTuples(ftab)
         except:
             print(f"Error found in {f} while extracting tuples")
-            break
+            continue
         nbNote = len(stringFretList)
         for i in range(nbNote):
             [st,fr] = stringFretList[i]
@@ -113,7 +113,7 @@ from collections import Counter
 for nID in range(nbOfNote):
     nboccur = Counter(outputsSeq[nID])
     plt.bar(nboccur.keys(), nboccur.values())
-    plt.savefig(f"../outputresources/posdistrib/{nID}_{id2notename[nID]}posDistrib.png", dpi=300)
+    plt.savefig(f"../outputresources/posdistribDATAFIX/{nID}_{id2notename[nID]}posDistrib.png", dpi=300)
     plt.close()
 
 ###########

@@ -76,7 +76,7 @@ for f in glob.glob(trainDir+"*.tab"):
             stringFretList = extractTuples(ftab)
         except:
             print(f"Error found in {f} while extracting tuples")
-            break
+            continue
         for i in range(len(stringFretList)):
             [st,fr] = stringFretList[i]
             noteName = str(getAssociatedNote(st, fr))
@@ -111,7 +111,7 @@ dump(possiblePosPerNote, "possiblePosPerNote.joblib")
 
 print(f"{len(allNotePosSet)=}")
 
-with open("../outputresources/globseqIds.txt", "w") as f:
+with open("../outputresources/globseqIdsDATAFIX.txt", "w") as f:
     for item in globSeqIds:
         f.write(f"{item} ")
 
@@ -145,8 +145,8 @@ for nID in range(nbOfNote):
             df['count'] = df.groupby('output')['output'].transform('count')
             df.drop(df.loc[df['count']<=10].index, inplace=True)
             print(df['output'].value_counts())
-            del df['count']
-        df.to_csv(f"../outputresources/csvs_no_outliers2/{nID}.csv")
+            del df['count'] 
+        df.to_csv(f"../outputresources/csvs_no_outliers2DATAFIX/{nID}.csv")
 
 
 ###########
