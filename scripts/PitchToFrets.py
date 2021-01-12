@@ -17,4 +17,4 @@ def getPossibleTuples(note):
 
 
 if __name__ == "__main__":
-    print("As a test, G4 --> "+str(getPossibleTuples("G4")))
+    print("As a test, G4 --> "+str(getPossibleTuples("G2")))
