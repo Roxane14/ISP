@@ -63,7 +63,8 @@ def getTabFromFile(file):
 
 if __name__ == "__main__":
     # Testing the function
-    getTabFromFile("anyname")
+    input_file = "../Tab/Example_Tab/example_1.mid"
+    getTabFromFile(input_file)
     
     
     
