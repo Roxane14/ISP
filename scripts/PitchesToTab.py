@@ -17,10 +17,11 @@ def use_rnns(file):
     tuples = []
     
     pitches = converter.parse(file).pitches
+    
     for pitch in pitches:
         t = getPossibleTuples(str(pitch))
         if(len(t)>0):
-            tuples.append([0])
+            tuples.append(t[0])
     
     
     return tuples
