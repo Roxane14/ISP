@@ -13,6 +13,9 @@ from preprocess import extractTuples
 from sklearn import svm
 from joblib import dump, load
 
+from keras.models import model_from_json, load_model
+# from tensorflow import keras
+import json
 """
 Objective of this script is to take models that have been saved after training
 in order to:
@@ -23,8 +26,7 @@ in order to:
 
 """
 nbOfNote = 49
-models_dir = "../outputresources/modelsSVMs_fromCsvs_no_outliers2/"
-input_file = "../Tab/testing/ledzepSolo.mid"
+
 dummies=[]
 seqLength = 7
 
@@ -42,61 +44,116 @@ sf2id = load("sf2idcsvs_no_outliers2.joblib")
 
 possiblePosPerNote = load("possiblePosPerNote.joblib")
 
-##########
-# LOAD models
-models = [None for i in range(nbOfNote)]
-for i in range(nbOfNote):
-    try:
-        models[i] = load(f"{models_dir}{i}.joblib")
-    except Exception as e:
-        print(e)
-        models[i] = None
-        dummies.append(i)
-print(dummies)
+def use_rnns(input_file, models_dir):
+    models = [None for i in range(nbOfNote)]
+    for i in range(nbOfNote):
+        try:
+            model = load_model(f'../outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/model{i}')
+            # model = model_from_json(models_dir+f"model{i}.json")
+            # json_file = open(models_dir+f"model{i}.json", 'r')
+            # architecture = json.load(json_file)
+            # model = model_from_json(json.dumps(architecture)) 
+            # model = model_from_json(architecture)
+            # model = model.load_weights(models_dir+f'weights{i}.hdf5')
+            models[i] = model
+        except Exception as e:
+            print("error while loading model",e)
+            models[i] = None
+            dummies.append(i)
+    print(dummies)
+    
+    # READING Input file
+    noteIDs_midi = []
+    midi = converter.parse(input_file)
+    s = instrument.partitionByInstrument(midi)
+    notes_to_parse = s.recurse() 
+    for element in notes_to_parse:
+        if isinstance(element, note.Note):
+            noteIDs_midi.append(notename2id[element.nameWithOctave])
 
-################
-# READING Input file
-noteIDs_midi = []
-midi = converter.parse(input_file)
-s = instrument.partitionByInstrument(midi)
-notes_to_parse = s.recurse() 
-for element in notes_to_parse:
-    if isinstance(element, note.Note):
-        noteIDs_midi.append(notename2id[element.nameWithOctave])
+    #########
+    # PREDICTING
+    # We initialize first seq to lowest note (no fingers needed)
+    # seq = [ sf2id[(1,0)] , sf2id[(4,7)], sf2id[(6,5)], sf2id[(5,8)], sf2id[(5,5)], sf2id[(4,7)],sf2id[(3,7)]]
+    seq = [ sf2id[(1,0)] for i in range(seqLength)]
+    output_sfs = [] #list of string frets predicted
+    for i in range(len(noteIDs_midi)):
+        nID = noteIDs_midi[i]
+        # If there is no model attached or solution is trivial
+        if nID in dummies:
+            # "predict" the usual assiciated pos
+            # TODO: dictionnary for each dummy note id => gives usual position
+            predicted_sf = tuple(possiblePosPerNote[nID][0])
+        else:
+            seq_shaped = np.reshape(seq, (1, seqLength, 1))
+            predicted_pos_probs = models[nID].predict(seq_shaped)
+            predicted_pos = np.argmax(predicted_pos_probs)
+            print(predicted_pos)
+            predicted_sf = tuple(tuple2sf[(nID, predicted_pos)])
+        output_sfs.append(predicted_sf)
+        # then we have to update sliding window
+        # print(i)
+        # print(nID)
+        # print(possiblePosPerNote[nID][0])
+        # print(predicted_sf)
+        # print(sf2id[predicted_sf])
 
-print(noteIDs_midi)
+        seq = seq[1:]+[sf2id[predicted_sf]]
+    return output_sfs
 
-#########
-# PREDICTING
-# We initialize first seq to lowest note (no fingers needed)
-# seq = [ sf2id[(1,0)] , sf2id[(4,7)], sf2id[(6,5)], sf2id[(5,8)], sf2id[(5,5)], sf2id[(4,7)],sf2id[(3,7)]]
-seq = [ sf2id[(1,0)] for i in range(seqLength)]
-output_sfs = [] #list of string frets predicted
-for i in range(len(noteIDs_midi)):
-    print()
-    nID = noteIDs_midi[i]
-    # If there is no model attached or solution is trivial
-    if nID in dummies:
-        # "predict" the usual assiciated pos
-        # TODO: dictionnary for each dummy note id => gives usual position
-        predicted_sf = tuple(possiblePosPerNote[nID][0])
-    else:
-        print(f"we predict with model {nID}")
-        predicted_pos = models[nID].predict(np.array(seq).reshape(1,-1))
-        predicted_sf = tuple(tuple2sf[(nID, predicted_pos[0])])
-    output_sfs.append(predicted_sf)
-    # then we have to update sliding window
-    print(i)
-    print(nID)
-    print(possiblePosPerNote[nID][0])
-    print(predicted_sf)
-    print(sf2id[predicted_sf])
+def use_svms(input_file, models_dir):
+    ##########
+    # LOAD models
+    models = [None for i in range(nbOfNote)]
+    for i in range(nbOfNote):
+        try:
+            models[i] = load(f"{models_dir}{i}.joblib")
+        except Exception as e:
+            print(e)
+            models[i] = None
+            dummies.append(i)
+    ################
+    # READING Input file
+    noteIDs_midi = []
+    midi = converter.parse(input_file)
+    s = instrument.partitionByInstrument(midi)
+    notes_to_parse = s.recurse() 
+    for element in notes_to_parse:
+        if isinstance(element, note.Note):
+            noteIDs_midi.append(notename2id[element.nameWithOctave])
 
-    print(seq)
-    seq = seq[1:]+[sf2id[predicted_sf]]
-    print(seq)
+    #########
+    # PREDICTING
+    # We initialize first seq to lowest note (no fingers needed)
+    # seq = [ sf2id[(1,0)] , sf2id[(4,7)], sf2id[(6,5)], sf2id[(5,8)], sf2id[(5,5)], sf2id[(4,7)],sf2id[(3,7)]]
+    seq = [ sf2id[(1,0)] for i in range(seqLength)]
+    output_sfs = [] #list of string frets predicted
+    for i in range(len(noteIDs_midi)):
+        print()
+        nID = noteIDs_midi[i]
+        # If there is no model attached or solution is trivial
+        if nID in dummies:
+            # "predict" the usual assiciated pos
+            # TODO: dictionnary for each dummy note id => gives usual position
+            predicted_sf = tuple(possiblePosPerNote[nID][0])
+        else:
+            print(f"we predict with model {nID}")
+            predicted_pos = models[nID].predict(np.array(seq).reshape(1,-1))
+            predicted_sf = tuple(tuple2sf[(nID, predicted_pos[0])])
+        output_sfs.append(predicted_sf)
+        # then we have to update sliding window
+        # print(i)
+        # print(nID)
+        # print(possiblePosPerNote[nID][0])
+        # print(predicted_sf)
+        # print(sf2id[predicted_sf])
+
+        seq = seq[1:]+[sf2id[predicted_sf]]
+    return output_sfs
 
 
-print(output_sfs)
-
-
+if __name__=='__main__':
+    models_dir = "../outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/"#modelsSVMs_fromCsvs_no_outliersDATAFIX2/" #modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata/"
+    input_file = "../Tab/testing/ledzepSolo.mid"
+    translation = use_rnns(input_file, models_dir)
+    print(translation)

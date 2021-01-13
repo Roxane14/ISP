@@ -111,7 +111,7 @@ dump(possiblePosPerNote, "possiblePosPerNote.joblib")
 
 print(f"{len(allNotePosSet)=}")
 
-with open("../outputresources/globseqIdsDATAFIX.txt", "w") as f:
+with open("../outputresources/globseqIdsDATAFIX200MIN.txt", "w") as f:
     for item in globSeqIds:
         f.write(f"{item} ")
 
@@ -128,6 +128,7 @@ for i in range(len(globSeq)-seqLength - 1 ): # last note is part of the answers
     outputsSeq[noteToPredictId].append(posToPredict)
 
 remove_outlier = True
+nbMinPosPlayed = 200
 
 for nID in range(nbOfNote):
     df = pd.DataFrame(np.matrix(inputsSeq[nID]))
@@ -143,10 +144,10 @@ for nID in range(nbOfNote):
             print(f"\n\n{nID}")
             print(df['output'].value_counts())
             df['count'] = df.groupby('output')['output'].transform('count')
-            df.drop(df.loc[df['count']<=10].index, inplace=True)
+            df.drop(df.loc[df['count']<=nbMinPosPlayed].index, inplace=True)
             print(df['output'].value_counts())
             del df['count'] 
-        df.to_csv(f"../outputresources/csvs_no_outliers2DATAFIX/{nID}.csv")
+        df.to_csv(f"../outputresources/csvs_no_outliers2DATAFIX200MIN/{nID}.csv")
 
 
 ###########

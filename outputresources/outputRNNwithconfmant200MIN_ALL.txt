@@ -1,0 +1,3275 @@
+
+nb different output for 5 is 2
+nb different output for 6 is 2
+nb different output for 7 is 2
+nb different output for 8 is 2
+nb different output for 9 is 2
+nb different output for 10 is 3
+nb different output for 11 is 3
+nb different output for 12 is 3
+nb different output for 13 is 3
+nb different output for 14 is 3
+nb different output for 15 is 4
+nb different output for 16 is 4
+nb different output for 17 is 4
+nb different output for 18 is 4
+nb different output for 19 is 5
+nb different output for 20 is 4
+nb different output for 21 is 4
+nb different output for 22 is 5
+nb different output for 23 is 4
+nb different output for 24 is 5
+nb different output for 25 is 4
+nb different output for 26 is 5
+nb different output for 27 is 5
+nb different output for 28 is 4
+nb different output for 29 is 5
+nb different output for 30 is 4
+nb different output for 31 is 4
+nb different output for 32 is 4
+nb different output for 33 is 3
+nb different output for 34 is 3
+nb different output for 35 is 3
+nb different output for 36 is 3
+nb different output for 37 is 3
+nb different output for 38 is 3
+nb different output for 39 is 2
+nb different output for 40 is 2
+nb different output for 41 is 2
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+For 5 nbtrain = 93762, nbtest = 23442
+For 6 nbtrain = 24055, nbtest = 6015
+For 7 nbtrain = 58380, nbtest = 14597
+For 8 nbtrain = 56838, nbtest = 14210
+For 9 nbtrain = 21930, nbtest = 5484
+For 10 nbtrain = 89730, nbtest = 22434
+For 11 nbtrain = 22051, nbtest = 5514
+For 12 nbtrain = 83854, nbtest = 20965
+For 13 nbtrain = 34177, nbtest = 8546
+For 14 nbtrain = 38497, nbtest = 9626
+For 15 nbtrain = 85353, nbtest = 21341
+For 16 nbtrain = 23927, nbtest = 5984
+For 17 nbtrain = 84061, nbtest = 21017
+For 18 nbtrain = 25957, nbtest = 6490
+For 19 nbtrain = 87853, nbtest = 21967
+For 20 nbtrain = 65779, nbtest = 16445
+For 21 nbtrain = 32979, nbtest = 8246
+For 22 nbtrain = 83176, nbtest = 20797
+For 23 nbtrain = 25894, nbtest = 6476
+For 24 nbtrain = 101424, nbtest = 25359
+For 25 nbtrain = 40952, nbtest = 10239
+For 26 nbtrain = 50087, nbtest = 12524
+For 27 nbtrain = 68049, nbtest = 17015
+For 28 nbtrain = 22896, nbtest = 5726
+For 29 nbtrain = 65069, nbtest = 16268
+For 30 nbtrain = 21093, nbtest = 5275
+For 31 nbtrain = 48768, nbtest = 12195
+For 32 nbtrain = 36088, nbtest = 9024
+For 33 nbtrain = 17950, nbtest = 4489
+For 34 nbtrain = 39836, nbtest = 9960
+For 35 nbtrain = 11204, nbtest = 2802
+For 36 nbtrain = 32911, nbtest = 8229
+For 37 nbtrain = 13030, nbtest = 3259
+For 38 nbtrain = 14172, nbtest = 3545
+For 39 nbtrain = 19534, nbtest = 4885
+For 40 nbtrain = 5403, nbtest = 1352
+For 41 nbtrain = 12937, nbtest = 3236
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+Dummy note
+trainingshape 5
+(93762, 7)
+(93762, 7, 1)
+testingshape 5
+(23442, 7)
+(23442, 7, 1)
+nb occurences
+Counter({0: 59057, 1: 34705})
+weights={0: 1.5876526068035963, 1: 2.7016856360754935}
+2021-01-12 18:37:16.790836: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-01-12 18:37:16.791781: W tensorflow/stream_executor/cuda/cuda_driver.cc:312] failed call to cuInit: UNKNOWN ERROR (303)
+2021-01-12 18:37:16.792676: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (LAPTOP-2L5S26NL): /proc/driver/nvidia/version does not exist
+2021-01-12 18:37:16.794243: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-01-12 18:37:16.812480: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2100000000 Hz
+2021-01-12 18:37:16.816280: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x63a4d30 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-01-12 18:37:16.817197: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru (GRU)                    (None, 7, 8)              264
+_________________________________________________________________
+gru_1 (GRU)                  (None, 8)                 432
+_________________________________________________________________
+dense (Dense)                (None, 2)                 18
+_________________________________________________________________
+activation (Activation)      (None, 2)                 0
+=================================================================
+Total params: 714
+Trainable params: 714
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+367/367 [==============================] - 5s 13ms/step - loss: 1.0129 - accuracy: 0.7923
+Epoch 2/20
+367/367 [==============================] - 4s 11ms/step - loss: 0.8803 - accuracy: 0.8218
+Epoch 3/20
+367/367 [==============================] - 5s 14ms/step - loss: 0.8153 - accuracy: 0.8437
+Epoch 4/20
+367/367 [==============================] - 5s 15ms/step - loss: 0.7757 - accuracy: 0.8528
+Epoch 5/20
+367/367 [==============================] - 5s 14ms/step - loss: 0.7657 - accuracy: 0.8559
+Epoch 6/20
+367/367 [==============================] - 5s 14ms/step - loss: 0.7575 - accuracy: 0.8570
+Epoch 7/20
+367/367 [==============================] - 5s 15ms/step - loss: 0.7529 - accuracy: 0.8597
+Epoch 8/20
+367/367 [==============================] - 5s 14ms/step - loss: 0.7484 - accuracy: 0.8610
+Epoch 9/20
+367/367 [==============================] - 3s 9ms/step - loss: 0.7447 - accuracy: 0.8620
+Epoch 10/20
+367/367 [==============================] - 3s 9ms/step - loss: 0.7421 - accuracy: 0.8632
+Epoch 11/20
+367/367 [==============================] - 5s 15ms/step - loss: 0.7395 - accuracy: 0.8643
+Epoch 12/20
+367/367 [==============================] - 4s 11ms/step - loss: 0.7364 - accuracy: 0.8650
+Epoch 13/20
+367/367 [==============================] - 5s 15ms/step - loss: 0.7353 - accuracy: 0.8649
+Epoch 14/20
+367/367 [==============================] - 5s 15ms/step - loss: 0.7335 - accuracy: 0.8645
+Epoch 15/20
+367/367 [==============================] - 5s 14ms/step - loss: 0.7322 - accuracy: 0.8658
+Epoch 16/20
+367/367 [==============================] - 5s 14ms/step - loss: 0.7304 - accuracy: 0.8663
+Epoch 17/20
+367/367 [==============================] - 5s 14ms/step - loss: 0.7294 - accuracy: 0.8671
+Epoch 18/20
+367/367 [==============================] - 5s 14ms/step - loss: 0.7277 - accuracy: 0.8669
+Epoch 19/20
+367/367 [==============================] - 5s 14ms/step - loss: 0.7269 - accuracy: 0.8666
+Epoch 20/20
+367/367 [==============================] - 5s 15ms/step - loss: 0.7262 - accuracy: 0.8678
+92/92 [==============================] - 0s 4ms/step - loss: 0.3426 - accuracy: 0.8680
+
+
+For 5: Test ACC=[0.3425888419151306, 0.8680146932601929]
+Confusion Matrix
+[[13598  1167]
+ [ 1927  6750]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.88      0.92      0.90     14765
+           1       0.85      0.78      0.81      8677
+
+    accuracy                           0.87     23442
+   macro avg       0.86      0.85      0.86     23442
+weighted avg       0.87      0.87      0.87     23442
+
+trainingshape 6
+(24055, 7)
+(24055, 7, 1)
+testingshape 6
+(6015, 7)
+(6015, 7, 1)
+nb occurences
+Counter({0: 14460, 1: 9595})
+weights={0: 1.6635546334716458, 1: 2.5070349140177175}
+Model: "sequential_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_2 (GRU)                  (None, 7, 8)              264
+_________________________________________________________________
+gru_3 (GRU)                  (None, 8)                 432
+_________________________________________________________________
+dense_1 (Dense)              (None, 2)                 18
+_________________________________________________________________
+activation_1 (Activation)    (None, 2)                 0
+=================================================================
+Total params: 714
+Trainable params: 714
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+94/94 [==============================] - 2s 17ms/step - loss: 1.3977 - accuracy: 0.5527
+Epoch 2/20
+94/94 [==============================] - 1s 7ms/step - loss: 1.2476 - accuracy: 0.6861
+Epoch 3/20
+94/94 [==============================] - 1s 10ms/step - loss: 1.1692 - accuracy: 0.7175
+Epoch 4/20
+94/94 [==============================] - 1s 11ms/step - loss: 1.1234 - accuracy: 0.7321
+Epoch 5/20
+94/94 [==============================] - 1s 13ms/step - loss: 1.0999 - accuracy: 0.7379
+Epoch 6/20
+94/94 [==============================] - 1s 11ms/step - loss: 1.0864 - accuracy: 0.7408
+Epoch 7/20
+94/94 [==============================] - 1s 7ms/step - loss: 1.0736 - accuracy: 0.7471
+Epoch 8/20
+94/94 [==============================] - 1s 7ms/step - loss: 1.0681 - accuracy: 0.7482
+Epoch 9/20
+94/94 [==============================] - 1s 8ms/step - loss: 1.0622 - accuracy: 0.7492
+Epoch 10/20
+94/94 [==============================] - 1s 15ms/step - loss: 1.0548 - accuracy: 0.7533
+Epoch 11/20
+94/94 [==============================] - 1s 13ms/step - loss: 1.0489 - accuracy: 0.7574
+Epoch 12/20
+94/94 [==============================] - 1s 9ms/step - loss: 1.0448 - accuracy: 0.7605
+Epoch 13/20
+94/94 [==============================] - 1s 14ms/step - loss: 1.0387 - accuracy: 0.7657
+Epoch 14/20
+94/94 [==============================] - 1s 14ms/step - loss: 1.0371 - accuracy: 0.7651
+Epoch 15/20
+94/94 [==============================] - 2s 17ms/step - loss: 1.0284 - accuracy: 0.7673
+Epoch 16/20
+94/94 [==============================] - 1s 14ms/step - loss: 1.0250 - accuracy: 0.7695
+Epoch 17/20
+94/94 [==============================] - 1s 14ms/step - loss: 1.0225 - accuracy: 0.7741
+Epoch 18/20
+94/94 [==============================] - 1s 15ms/step - loss: 1.0208 - accuracy: 0.7727
+Epoch 19/20
+94/94 [==============================] - 1s 15ms/step - loss: 1.0182 - accuracy: 0.7757
+Epoch 20/20
+94/94 [==============================] - 1s 14ms/step - loss: 1.0128 - accuracy: 0.7762
+24/24 [==============================] - 0s 4ms/step - loss: 0.4972 - accuracy: 0.7890
+
+
+For 6: Test ACC=[0.49718427658081055, 0.7890274524688721]
+Confusion Matrix
+[[2786  830]
+ [ 439 1960]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.86      0.77      0.81      3616
+           1       0.70      0.82      0.76      2399
+
+    accuracy                           0.79      6015
+   macro avg       0.78      0.79      0.78      6015
+weighted avg       0.80      0.79      0.79      6015
+
+trainingshape 7
+(58380, 7)
+(58380, 7, 1)
+testingshape 7
+(14597, 7)
+(14597, 7, 1)
+nb occurences
+Counter({0: 39524, 1: 18856})
+weights={0: 1.4770772189049692, 1: 3.0960967331353415}
+Model: "sequential_2"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_4 (GRU)                  (None, 7, 8)              264
+_________________________________________________________________
+gru_5 (GRU)                  (None, 8)                 432
+_________________________________________________________________
+dense_2 (Dense)              (None, 2)                 18
+_________________________________________________________________
+activation_2 (Activation)    (None, 2)                 0
+=================================================================
+Total params: 714
+Trainable params: 714
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+229/229 [==============================] - 3s 15ms/step - loss: 1.1604 - accuracy: 0.7351
+Epoch 2/20
+229/229 [==============================] - 3s 14ms/step - loss: 0.9323 - accuracy: 0.8100
+Epoch 3/20
+229/229 [==============================] - 3s 13ms/step - loss: 0.8206 - accuracy: 0.8514
+Epoch 4/20
+229/229 [==============================] - 3s 14ms/step - loss: 0.7884 - accuracy: 0.8630
+Epoch 5/20
+229/229 [==============================] - 2s 9ms/step - loss: 0.7765 - accuracy: 0.8651
+Epoch 6/20
+229/229 [==============================] - 3s 14ms/step - loss: 0.7679 - accuracy: 0.8680
+Epoch 7/20
+229/229 [==============================] - 3s 14ms/step - loss: 0.7607 - accuracy: 0.8690
+Epoch 8/20
+229/229 [==============================] - 3s 14ms/step - loss: 0.7557 - accuracy: 0.8694
+Epoch 9/20
+229/229 [==============================] - 3s 15ms/step - loss: 0.7523 - accuracy: 0.8694
+Epoch 10/20
+229/229 [==============================] - 3s 14ms/step - loss: 0.7492 - accuracy: 0.8699
+Epoch 11/20
+229/229 [==============================] - 3s 15ms/step - loss: 0.7460 - accuracy: 0.8708
+Epoch 12/20
+229/229 [==============================] - 3s 14ms/step - loss: 0.7440 - accuracy: 0.8703
+Epoch 13/20
+229/229 [==============================] - 3s 14ms/step - loss: 0.7414 - accuracy: 0.8719
+Epoch 14/20
+229/229 [==============================] - 2s 10ms/step - loss: 0.7392 - accuracy: 0.8711
+Epoch 15/20
+229/229 [==============================] - 3s 12ms/step - loss: 0.7374 - accuracy: 0.8719
+Epoch 16/20
+229/229 [==============================] - 3s 14ms/step - loss: 0.7357 - accuracy: 0.8723
+Epoch 17/20
+229/229 [==============================] - 2s 10ms/step - loss: 0.7347 - accuracy: 0.8719
+Epoch 18/20
+229/229 [==============================] - 3s 11ms/step - loss: 0.7330 - accuracy: 0.8720
+Epoch 19/20
+229/229 [==============================] - 3s 15ms/step - loss: 0.7304 - accuracy: 0.8725
+Epoch 20/20
+229/229 [==============================] - 3s 13ms/step - loss: 0.7284 - accuracy: 0.8737
+58/58 [==============================] - 0s 5ms/step - loss: 0.3378 - accuracy: 0.8742
+
+
+For 7: Test ACC=[0.337759405374527, 0.8742207288742065]
+Confusion Matrix
+[[9156  726]
+ [1110 3605]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.89      0.93      0.91      9882
+           1       0.83      0.76      0.80      4715
+
+    accuracy                           0.87     14597
+   macro avg       0.86      0.85      0.85     14597
+weighted avg       0.87      0.87      0.87     14597
+
+trainingshape 8
+(56838, 7)
+(56838, 7, 1)
+testingshape 8
+(14210, 7)
+(14210, 7, 1)
+nb occurences
+Counter({0: 44931, 1: 11907})
+weights={0: 1.2650063430593577, 1: 4.773494583018392}
+Model: "sequential_3"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_6 (GRU)                  (None, 7, 8)              264
+_________________________________________________________________
+gru_7 (GRU)                  (None, 8)                 432
+_________________________________________________________________
+dense_3 (Dense)              (None, 2)                 18
+_________________________________________________________________
+activation_3 (Activation)    (None, 2)                 0
+=================================================================
+Total params: 714
+Trainable params: 714
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+223/223 [==============================] - 3s 14ms/step - loss: 1.2768 - accuracy: 0.5779
+Epoch 2/20
+223/223 [==============================] - 3s 12ms/step - loss: 0.9932 - accuracy: 0.7183
+Epoch 3/20
+223/223 [==============================] - 3s 13ms/step - loss: 0.8765 - accuracy: 0.7508
+Epoch 4/20
+223/223 [==============================] - 3s 13ms/step - loss: 0.8403 - accuracy: 0.7644
+Epoch 5/20
+223/223 [==============================] - 3s 12ms/step - loss: 0.8223 - accuracy: 0.7676
+Epoch 6/20
+223/223 [==============================] - 3s 12ms/step - loss: 0.8056 - accuracy: 0.7781
+Epoch 7/20
+223/223 [==============================] - 3s 13ms/step - loss: 0.7924 - accuracy: 0.7825
+Epoch 8/20
+223/223 [==============================] - 3s 15ms/step - loss: 0.7828 - accuracy: 0.7867
+Epoch 9/20
+223/223 [==============================] - 3s 14ms/step - loss: 0.7753 - accuracy: 0.7906
+Epoch 10/20
+223/223 [==============================] - 3s 15ms/step - loss: 0.7699 - accuracy: 0.7936
+Epoch 11/20
+223/223 [==============================] - 3s 15ms/step - loss: 0.7652 - accuracy: 0.7951
+Epoch 12/20
+223/223 [==============================] - 3s 14ms/step - loss: 0.7537 - accuracy: 0.8000
+Epoch 13/20
+223/223 [==============================] - 3s 15ms/step - loss: 0.7454 - accuracy: 0.8025
+Epoch 14/20
+223/223 [==============================] - 3s 15ms/step - loss: 0.7439 - accuracy: 0.8034
+Epoch 15/20
+223/223 [==============================] - 3s 14ms/step - loss: 0.7391 - accuracy: 0.8039
+Epoch 16/20
+223/223 [==============================] - 3s 15ms/step - loss: 0.7312 - accuracy: 0.8068
+Epoch 17/20
+223/223 [==============================] - 3s 15ms/step - loss: 0.7273 - accuracy: 0.8102
+Epoch 18/20
+223/223 [==============================] - 3s 16ms/step - loss: 0.7243 - accuracy: 0.8102
+Epoch 19/20
+223/223 [==============================] - 3s 12ms/step - loss: 0.7204 - accuracy: 0.8122
+Epoch 20/20
+223/223 [==============================] - 2s 8ms/step - loss: 0.7167 - accuracy: 0.8119
+56/56 [==============================] - 0s 5ms/step - loss: 0.3451 - accuracy: 0.8345
+
+
+For 8: Test ACC=[0.3450566530227661, 0.834482729434967]
+Confusion Matrix
+[[9384 1849]
+ [ 503 2474]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.95      0.84      0.89     11233
+           1       0.57      0.83      0.68      2977
+
+    accuracy                           0.83     14210
+   macro avg       0.76      0.83      0.78     14210
+weighted avg       0.87      0.83      0.84     14210
+
+trainingshape 9
+(21930, 7)
+(21930, 7, 1)
+testingshape 9
+(5484, 7)
+(5484, 7, 1)
+nb occurences
+Counter({0: 17133, 1: 4797})
+weights={0: 1.2799859919453687, 1: 4.571607254534084}
+Model: "sequential_4"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_8 (GRU)                  (None, 7, 8)              264
+_________________________________________________________________
+gru_9 (GRU)                  (None, 8)                 432
+_________________________________________________________________
+dense_4 (Dense)              (None, 2)                 18
+_________________________________________________________________
+activation_4 (Activation)    (None, 2)                 0
+=================================================================
+Total params: 714
+Trainable params: 714
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+86/86 [==============================] - 2s 18ms/step - loss: 1.3399 - accuracy: 0.5796
+Epoch 2/20
+86/86 [==============================] - 1s 17ms/step - loss: 1.0586 - accuracy: 0.7760
+Epoch 3/20
+86/86 [==============================] - 1s 14ms/step - loss: 0.9059 - accuracy: 0.8016
+Epoch 4/20
+86/86 [==============================] - 1s 15ms/step - loss: 0.8657 - accuracy: 0.8177
+Epoch 5/20
+86/86 [==============================] - 1s 15ms/step - loss: 0.8364 - accuracy: 0.8274
+Epoch 6/20
+86/86 [==============================] - 1s 17ms/step - loss: 0.8141 - accuracy: 0.8389
+Epoch 7/20
+86/86 [==============================] - 1s 12ms/step - loss: 0.7967 - accuracy: 0.8476
+Epoch 8/20
+86/86 [==============================] - 1s 12ms/step - loss: 0.7828 - accuracy: 0.8529
+Epoch 9/20
+86/86 [==============================] - 1s 12ms/step - loss: 0.7693 - accuracy: 0.8549
+Epoch 10/20
+86/86 [==============================] - 1s 12ms/step - loss: 0.7592 - accuracy: 0.8566
+Epoch 11/20
+86/86 [==============================] - 1s 14ms/step - loss: 0.7504 - accuracy: 0.8595
+Epoch 12/20
+86/86 [==============================] - 1s 12ms/step - loss: 0.7442 - accuracy: 0.8593
+Epoch 13/20
+86/86 [==============================] - 1s 13ms/step - loss: 0.7393 - accuracy: 0.8624
+Epoch 14/20
+86/86 [==============================] - 1s 12ms/step - loss: 0.7359 - accuracy: 0.8609
+Epoch 15/20
+86/86 [==============================] - 1s 12ms/step - loss: 0.7306 - accuracy: 0.8629
+Epoch 16/20
+86/86 [==============================] - 1s 13ms/step - loss: 0.7273 - accuracy: 0.8641
+Epoch 17/20
+86/86 [==============================] - 1s 13ms/step - loss: 0.7239 - accuracy: 0.8679
+Epoch 18/20
+86/86 [==============================] - 1s 12ms/step - loss: 0.7221 - accuracy: 0.8661
+Epoch 19/20
+86/86 [==============================] - 1s 12ms/step - loss: 0.7205 - accuracy: 0.8668
+Epoch 20/20
+86/86 [==============================] - 1s 14ms/step - loss: 0.7169 - accuracy: 0.8699
+22/22 [==============================] - 0s 5ms/step - loss: 0.3549 - accuracy: 0.8651
+
+
+For 9: Test ACC=[0.3548752963542938, 0.8650619983673096]
+Confusion Matrix
+[[3767  517]
+ [ 223  977]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.94      0.88      0.91      4284
+           1       0.65      0.81      0.73      1200
+
+    accuracy                           0.87      5484
+   macro avg       0.80      0.85      0.82      5484
+weighted avg       0.88      0.87      0.87      5484
+
+trainingshape 10
+(89730, 7)
+(89730, 7, 1)
+testingshape 10
+(22434, 7)
+(22434, 7, 1)
+nb occurences
+Counter({0: 43413, 1: 41373, 2: 4944})
+weights={0: 2.0668924055006563, 1: 2.1688057428757883, 2: 18.149271844660195}
+Model: "sequential_5"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_10 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_11 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_5 (Dense)              (None, 3)                 27
+_________________________________________________________________
+activation_5 (Activation)    (None, 3)                 0
+=================================================================
+Total params: 723
+Trainable params: 723
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+351/351 [==============================] - 5s 15ms/step - loss: 3.2236 - accuracy: 0.3873
+Epoch 2/20
+351/351 [==============================] - 5s 15ms/step - loss: 3.0720 - accuracy: 0.4388
+Epoch 3/20
+351/351 [==============================] - 4s 13ms/step - loss: 3.0275 - accuracy: 0.4479
+Epoch 4/20
+351/351 [==============================] - 4s 12ms/step - loss: 3.0047 - accuracy: 0.4539
+Epoch 5/20
+351/351 [==============================] - 4s 12ms/step - loss: 2.9884 - accuracy: 0.4620
+Epoch 6/20
+351/351 [==============================] - 4s 13ms/step - loss: 2.9817 - accuracy: 0.4654
+Epoch 7/20
+351/351 [==============================] - 4s 12ms/step - loss: 2.9729 - accuracy: 0.4655
+Epoch 8/20
+351/351 [==============================] - 4s 12ms/step - loss: 2.9659 - accuracy: 0.4680
+Epoch 9/20
+351/351 [==============================] - 5s 14ms/step - loss: 2.9578 - accuracy: 0.4724
+Epoch 10/20
+351/351 [==============================] - 5s 15ms/step - loss: 2.9293 - accuracy: 0.5012
+Epoch 11/20
+351/351 [==============================] - 5s 15ms/step - loss: 2.8515 - accuracy: 0.5626
+Epoch 12/20
+351/351 [==============================] - 5s 15ms/step - loss: 2.8265 - accuracy: 0.5725
+Epoch 13/20
+351/351 [==============================] - 5s 15ms/step - loss: 2.8057 - accuracy: 0.5817
+Epoch 14/20
+351/351 [==============================] - 5s 15ms/step - loss: 2.8009 - accuracy: 0.5818
+Epoch 15/20
+351/351 [==============================] - 5s 15ms/step - loss: 2.7843 - accuracy: 0.5879
+Epoch 16/20
+351/351 [==============================] - 5s 14ms/step - loss: 2.7799 - accuracy: 0.5875
+Epoch 17/20
+351/351 [==============================] - 5s 14ms/step - loss: 2.7656 - accuracy: 0.5890
+Epoch 18/20
+351/351 [==============================] - 5s 15ms/step - loss: 2.7561 - accuracy: 0.5922
+Epoch 19/20
+351/351 [==============================] - 5s 14ms/step - loss: 2.7547 - accuracy: 0.5931
+Epoch 20/20
+351/351 [==============================] - 5s 15ms/step - loss: 2.7474 - accuracy: 0.5936
+88/88 [==============================] - 0s 4ms/step - loss: 0.9188 - accuracy: 0.5977
+
+
+For 10: Test ACC=[0.9187659025192261, 0.5976642370223999]
+Confusion Matrix
+[[6881 2629 1344]
+ [2868 5919 1557]
+ [ 419  209  608]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.68      0.63      0.65     10854
+           1       0.68      0.57      0.62     10344
+           2       0.17      0.49      0.26      1236
+
+    accuracy                           0.60     22434
+   macro avg       0.51      0.57      0.51     22434
+weighted avg       0.65      0.60      0.62     22434
+
+trainingshape 11
+(22051, 7)
+(22051, 7, 1)
+testingshape 11
+(5514, 7)
+(5514, 7, 1)
+nb occurences
+Counter({1: 11258, 0: 8959, 2: 1834})
+weights={0: 2.4613238084607656, 1: 1.9586960383727126, 2: 12.023446019629226}
+Model: "sequential_6"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_12 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_13 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_6 (Dense)              (None, 3)                 27
+_________________________________________________________________
+activation_6 (Activation)    (None, 3)                 0
+=================================================================
+Total params: 723
+Trainable params: 723
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+87/87 [==============================] - 1s 15ms/step - loss: 3.6754 - accuracy: 0.3998
+Epoch 2/20
+87/87 [==============================] - 1s 14ms/step - loss: 3.2686 - accuracy: 0.4075
+Epoch 3/20
+87/87 [==============================] - 1s 14ms/step - loss: 3.2187 - accuracy: 0.4188
+Epoch 4/20
+87/87 [==============================] - 1s 17ms/step - loss: 3.1847 - accuracy: 0.3793
+Epoch 5/20
+87/87 [==============================] - 1s 12ms/step - loss: 3.1491 - accuracy: 0.4104
+Epoch 6/20
+87/87 [==============================] - 1s 12ms/step - loss: 3.1154 - accuracy: 0.4165
+Epoch 7/20
+87/87 [==============================] - 1s 11ms/step - loss: 3.0958 - accuracy: 0.4472
+Epoch 8/20
+87/87 [==============================] - 1s 13ms/step - loss: 3.0819 - accuracy: 0.4429
+Epoch 9/20
+87/87 [==============================] - 1s 14ms/step - loss: 3.0716 - accuracy: 0.4452
+Epoch 10/20
+87/87 [==============================] - 1s 13ms/step - loss: 3.0605 - accuracy: 0.4507
+Epoch 11/20
+87/87 [==============================] - 1s 13ms/step - loss: 3.0519 - accuracy: 0.4488
+Epoch 12/20
+87/87 [==============================] - 1s 13ms/step - loss: 3.0418 - accuracy: 0.4581
+Epoch 13/20
+87/87 [==============================] - 1s 14ms/step - loss: 3.0309 - accuracy: 0.4601
+Epoch 14/20
+87/87 [==============================] - 1s 12ms/step - loss: 3.0205 - accuracy: 0.4565
+Epoch 15/20
+87/87 [==============================] - 1s 12ms/step - loss: 3.0068 - accuracy: 0.4686
+Epoch 16/20
+87/87 [==============================] - 1s 12ms/step - loss: 2.9933 - accuracy: 0.4759
+Epoch 17/20
+87/87 [==============================] - 1s 13ms/step - loss: 2.9805 - accuracy: 0.4753
+Epoch 18/20
+87/87 [==============================] - 1s 13ms/step - loss: 2.9649 - accuracy: 0.4823
+Epoch 19/20
+87/87 [==============================] - 1s 11ms/step - loss: 2.9536 - accuracy: 0.4850
+Epoch 20/20
+87/87 [==============================] - 1s 15ms/step - loss: 2.9346 - accuracy: 0.4887
+22/22 [==============================] - 0s 5ms/step - loss: 1.0464 - accuracy: 0.4238
+
+
+For 11: Test ACC=[1.0464051961898804, 0.4238302409648895]
+Confusion Matrix
+[[ 567  469 1204]
+ [ 364 1431 1020]
+ [  52   68  339]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.58      0.25      0.35      2240
+           1       0.73      0.51      0.60      2815
+           2       0.13      0.74      0.22       459
+
+    accuracy                           0.42      5514
+   macro avg       0.48      0.50      0.39      5514
+weighted avg       0.62      0.42      0.47      5514
+
+trainingshape 12
+(83854, 7)
+(83854, 7, 1)
+testingshape 12
+(20965, 7)
+(20965, 7, 1)
+nb occurences
+Counter({0: 47352, 1: 32371, 2: 4131})
+weights={0: 1.7708650109815849, 1: 2.590404992122579, 2: 20.298717017671265}
+Model: "sequential_7"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_14 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_15 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_7 (Dense)              (None, 3)                 27
+_________________________________________________________________
+activation_7 (Activation)    (None, 3)                 0
+=================================================================
+Total params: 723
+Trainable params: 723
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+328/328 [==============================] - 5s 16ms/step - loss: 3.2418 - accuracy: 0.4034
+Epoch 2/20
+328/328 [==============================] - 5s 14ms/step - loss: 3.1304 - accuracy: 0.4146
+Epoch 3/20
+328/328 [==============================] - 4s 12ms/step - loss: 3.0310 - accuracy: 0.4470
+Epoch 4/20
+328/328 [==============================] - 4s 14ms/step - loss: 2.9840 - accuracy: 0.4595
+Epoch 5/20
+328/328 [==============================] - 5s 14ms/step - loss: 2.9447 - accuracy: 0.4777
+Epoch 6/20
+328/328 [==============================] - 4s 12ms/step - loss: 2.9158 - accuracy: 0.4930
+Epoch 7/20
+328/328 [==============================] - 4s 11ms/step - loss: 2.8828 - accuracy: 0.5172
+Epoch 8/20
+328/328 [==============================] - 3s 9ms/step - loss: 2.8488 - accuracy: 0.5281
+Epoch 9/20
+328/328 [==============================] - 3s 9ms/step - loss: 2.8207 - accuracy: 0.5408
+Epoch 10/20
+328/328 [==============================] - 3s 11ms/step - loss: 2.7970 - accuracy: 0.5465
+Epoch 11/20
+328/328 [==============================] - 5s 14ms/step - loss: 2.7696 - accuracy: 0.5545
+Epoch 12/20
+328/328 [==============================] - 3s 10ms/step - loss: 2.7683 - accuracy: 0.5573
+Epoch 13/20
+328/328 [==============================] - 4s 11ms/step - loss: 2.7426 - accuracy: 0.5679
+Epoch 14/20
+328/328 [==============================] - 4s 13ms/step - loss: 2.7307 - accuracy: 0.5684
+Epoch 15/20
+328/328 [==============================] - 5s 15ms/step - loss: 2.7177 - accuracy: 0.5739
+Epoch 16/20
+328/328 [==============================] - 5s 15ms/step - loss: 2.7067 - accuracy: 0.5781
+Epoch 17/20
+328/328 [==============================] - 4s 11ms/step - loss: 2.6935 - accuracy: 0.5833
+Epoch 18/20
+328/328 [==============================] - 5s 14ms/step - loss: 2.6836 - accuracy: 0.5838
+Epoch 19/20
+328/328 [==============================] - 5s 15ms/step - loss: 2.6710 - accuracy: 0.5879
+Epoch 20/20
+328/328 [==============================] - 5s 15ms/step - loss: 2.6588 - accuracy: 0.5904
+82/82 [==============================] - 0s 5ms/step - loss: 0.8604 - accuracy: 0.6104
+
+
+For 12: Test ACC=[0.8604271411895752, 0.6104459762573242]
+Confusion Matrix
+[[6385 3501 1953]
+ [1224 5915  954]
+ [ 236  299  498]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.81      0.54      0.65     11839
+           1       0.61      0.73      0.66      8093
+           2       0.15      0.48      0.22      1033
+
+    accuracy                           0.61     20965
+   macro avg       0.52      0.58      0.51     20965
+weighted avg       0.70      0.61      0.63     20965
+
+trainingshape 13
+(34177, 7)
+(34177, 7, 1)
+testingshape 13
+(8546, 7)
+(8546, 7, 1)
+nb occurences
+Counter({0: 23961, 1: 8910, 2: 1306})
+weights={0: 1.426359500855557, 1: 3.8358024691358024, 2: 26.169218989280246}
+Model: "sequential_8"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_16 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_17 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 27
+_________________________________________________________________
+activation_8 (Activation)    (None, 3)                 0
+=================================================================
+Total params: 723
+Trainable params: 723
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+134/134 [==============================] - 2s 16ms/step - loss: 3.3071 - accuracy: 0.5575
+Epoch 2/20
+134/134 [==============================] - 2s 12ms/step - loss: 3.0843 - accuracy: 0.3700
+Epoch 3/20
+134/134 [==============================] - 2s 12ms/step - loss: 2.9132 - accuracy: 0.5418
+Epoch 4/20
+134/134 [==============================] - 2s 13ms/step - loss: 2.8578 - accuracy: 0.5792
+Epoch 5/20
+134/134 [==============================] - 2s 12ms/step - loss: 2.8186 - accuracy: 0.6194
+Epoch 6/20
+134/134 [==============================] - 2s 12ms/step - loss: 2.7885 - accuracy: 0.6213
+Epoch 7/20
+134/134 [==============================] - 2s 13ms/step - loss: 2.7646 - accuracy: 0.6278
+Epoch 8/20
+134/134 [==============================] - 2s 12ms/step - loss: 2.7417 - accuracy: 0.6456
+Epoch 9/20
+134/134 [==============================] - 2s 12ms/step - loss: 2.7148 - accuracy: 0.6346
+Epoch 10/20
+134/134 [==============================] - 2s 11ms/step - loss: 2.6956 - accuracy: 0.6459
+Epoch 11/20
+134/134 [==============================] - 2s 13ms/step - loss: 2.6734 - accuracy: 0.6610
+Epoch 12/20
+134/134 [==============================] - 2s 15ms/step - loss: 2.6520 - accuracy: 0.6393
+Epoch 13/20
+134/134 [==============================] - 2s 16ms/step - loss: 2.6340 - accuracy: 0.6473
+Epoch 14/20
+134/134 [==============================] - 2s 15ms/step - loss: 2.6157 - accuracy: 0.6334
+Epoch 15/20
+134/134 [==============================] - 2s 15ms/step - loss: 2.6043 - accuracy: 0.6480
+Epoch 16/20
+134/134 [==============================] - 2s 13ms/step - loss: 2.5895 - accuracy: 0.6404
+Epoch 17/20
+134/134 [==============================] - 2s 15ms/step - loss: 2.5828 - accuracy: 0.6379
+Epoch 18/20
+134/134 [==============================] - 2s 15ms/step - loss: 2.5723 - accuracy: 0.6477
+Epoch 19/20
+134/134 [==============================] - 2s 14ms/step - loss: 2.5632 - accuracy: 0.6508
+Epoch 20/20
+134/134 [==============================] - 2s 14ms/step - loss: 2.5549 - accuracy: 0.6390
+34/34 [==============================] - 0s 5ms/step - loss: 0.8069 - accuracy: 0.6736
+
+
+For 13: Test ACC=[0.8068974018096924, 0.673648476600647]
+Confusion Matrix
+[[4167  560 1264]
+ [ 391 1435  402]
+ [ 120   52  155]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.89      0.70      0.78      5991
+           1       0.70      0.64      0.67      2228
+           2       0.09      0.47      0.14       327
+
+    accuracy                           0.67      8546
+   macro avg       0.56      0.60      0.53      8546
+weighted avg       0.81      0.67      0.73      8546
+
+trainingshape 14
+(38497, 7)
+(38497, 7, 1)
+testingshape 14
+(9626, 7)
+(9626, 7, 1)
+nb occurences
+Counter({0: 25740, 1: 11588, 2: 1169})
+weights={0: 1.4956099456099456, 1: 3.3221435968243007, 2: 32.93156544054747}
+Model: "sequential_9"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_18 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_19 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_9 (Dense)              (None, 3)                 27
+_________________________________________________________________
+activation_9 (Activation)    (None, 3)                 0
+=================================================================
+Total params: 723
+Trainable params: 723
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+151/151 [==============================] - 2s 14ms/step - loss: 3.2094 - accuracy: 0.3410
+Epoch 2/20
+151/151 [==============================] - 2s 14ms/step - loss: 2.9064 - accuracy: 0.3826
+Epoch 3/20
+151/151 [==============================] - 2s 15ms/step - loss: 2.8309 - accuracy: 0.4113
+Epoch 4/20
+151/151 [==============================] - 2s 15ms/step - loss: 2.8094 - accuracy: 0.4252
+Epoch 5/20
+151/151 [==============================] - 2s 16ms/step - loss: 2.8043 - accuracy: 0.4328
+Epoch 6/20
+151/151 [==============================] - 2s 15ms/step - loss: 2.7872 - accuracy: 0.4556
+Epoch 7/20
+151/151 [==============================] - 2s 16ms/step - loss: 2.7690 - accuracy: 0.4718
+Epoch 8/20
+151/151 [==============================] - 2s 13ms/step - loss: 2.7592 - accuracy: 0.4860
+Epoch 9/20
+151/151 [==============================] - 2s 15ms/step - loss: 2.7413 - accuracy: 0.5041
+Epoch 10/20
+151/151 [==============================] - 2s 14ms/step - loss: 2.7351 - accuracy: 0.5160
+Epoch 11/20
+151/151 [==============================] - 2s 15ms/step - loss: 2.7248 - accuracy: 0.5239
+Epoch 12/20
+151/151 [==============================] - 2s 16ms/step - loss: 2.7119 - accuracy: 0.5342
+Epoch 13/20
+151/151 [==============================] - 2s 14ms/step - loss: 2.7035 - accuracy: 0.5451
+Epoch 14/20
+151/151 [==============================] - 3s 17ms/step - loss: 2.6874 - accuracy: 0.5537
+Epoch 15/20
+151/151 [==============================] - 2s 14ms/step - loss: 2.6775 - accuracy: 0.5603
+Epoch 16/20
+151/151 [==============================] - 2s 14ms/step - loss: 2.6730 - accuracy: 0.5607
+Epoch 17/20
+151/151 [==============================] - 1s 8ms/step - loss: 2.6658 - accuracy: 0.5591
+Epoch 18/20
+151/151 [==============================] - 1s 8ms/step - loss: 2.6647 - accuracy: 0.5607
+Epoch 19/20
+151/151 [==============================] - 1s 9ms/step - loss: 2.6546 - accuracy: 0.5597
+Epoch 20/20
+151/151 [==============================] - 1s 9ms/step - loss: 2.6466 - accuracy: 0.5675
+38/38 [==============================] - 0s 6ms/step - loss: 0.9135 - accuracy: 0.5649
+
+
+For 14: Test ACC=[0.9135012626647949, 0.5649282932281494]
+Confusion Matrix
+[[3362 1297 1776]
+ [ 575 1888  435]
+ [  53   52  188]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.84      0.52      0.64      6435
+           1       0.58      0.65      0.62      2898
+           2       0.08      0.64      0.14       293
+
+    accuracy                           0.56      9626
+   macro avg       0.50      0.61      0.47      9626
+weighted avg       0.74      0.56      0.62      9626
+
+trainingshape 15
+(85353, 7)
+(85353, 7, 1)
+testingshape 15
+(21341, 7)
+(21341, 7, 1)
+nb occurences
+Counter({0: 42768, 1: 32909, 2: 8120, 3: 1556})
+weights={0: 1.9957210998877664, 1: 2.593606612172962, 2: 10.511453201970443, 3: 54.85411311053984}
+Model: "sequential_10"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_20 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_21 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_10 (Dense)             (None, 4)                 36
+_________________________________________________________________
+activation_10 (Activation)   (None, 4)                 0
+=================================================================
+Total params: 732
+Trainable params: 732
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+334/334 [==============================] - 5s 14ms/step - loss: 5.3919 - accuracy: 0.3361
+Epoch 2/20
+334/334 [==============================] - 4s 13ms/step - loss: 4.9063 - accuracy: 0.3027
+Epoch 3/20
+334/334 [==============================] - 5s 15ms/step - loss: 4.7581 - accuracy: 0.2889
+Epoch 4/20
+334/334 [==============================] - 5s 15ms/step - loss: 4.6642 - accuracy: 0.3365
+Epoch 5/20
+334/334 [==============================] - 5s 15ms/step - loss: 4.5867 - accuracy: 0.3894
+Epoch 6/20
+334/334 [==============================] - 5s 16ms/step - loss: 4.5473 - accuracy: 0.4266
+Epoch 7/20
+334/334 [==============================] - 5s 15ms/step - loss: 4.5107 - accuracy: 0.4398
+Epoch 8/20
+334/334 [==============================] - 5s 14ms/step - loss: 4.4798 - accuracy: 0.4626
+Epoch 9/20
+334/334 [==============================] - 5s 15ms/step - loss: 4.4627 - accuracy: 0.4751
+Epoch 10/20
+334/334 [==============================] - 5s 15ms/step - loss: 4.4316 - accuracy: 0.4824
+Epoch 11/20
+334/334 [==============================] - 5s 14ms/step - loss: 4.4087 - accuracy: 0.4931
+Epoch 12/20
+334/334 [==============================] - 5s 15ms/step - loss: 4.3697 - accuracy: 0.5091
+Epoch 13/20
+334/334 [==============================] - 5s 15ms/step - loss: 4.3384 - accuracy: 0.5362
+Epoch 14/20
+334/334 [==============================] - 5s 14ms/step - loss: 4.3026 - accuracy: 0.5375
+Epoch 15/20
+334/334 [==============================] - 5s 14ms/step - loss: 4.2755 - accuracy: 0.5465
+Epoch 16/20
+334/334 [==============================] - 5s 14ms/step - loss: 4.2269 - accuracy: 0.5556
+Epoch 17/20
+334/334 [==============================] - 5s 15ms/step - loss: 4.1884 - accuracy: 0.5599
+Epoch 18/20
+334/334 [==============================] - 5s 15ms/step - loss: 4.1663 - accuracy: 0.5634
+Epoch 19/20
+334/334 [==============================] - 5s 14ms/step - loss: 4.1359 - accuracy: 0.5659
+Epoch 20/20
+334/334 [==============================] - 5s 14ms/step - loss: 4.1268 - accuracy: 0.5705
+84/84 [==============================] - 0s 5ms/step - loss: 1.0318 - accuracy: 0.5671
+
+
+For 15: Test ACC=[1.0317803621292114, 0.5670774579048157]
+Confusion Matrix
+[[6864 1218 1962  649]
+ [ 903 3760 1434 2131]
+ [ 264  278 1245  243]
+ [  30   71   56  233]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.85      0.64      0.73     10693
+           1       0.71      0.46      0.55      8228
+           2       0.27      0.61      0.37      2030
+           3       0.07      0.60      0.13       390
+
+    accuracy                           0.57     21341
+   macro avg       0.47      0.58      0.45     21341
+weighted avg       0.73      0.57      0.62     21341
+
+trainingshape 16
+(23927, 7)
+(23927, 7, 1)
+testingshape 16
+(5984, 7)
+(5984, 7, 1)
+nb occurences
+Counter({1: 11101, 0: 9954, 2: 2453, 3: 419})
+weights={0: 2.403757283504119, 1: 2.155391406179623, 2: 9.75417855686914, 3: 57.105011933174225}
+Model: "sequential_11"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_22 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_23 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_11 (Dense)             (None, 4)                 36
+_________________________________________________________________
+activation_11 (Activation)   (None, 4)                 0
+=================================================================
+Total params: 732
+Trainable params: 732
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+94/94 [==============================] - 1s 15ms/step - loss: 5.5963 - accuracy: 0.3926
+Epoch 2/20
+94/94 [==============================] - 2s 17ms/step - loss: 5.5295 - accuracy: 0.3266
+Epoch 3/20
+94/94 [==============================] - 1s 12ms/step - loss: 5.5059 - accuracy: 0.3498
+Epoch 4/20
+94/94 [==============================] - 1s 12ms/step - loss: 5.4878 - accuracy: 0.2921
+Epoch 5/20
+94/94 [==============================] - 1s 12ms/step - loss: 5.4697 - accuracy: 0.2717
+Epoch 6/20
+94/94 [==============================] - 1s 13ms/step - loss: 5.4457 - accuracy: 0.2473
+Epoch 7/20
+94/94 [==============================] - 1s 13ms/step - loss: 5.3819 - accuracy: 0.3324
+Epoch 8/20
+94/94 [==============================] - 1s 12ms/step - loss: 5.3052 - accuracy: 0.3634
+Epoch 9/20
+94/94 [==============================] - 1s 12ms/step - loss: 5.2820 - accuracy: 0.3885
+Epoch 10/20
+94/94 [==============================] - 1s 13ms/step - loss: 5.2555 - accuracy: 0.3712
+Epoch 11/20
+94/94 [==============================] - 1s 14ms/step - loss: 5.2458 - accuracy: 0.3697
+Epoch 12/20
+94/94 [==============================] - 1s 8ms/step - loss: 5.2336 - accuracy: 0.3634
+Epoch 13/20
+94/94 [==============================] - 1s 8ms/step - loss: 5.2294 - accuracy: 0.3706
+Epoch 14/20
+94/94 [==============================] - 1s 9ms/step - loss: 5.2186 - accuracy: 0.3626
+Epoch 15/20
+94/94 [==============================] - 1s 8ms/step - loss: 5.2079 - accuracy: 0.3550
+Epoch 16/20
+94/94 [==============================] - 1s 15ms/step - loss: 5.1969 - accuracy: 0.3647
+Epoch 17/20
+94/94 [==============================] - 1s 15ms/step - loss: 5.1906 - accuracy: 0.3607
+Epoch 18/20
+94/94 [==============================] - 1s 14ms/step - loss: 5.1863 - accuracy: 0.3626
+Epoch 19/20
+94/94 [==============================] - 1s 15ms/step - loss: 5.1792 - accuracy: 0.3639
+Epoch 20/20
+94/94 [==============================] - 2s 17ms/step - loss: 5.1612 - accuracy: 0.3624
+24/24 [==============================] - 0s 4ms/step - loss: 1.3062 - accuracy: 0.3499
+
+
+For 16: Test ACC=[1.3061827421188354, 0.3499331474304199]
+Confusion Matrix
+[[1554  168  307  460]
+ [1353  309  616  498]
+ [ 217   55  172  170]
+ [  22    5   19   59]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.49      0.62      0.55      2489
+           1       0.58      0.11      0.19      2776
+           2       0.15      0.28      0.20       614
+           3       0.05      0.56      0.09       105
+
+    accuracy                           0.35      5984
+   macro avg       0.32      0.39      0.26      5984
+weighted avg       0.49      0.35      0.34      5984
+
+trainingshape 17
+(84061, 7)
+(84061, 7, 1)
+testingshape 17
+(21017, 7)
+(21017, 7, 1)
+nb occurences
+Counter({0: 48159, 1: 29846, 2: 5446, 3: 610})
+weights={0: 1.7454889013476194, 1: 2.8164913221202172, 2: 15.435365405802424, 3: 137.80491803278687}
+Model: "sequential_12"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_24 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_25 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_12 (Dense)             (None, 4)                 36
+_________________________________________________________________
+activation_12 (Activation)   (None, 4)                 0
+=================================================================
+Total params: 732
+Trainable params: 732
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+329/329 [==============================] - 5s 14ms/step - loss: 5.3364 - accuracy: 0.3063
+Epoch 2/20
+329/329 [==============================] - 4s 13ms/step - loss: 4.9766 - accuracy: 0.2967
+Epoch 3/20
+329/329 [==============================] - 4s 13ms/step - loss: 4.7139 - accuracy: 0.4054
+Epoch 4/20
+329/329 [==============================] - 4s 13ms/step - loss: 4.5861 - accuracy: 0.4546
+Epoch 5/20
+329/329 [==============================] - 4s 13ms/step - loss: 4.4637 - accuracy: 0.4796
+Epoch 6/20
+329/329 [==============================] - 4s 13ms/step - loss: 4.3554 - accuracy: 0.5071
+Epoch 7/20
+329/329 [==============================] - 4s 13ms/step - loss: 4.2542 - accuracy: 0.5218
+Epoch 8/20
+329/329 [==============================] - 4s 13ms/step - loss: 4.2013 - accuracy: 0.5295
+Epoch 9/20
+329/329 [==============================] - 5s 16ms/step - loss: 4.1542 - accuracy: 0.5382
+Epoch 10/20
+329/329 [==============================] - 5s 15ms/step - loss: 4.1342 - accuracy: 0.5530
+Epoch 11/20
+329/329 [==============================] - 4s 13ms/step - loss: 4.1085 - accuracy: 0.5541
+Epoch 12/20
+329/329 [==============================] - 5s 14ms/step - loss: 4.0799 - accuracy: 0.5552
+Epoch 13/20
+329/329 [==============================] - 4s 14ms/step - loss: 4.0656 - accuracy: 0.5648
+Epoch 14/20
+329/329 [==============================] - 5s 14ms/step - loss: 4.0459 - accuracy: 0.5571
+Epoch 15/20
+329/329 [==============================] - 4s 13ms/step - loss: 4.0232 - accuracy: 0.5639
+Epoch 16/20
+329/329 [==============================] - 5s 15ms/step - loss: 4.0289 - accuracy: 0.5592
+Epoch 17/20
+329/329 [==============================] - 5s 15ms/step - loss: 4.0044 - accuracy: 0.5600
+Epoch 18/20
+329/329 [==============================] - 5s 14ms/step - loss: 3.9804 - accuracy: 0.5616
+Epoch 19/20
+329/329 [==============================] - 5s 14ms/step - loss: 3.9731 - accuracy: 0.5640
+Epoch 20/20
+329/329 [==============================] - 5s 14ms/step - loss: 3.9685 - accuracy: 0.5601
+83/83 [==============================] - 0s 6ms/step - loss: 1.0066 - accuracy: 0.5766
+
+
+For 17: Test ACC=[1.006590485572815, 0.5766284465789795]
+Confusion Matrix
+[[6279 2499 2957  305]
+ [ 901 5131 1147  283]
+ [ 229  453  617   63]
+ [   7   41   13   92]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.85      0.52      0.65     12040
+           1       0.63      0.69      0.66      7462
+           2       0.13      0.45      0.20      1362
+           3       0.12      0.60      0.21       153
+
+    accuracy                           0.58     21017
+   macro avg       0.43      0.57      0.43     21017
+weighted avg       0.72      0.58      0.62     21017
+
+trainingshape 18
+(25957, 7)
+(25957, 7, 1)
+testingshape 18
+(6490, 7)
+(6490, 7, 1)
+nb occurences
+Counter({0: 15976, 1: 7923, 2: 1476, 3: 582})
+weights={0: 1.6247496244366548, 1: 3.27615802095166, 2: 17.586043360433603, 3: 44.59965635738831}
+Model: "sequential_13"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_26 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_27 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_13 (Dense)             (None, 4)                 36
+_________________________________________________________________
+activation_13 (Activation)   (None, 4)                 0
+=================================================================
+Total params: 732
+Trainable params: 732
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+102/102 [==============================] - 2s 15ms/step - loss: 5.6516 - accuracy: 0.3012
+Epoch 2/20
+102/102 [==============================] - 2s 15ms/step - loss: 5.3550 - accuracy: 0.3749
+Epoch 3/20
+102/102 [==============================] - 2s 15ms/step - loss: 5.0643 - accuracy: 0.3279
+Epoch 4/20
+102/102 [==============================] - 1s 12ms/step - loss: 4.7797 - accuracy: 0.4114
+Epoch 5/20
+102/102 [==============================] - 1s 12ms/step - loss: 4.5996 - accuracy: 0.4290
+Epoch 6/20
+102/102 [==============================] - 1s 12ms/step - loss: 4.5139 - accuracy: 0.4104
+Epoch 7/20
+102/102 [==============================] - 1s 10ms/step - loss: 4.4788 - accuracy: 0.4118
+Epoch 8/20
+102/102 [==============================] - 1s 14ms/step - loss: 4.4559 - accuracy: 0.4548
+Epoch 9/20
+102/102 [==============================] - 1s 14ms/step - loss: 4.4252 - accuracy: 0.4299
+Epoch 10/20
+102/102 [==============================] - 1s 15ms/step - loss: 4.3971 - accuracy: 0.4377
+Epoch 11/20
+102/102 [==============================] - 2s 16ms/step - loss: 4.3752 - accuracy: 0.4786
+Epoch 12/20
+102/102 [==============================] - 1s 14ms/step - loss: 4.3690 - accuracy: 0.4156
+Epoch 13/20
+102/102 [==============================] - 1s 14ms/step - loss: 4.3512 - accuracy: 0.4313
+Epoch 14/20
+102/102 [==============================] - 2s 16ms/step - loss: 4.3501 - accuracy: 0.3690
+Epoch 15/20
+102/102 [==============================] - 1s 14ms/step - loss: 4.3148 - accuracy: 0.4371
+Epoch 16/20
+102/102 [==============================] - 1s 14ms/step - loss: 4.3005 - accuracy: 0.3632
+Epoch 17/20
+102/102 [==============================] - 2s 16ms/step - loss: 4.2867 - accuracy: 0.4062
+Epoch 18/20
+102/102 [==============================] - 2s 15ms/step - loss: 4.2674 - accuracy: 0.4008
+Epoch 19/20
+102/102 [==============================] - 2s 15ms/step - loss: 4.2600 - accuracy: 0.4126
+Epoch 20/20
+102/102 [==============================] - 2s 17ms/step - loss: 4.2424 - accuracy: 0.4352
+26/26 [==============================] - 0s 5ms/step - loss: 1.1175 - accuracy: 0.4231
+
+
+For 18: Test ACC=[1.1174970865249634, 0.4231124818325043]
+Confusion Matrix
+[[1316  462 1575  641]
+ [ 280 1125  378  198]
+ [  80   47  188   54]
+ [  14    4   11  117]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.78      0.33      0.46      3994
+           1       0.69      0.57      0.62      1981
+           2       0.09      0.51      0.15       369
+           3       0.12      0.80      0.20       146
+
+    accuracy                           0.42      6490
+   macro avg       0.42      0.55      0.36      6490
+weighted avg       0.70      0.42      0.49      6490
+
+trainingshape 19
+(87853, 7)
+(87853, 7, 1)
+testingshape 19
+(21967, 7)
+(21967, 7, 1)
+nb occurences
+Counter({0: 38736, 1: 26893, 2: 18609, 3: 3147, 4: 468})
+weights={0: 2.2679935976869063, 1: 3.266760867140148, 2: 4.72099521736794, 3: 27.91642834445504, 4: 187.72008547008548}
+Model: "sequential_14"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_28 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_29 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_14 (Dense)             (None, 5)                 45
+_________________________________________________________________
+activation_14 (Activation)   (None, 5)                 0
+=================================================================
+Total params: 741
+Trainable params: 741
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+344/344 [==============================] - 5s 16ms/step - loss: 7.3794 - accuracy: 0.5319
+Epoch 2/20
+344/344 [==============================] - 4s 12ms/step - loss: 6.7985 - accuracy: 0.4796
+Epoch 3/20
+344/344 [==============================] - 4s 12ms/step - loss: 6.6311 - accuracy: 0.4682
+Epoch 4/20
+344/344 [==============================] - 5s 15ms/step - loss: 6.5444 - accuracy: 0.4556
+Epoch 5/20
+344/344 [==============================] - 5s 15ms/step - loss: 6.4595 - accuracy: 0.4534
+Epoch 6/20
+344/344 [==============================] - 5s 15ms/step - loss: 6.3376 - accuracy: 0.4524
+Epoch 7/20
+344/344 [==============================] - 3s 9ms/step - loss: 6.2056 - accuracy: 0.4771
+Epoch 8/20
+344/344 [==============================] - 5s 15ms/step - loss: 6.0926 - accuracy: 0.5014
+Epoch 9/20
+344/344 [==============================] - 5s 15ms/step - loss: 6.0190 - accuracy: 0.5079
+Epoch 10/20
+344/344 [==============================] - 5s 15ms/step - loss: 5.9715 - accuracy: 0.5069
+Epoch 11/20
+344/344 [==============================] - 5s 15ms/step - loss: 5.9306 - accuracy: 0.5268
+Epoch 12/20
+344/344 [==============================] - 5s 15ms/step - loss: 5.8885 - accuracy: 0.5302
+Epoch 13/20
+344/344 [==============================] - 5s 14ms/step - loss: 5.8585 - accuracy: 0.5208
+Epoch 14/20
+344/344 [==============================] - 5s 15ms/step - loss: 5.8293 - accuracy: 0.5322
+Epoch 15/20
+344/344 [==============================] - 5s 15ms/step - loss: 5.8080 - accuracy: 0.5526
+Epoch 16/20
+344/344 [==============================] - 5s 15ms/step - loss: 5.7904 - accuracy: 0.5259
+Epoch 17/20
+344/344 [==============================] - 5s 15ms/step - loss: 5.7653 - accuracy: 0.5363
+Epoch 18/20
+344/344 [==============================] - 5s 15ms/step - loss: 5.7518 - accuracy: 0.5409
+Epoch 19/20
+344/344 [==============================] - 5s 13ms/step - loss: 5.7250 - accuracy: 0.5324
+Epoch 20/20
+344/344 [==============================] - 4s 12ms/step - loss: 5.6982 - accuracy: 0.5409
+86/86 [==============================] - 0s 5ms/step - loss: 1.0518 - accuracy: 0.6342
+
+
+For 19: Test ACC=[1.0517741441726685, 0.6341785192489624]
+Confusion Matrix
+[[6680 1647  849  328  181]
+ [ 676 4096 1436  385  131]
+ [ 258 1091 2956  107  241]
+ [  18  457   87  125  100]
+ [   1   19    3   21   74]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.88      0.69      0.77      9685
+           1       0.56      0.61      0.58      6724
+           2       0.55      0.64      0.59      4653
+           3       0.13      0.16      0.14       787
+           4       0.10      0.63      0.18       118
+
+    accuracy                           0.63     21967
+   macro avg       0.44      0.54      0.45     21967
+weighted avg       0.68      0.63      0.65     21967
+
+trainingshape 20
+(65779, 7)
+(65779, 7, 1)
+testingshape 20
+(16445, 7)
+(16445, 7, 1)
+nb occurences
+Counter({0: 28160, 1: 25152, 2: 10127, 3: 2340})
+weights={0: 2.3359019886363637, 1: 2.6152592239185752, 2: 6.4954083144070305, 3: 28.11068376068376}
+Model: "sequential_15"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_30 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_31 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_15 (Dense)             (None, 4)                 36
+_________________________________________________________________
+activation_15 (Activation)   (None, 4)                 0
+=================================================================
+Total params: 732
+Trainable params: 732
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+257/257 [==============================] - 4s 16ms/step - loss: 5.5203 - accuracy: 0.2424
+Epoch 2/20
+257/257 [==============================] - 4s 14ms/step - loss: 5.3607 - accuracy: 0.3173
+Epoch 3/20
+257/257 [==============================] - 3s 11ms/step - loss: 5.2574 - accuracy: 0.3304
+Epoch 4/20
+257/257 [==============================] - 4s 14ms/step - loss: 5.1718 - accuracy: 0.3610
+Epoch 5/20
+257/257 [==============================] - 4s 15ms/step - loss: 5.1029 - accuracy: 0.3398
+Epoch 6/20
+257/257 [==============================] - 4s 15ms/step - loss: 5.0588 - accuracy: 0.3473
+Epoch 7/20
+257/257 [==============================] - 4s 14ms/step - loss: 5.0315 - accuracy: 0.3582
+Epoch 8/20
+257/257 [==============================] - 4s 15ms/step - loss: 5.0126 - accuracy: 0.3491
+Epoch 9/20
+257/257 [==============================] - 4s 14ms/step - loss: 4.9964 - accuracy: 0.3526
+Epoch 10/20
+257/257 [==============================] - 4s 15ms/step - loss: 4.9852 - accuracy: 0.3601
+Epoch 11/20
+257/257 [==============================] - 4s 15ms/step - loss: 4.9733 - accuracy: 0.3583
+Epoch 12/20
+257/257 [==============================] - 3s 13ms/step - loss: 4.9597 - accuracy: 0.3685
+Epoch 13/20
+257/257 [==============================] - 4s 16ms/step - loss: 4.9509 - accuracy: 0.3539
+Epoch 14/20
+257/257 [==============================] - 4s 16ms/step - loss: 4.9457 - accuracy: 0.3725
+Epoch 15/20
+257/257 [==============================] - 4s 15ms/step - loss: 4.9364 - accuracy: 0.3586
+Epoch 16/20
+257/257 [==============================] - 4s 16ms/step - loss: 4.9270 - accuracy: 0.3799
+Epoch 17/20
+257/257 [==============================] - 4s 15ms/step - loss: 4.9207 - accuracy: 0.3517
+Epoch 18/20
+257/257 [==============================] - 4s 15ms/step - loss: 4.9157 - accuracy: 0.3616
+Epoch 19/20
+257/257 [==============================] - 4s 15ms/step - loss: 4.9101 - accuracy: 0.3853
+Epoch 20/20
+257/257 [==============================] - 4s 15ms/step - loss: 4.9042 - accuracy: 0.3778
+65/65 [==============================] - 0s 4ms/step - loss: 1.2738 - accuracy: 0.2790
+
+
+For 20: Test ACC=[1.2738420963287354, 0.27899056673049927]
+Confusion Matrix
+[[2399 1268  810 2563]
+ [ 820  785 1423 3260]
+ [  76  562 1035  859]
+ [  16  138   62  369]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.72      0.34      0.46      7040
+           1       0.29      0.12      0.17      6288
+           2       0.31      0.41      0.35      2532
+           3       0.05      0.63      0.10       585
+
+    accuracy                           0.28     16445
+   macro avg       0.34      0.38      0.27     16445
+weighted avg       0.47      0.28      0.32     16445
+
+trainingshape 21
+(32979, 7)
+(32979, 7, 1)
+testingshape 21
+(8246, 7)
+(8246, 7, 1)
+nb occurences
+Counter({0: 15448, 1: 12264, 2: 4012, 3: 1255})
+weights={0: 2.1348394614189536, 1: 2.6890900195694716, 2: 8.220089730807576, 3: 26.27808764940239}
+Model: "sequential_16"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_32 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_33 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_16 (Dense)             (None, 4)                 36
+_________________________________________________________________
+activation_16 (Activation)   (None, 4)                 0
+=================================================================
+Total params: 732
+Trainable params: 732
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+129/129 [==============================] - 2s 15ms/step - loss: 5.4053 - accuracy: 0.3355
+Epoch 2/20
+129/129 [==============================] - 1s 9ms/step - loss: 4.8773 - accuracy: 0.3550
+Epoch 3/20
+129/129 [==============================] - 1s 11ms/step - loss: 4.7523 - accuracy: 0.3656
+Epoch 4/20
+129/129 [==============================] - 2s 14ms/step - loss: 4.6560 - accuracy: 0.3730
+Epoch 5/20
+129/129 [==============================] - 2s 15ms/step - loss: 4.6009 - accuracy: 0.3968
+Epoch 6/20
+129/129 [==============================] - 2s 13ms/step - loss: 4.5784 - accuracy: 0.4130
+Epoch 7/20
+129/129 [==============================] - 2s 15ms/step - loss: 4.5492 - accuracy: 0.4194
+Epoch 8/20
+129/129 [==============================] - 2s 14ms/step - loss: 4.5201 - accuracy: 0.4387
+Epoch 9/20
+129/129 [==============================] - 2s 15ms/step - loss: 4.5009 - accuracy: 0.4502
+Epoch 10/20
+129/129 [==============================] - 2s 16ms/step - loss: 4.4731 - accuracy: 0.4643
+Epoch 11/20
+129/129 [==============================] - 2s 13ms/step - loss: 4.4593 - accuracy: 0.4789
+Epoch 12/20
+129/129 [==============================] - 2s 15ms/step - loss: 4.4476 - accuracy: 0.4733
+Epoch 13/20
+129/129 [==============================] - 2s 15ms/step - loss: 4.4332 - accuracy: 0.4846
+Epoch 14/20
+129/129 [==============================] - 2s 14ms/step - loss: 4.4178 - accuracy: 0.4853
+Epoch 15/20
+129/129 [==============================] - 2s 13ms/step - loss: 4.4087 - accuracy: 0.4904
+Epoch 16/20
+129/129 [==============================] - 1s 10ms/step - loss: 4.3911 - accuracy: 0.4933
+Epoch 17/20
+129/129 [==============================] - 2s 14ms/step - loss: 4.3926 - accuracy: 0.5004
+Epoch 18/20
+129/129 [==============================] - 2s 14ms/step - loss: 4.3758 - accuracy: 0.4973
+Epoch 19/20
+129/129 [==============================] - 2s 14ms/step - loss: 4.3577 - accuracy: 0.5114
+Epoch 20/20
+129/129 [==============================] - 2s 15ms/step - loss: 4.3594 - accuracy: 0.5091
+33/33 [==============================] - 0s 3ms/step - loss: 1.1068 - accuracy: 0.4730
+
+
+For 21: Test ACC=[1.1068294048309326, 0.4729565978050232]
+Confusion Matrix
+[[2288  460  671  443]
+ [ 338  823  406 1499]
+ [ 182  107  589  126]
+ [  16   62   36  200]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.81      0.59      0.68      3862
+           1       0.57      0.27      0.36      3066
+           2       0.35      0.59      0.44      1004
+           3       0.09      0.64      0.15       314
+
+    accuracy                           0.47      8246
+   macro avg       0.45      0.52      0.41      8246
+weighted avg       0.64      0.47      0.51      8246
+
+trainingshape 22
+(83176, 7)
+(83176, 7, 1)
+testingshape 22
+(20797, 7)
+(20797, 7, 1)
+nb occurences
+Counter({0: 43650, 1: 29432, 2: 8406, 3: 1427, 4: 261})
+weights={0: 1.905521191294387, 1: 2.8260396846969282, 2: 9.894837021175352, 3: 58.28731604765242, 4: 318.68199233716473}
+Model: "sequential_17"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_34 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_35 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_17 (Dense)             (None, 5)                 45
+_________________________________________________________________
+activation_17 (Activation)   (None, 5)                 0
+=================================================================
+Total params: 741
+Trainable params: 741
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+325/325 [==============================] - 5s 14ms/step - loss: 7.9499 - accuracy: 0.2090
+Epoch 2/20
+325/325 [==============================] - 4s 14ms/step - loss: 7.6836 - accuracy: 0.2112
+Epoch 3/20
+325/325 [==============================] - 5s 14ms/step - loss: 7.5500 - accuracy: 0.2737
+Epoch 4/20
+325/325 [==============================] - 5s 15ms/step - loss: 7.4088 - accuracy: 0.3473
+Epoch 5/20
+325/325 [==============================] - 5s 14ms/step - loss: 7.2378 - accuracy: 0.3779
+Epoch 6/20
+325/325 [==============================] - 5s 14ms/step - loss: 7.1359 - accuracy: 0.4035
+Epoch 7/20
+325/325 [==============================] - 5s 14ms/step - loss: 7.0704 - accuracy: 0.4124
+Epoch 8/20
+325/325 [==============================] - 5s 15ms/step - loss: 7.0059 - accuracy: 0.4162
+Epoch 9/20
+325/325 [==============================] - 5s 14ms/step - loss: 6.9654 - accuracy: 0.4260
+Epoch 10/20
+325/325 [==============================] - 4s 13ms/step - loss: 6.9124 - accuracy: 0.4282
+Epoch 11/20
+325/325 [==============================] - 4s 11ms/step - loss: 6.8713 - accuracy: 0.4338
+Epoch 12/20
+325/325 [==============================] - 3s 9ms/step - loss: 6.8283 - accuracy: 0.4320
+Epoch 13/20
+325/325 [==============================] - 3s 9ms/step - loss: 6.7807 - accuracy: 0.4406
+Epoch 14/20
+325/325 [==============================] - 5s 14ms/step - loss: 6.7217 - accuracy: 0.4464
+Epoch 15/20
+325/325 [==============================] - 5s 15ms/step - loss: 6.6175 - accuracy: 0.4450
+Epoch 16/20
+325/325 [==============================] - 5s 15ms/step - loss: 6.3990 - accuracy: 0.4596
+Epoch 17/20
+325/325 [==============================] - 4s 13ms/step - loss: 6.3082 - accuracy: 0.4652
+Epoch 18/20
+325/325 [==============================] - 5s 15ms/step - loss: 6.2876 - accuracy: 0.4609
+Epoch 19/20
+325/325 [==============================] - 5s 15ms/step - loss: 6.2116 - accuracy: 0.4693
+Epoch 20/20
+325/325 [==============================] - 5s 15ms/step - loss: 6.1593 - accuracy: 0.4699
+82/82 [==============================] - 0s 5ms/step - loss: 1.3045 - accuracy: 0.4689
+
+
+For 22: Test ACC=[1.3044699430465698, 0.4689137935638428]
+Confusion Matrix
+[[5984 1813 1200 1677  239]
+ [1758 3197  907 1237  260]
+ [ 493  651  338  532   88]
+ [  58   56   40  197    6]
+ [  12    5    2   11   36]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.72      0.55      0.62     10913
+           1       0.56      0.43      0.49      7359
+           2       0.14      0.16      0.15      2102
+           3       0.05      0.55      0.10       357
+           4       0.06      0.55      0.10        66
+
+    accuracy                           0.47     20797
+   macro avg       0.31      0.45      0.29     20797
+weighted avg       0.59      0.47      0.52     20797
+
+trainingshape 23
+(25894, 7)
+(25894, 7, 1)
+testingshape 23
+(6476, 7)
+(6476, 7, 1)
+nb occurences
+Counter({0: 13320, 1: 9676, 2: 2437, 3: 461})
+weights={0: 1.9439939939939939, 1: 2.6761058288548987, 2: 10.625359048009848, 3: 56.16919739696313}
+Model: "sequential_18"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_36 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_37 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_18 (Dense)             (None, 4)                 36
+_________________________________________________________________
+activation_18 (Activation)   (None, 4)                 0
+=================================================================
+Total params: 732
+Trainable params: 732
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+102/102 [==============================] - 2s 16ms/step - loss: 5.6910 - accuracy: 0.4057
+Epoch 2/20
+102/102 [==============================] - 1s 14ms/step - loss: 5.5196 - accuracy: 0.3327
+Epoch 3/20
+102/102 [==============================] - 1s 12ms/step - loss: 5.5029 - accuracy: 0.3023
+Epoch 4/20
+102/102 [==============================] - 1s 12ms/step - loss: 5.4883 - accuracy: 0.2813
+Epoch 5/20
+102/102 [==============================] - 1s 13ms/step - loss: 5.4750 - accuracy: 0.2635
+Epoch 6/20
+102/102 [==============================] - 1s 12ms/step - loss: 5.4563 - accuracy: 0.2704
+Epoch 7/20
+102/102 [==============================] - 1s 12ms/step - loss: 5.4406 - accuracy: 0.2686
+Epoch 8/20
+102/102 [==============================] - 1s 12ms/step - loss: 5.4165 - accuracy: 0.3236
+Epoch 9/20
+102/102 [==============================] - 1s 14ms/step - loss: 5.3976 - accuracy: 0.3406
+Epoch 10/20
+102/102 [==============================] - 1s 12ms/step - loss: 5.3801 - accuracy: 0.2845
+Epoch 11/20
+102/102 [==============================] - 1s 12ms/step - loss: 5.3642 - accuracy: 0.3216
+Epoch 12/20
+102/102 [==============================] - 1s 12ms/step - loss: 5.3496 - accuracy: 0.3134
+Epoch 13/20
+102/102 [==============================] - 1s 13ms/step - loss: 5.3327 - accuracy: 0.3586
+Epoch 14/20
+102/102 [==============================] - 1s 12ms/step - loss: 5.3343 - accuracy: 0.3395
+Epoch 15/20
+102/102 [==============================] - 1s 12ms/step - loss: 5.3176 - accuracy: 0.3551
+Epoch 16/20
+102/102 [==============================] - 1s 12ms/step - loss: 5.3142 - accuracy: 0.3524
+Epoch 17/20
+102/102 [==============================] - 1s 11ms/step - loss: 5.2999 - accuracy: 0.3362
+Epoch 18/20
+102/102 [==============================] - 1s 11ms/step - loss: 5.2977 - accuracy: 0.3586
+Epoch 19/20
+102/102 [==============================] - 1s 14ms/step - loss: 5.2823 - accuracy: 0.3373
+Epoch 20/20
+102/102 [==============================] - 2s 15ms/step - loss: 5.2617 - accuracy: 0.3621
+26/26 [==============================] - 0s 5ms/step - loss: 1.3452 - accuracy: 0.4084
+
+
+For 23: Test ACC=[1.3451589345932007, 0.40843114256858826]
+Confusion Matrix
+[[ 789 1438  707  397]
+ [ 187 1629  336  267]
+ [   9  347  191   63]
+ [   1   60   19   36]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.80      0.24      0.37      3331
+           1       0.47      0.67      0.55      2419
+           2       0.15      0.31      0.21       610
+           3       0.05      0.31      0.08       116
+
+    accuracy                           0.41      6476
+   macro avg       0.37      0.38      0.30      6476
+weighted avg       0.60      0.41      0.42      6476
+
+trainingshape 24
+(101424, 7)
+(101424, 7, 1)
+testingshape 24
+(25359, 7)
+(25359, 7, 1)
+nb occurences
+Counter({0: 42648, 1: 28168, 2: 23370, 3: 6354, 4: 884})
+weights={0: 2.37816544738323, 1: 3.6006816245384834, 2: 4.33992297817715, 3: 15.96222851746931, 4: 114.73303167420815}
+Model: "sequential_19"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_38 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_39 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_19 (Dense)             (None, 5)                 45
+_________________________________________________________________
+activation_19 (Activation)   (None, 5)                 0
+=================================================================
+Total params: 741
+Trainable params: 741
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+397/397 [==============================] - 6s 15ms/step - loss: 7.8063 - accuracy: 0.2834
+Epoch 2/20
+397/397 [==============================] - 5s 13ms/step - loss: 7.4709 - accuracy: 0.3848
+Epoch 3/20
+397/397 [==============================] - 5s 12ms/step - loss: 7.3607 - accuracy: 0.3831
+Epoch 4/20
+397/397 [==============================] - 5s 13ms/step - loss: 7.2860 - accuracy: 0.3743
+Epoch 5/20
+397/397 [==============================] - 6s 14ms/step - loss: 7.2089 - accuracy: 0.3734
+Epoch 6/20
+397/397 [==============================] - 6s 14ms/step - loss: 7.1090 - accuracy: 0.3875
+Epoch 7/20
+397/397 [==============================] - 6s 14ms/step - loss: 7.0115 - accuracy: 0.3880
+Epoch 8/20
+397/397 [==============================] - 5s 13ms/step - loss: 6.9438 - accuracy: 0.3933
+Epoch 9/20
+397/397 [==============================] - 6s 15ms/step - loss: 6.8786 - accuracy: 0.4013
+Epoch 10/20
+397/397 [==============================] - 5s 13ms/step - loss: 6.8251 - accuracy: 0.4021
+Epoch 11/20
+397/397 [==============================] - 6s 15ms/step - loss: 6.7739 - accuracy: 0.4095
+Epoch 12/20
+397/397 [==============================] - 6s 15ms/step - loss: 6.7271 - accuracy: 0.4111
+Epoch 13/20
+397/397 [==============================] - 6s 15ms/step - loss: 6.6885 - accuracy: 0.4191
+Epoch 14/20
+397/397 [==============================] - 6s 15ms/step - loss: 6.6528 - accuracy: 0.4207
+Epoch 15/20
+397/397 [==============================] - 5s 14ms/step - loss: 6.6264 - accuracy: 0.4337
+Epoch 16/20
+397/397 [==============================] - 6s 14ms/step - loss: 6.5822 - accuracy: 0.4357
+Epoch 17/20
+397/397 [==============================] - 5s 13ms/step - loss: 6.5459 - accuracy: 0.4422
+Epoch 18/20
+397/397 [==============================] - 6s 15ms/step - loss: 6.5121 - accuracy: 0.4431
+Epoch 19/20
+397/397 [==============================] - 6s 15ms/step - loss: 6.4626 - accuracy: 0.4433
+Epoch 20/20
+397/397 [==============================] - 6s 14ms/step - loss: 6.4169 - accuracy: 0.4423
+100/100 [==============================] - 0s 5ms/step - loss: 1.2814 - accuracy: 0.4654
+
+
+For 24: Test ACC=[1.2814470529556274, 0.46543633937835693]
+Confusion Matrix
+[[3424  630 4424 2118   67]
+ [ 893 4142 1302  633   73]
+ [ 854  548 3244 1047  150]
+ [  97   91  394  934   73]
+ [  12   13   81   56   59]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.65      0.32      0.43     10663
+           1       0.76      0.59      0.66      7043
+           2       0.34      0.56      0.42      5843
+           3       0.20      0.59      0.29      1589
+           4       0.14      0.27      0.18       221
+
+    accuracy                           0.47     25359
+   macro avg       0.42      0.46      0.40     25359
+weighted avg       0.58      0.47      0.48     25359
+
+trainingshape 25
+(40952, 7)
+(40952, 7, 1)
+testingshape 25
+(10239, 7)
+(10239, 7, 1)
+nb occurences
+Counter({0: 15332, 1: 13630, 2: 9243, 3: 2747})
+weights={0: 2.671014870858335, 1: 3.0045487894350695, 2: 4.430596126798658, 3: 14.907899526756461}
+Model: "sequential_20"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_40 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_41 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_20 (Dense)             (None, 4)                 36
+_________________________________________________________________
+activation_20 (Activation)   (None, 4)                 0
+=================================================================
+Total params: 732
+Trainable params: 732
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+160/160 [==============================] - 2s 15ms/step - loss: 5.5738 - accuracy: 0.2963
+Epoch 2/20
+160/160 [==============================] - 2s 14ms/step - loss: 5.4788 - accuracy: 0.3086
+Epoch 3/20
+160/160 [==============================] - 2s 12ms/step - loss: 5.3486 - accuracy: 0.3185
+Epoch 4/20
+160/160 [==============================] - 2s 13ms/step - loss: 5.2667 - accuracy: 0.3033
+Epoch 5/20
+160/160 [==============================] - 2s 12ms/step - loss: 5.2139 - accuracy: 0.3118
+Epoch 6/20
+160/160 [==============================] - 2s 12ms/step - loss: 5.1708 - accuracy: 0.3330
+Epoch 7/20
+160/160 [==============================] - 2s 13ms/step - loss: 5.1525 - accuracy: 0.3484
+Epoch 8/20
+160/160 [==============================] - 2s 12ms/step - loss: 5.1416 - accuracy: 0.3511
+Epoch 9/20
+160/160 [==============================] - 2s 13ms/step - loss: 5.1319 - accuracy: 0.3528
+Epoch 10/20
+160/160 [==============================] - 2s 12ms/step - loss: 5.1155 - accuracy: 0.3564
+Epoch 11/20
+160/160 [==============================] - 2s 12ms/step - loss: 5.1069 - accuracy: 0.3599
+Epoch 12/20
+160/160 [==============================] - 2s 13ms/step - loss: 5.0953 - accuracy: 0.3626
+Epoch 13/20
+160/160 [==============================] - 2s 12ms/step - loss: 5.0857 - accuracy: 0.3705
+Epoch 14/20
+160/160 [==============================] - 2s 13ms/step - loss: 5.0802 - accuracy: 0.3744
+Epoch 15/20
+160/160 [==============================] - 2s 12ms/step - loss: 5.0789 - accuracy: 0.3736
+Epoch 16/20
+160/160 [==============================] - 2s 12ms/step - loss: 5.0673 - accuracy: 0.3805
+Epoch 17/20
+160/160 [==============================] - 2s 11ms/step - loss: 5.0595 - accuracy: 0.3823
+Epoch 18/20
+160/160 [==============================] - 2s 14ms/step - loss: 5.0500 - accuracy: 0.3854
+Epoch 19/20
+160/160 [==============================] - 2s 15ms/step - loss: 5.0423 - accuracy: 0.3838
+Epoch 20/20
+160/160 [==============================] - 2s 14ms/step - loss: 5.0326 - accuracy: 0.3898
+40/40 [==============================] - 0s 4ms/step - loss: 1.2789 - accuracy: 0.3708
+
+
+For 25: Test ACC=[1.2788761854171753, 0.37083700299263]
+Confusion Matrix
+[[1343  632 1541  317]
+ [ 946 1017  800  645]
+ [ 319  321 1160  511]
+ [  73  100  237  277]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.50      0.35      0.41      3833
+           1       0.49      0.30      0.37      3408
+           2       0.31      0.50      0.38      2311
+           3       0.16      0.40      0.23       687
+
+    accuracy                           0.37     10239
+   macro avg       0.37      0.39      0.35     10239
+weighted avg       0.43      0.37      0.38     10239
+
+trainingModelsFromCsv_fix_unbalanced.py:262: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  plt.figure()
+trainingshape 26
+(50087, 7)
+(50087, 7, 1)
+testingshape 26
+(12524, 7)
+(12524, 7, 1)
+nb occurences
+Counter({0: 21706, 1: 17573, 2: 8352, 3: 2079, 4: 377})
+weights={0: 2.307518658435456, 1: 2.850224776645991, 2: 5.997006704980842, 3: 24.09187109187109, 4: 132.85676392572944}
+Model: "sequential_21"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_42 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_43 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_21 (Dense)             (None, 5)                 45
+_________________________________________________________________
+activation_21 (Activation)   (None, 5)                 0
+=================================================================
+Total params: 741
+Trainable params: 741
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+196/196 [==============================] - 3s 14ms/step - loss: 7.9946 - accuracy: 0.2647
+Epoch 2/20
+196/196 [==============================] - 2s 12ms/step - loss: 7.8509 - accuracy: 0.3191
+Epoch 3/20
+196/196 [==============================] - 3s 13ms/step - loss: 7.7678 - accuracy: 0.3267
+Epoch 4/20
+196/196 [==============================] - 2s 12ms/step - loss: 7.7039 - accuracy: 0.3183
+Epoch 5/20
+196/196 [==============================] - 2s 9ms/step - loss: 7.6295 - accuracy: 0.3333
+Epoch 6/20
+196/196 [==============================] - 3s 15ms/step - loss: 7.5550 - accuracy: 0.3369
+Epoch 7/20
+196/196 [==============================] - 3s 15ms/step - loss: 7.4745 - accuracy: 0.3459
+Epoch 8/20
+196/196 [==============================] - 3s 17ms/step - loss: 7.4339 - accuracy: 0.3457
+Epoch 9/20
+196/196 [==============================] - 2s 10ms/step - loss: 7.3590 - accuracy: 0.3460
+Epoch 10/20
+196/196 [==============================] - 2s 8ms/step - loss: 7.3207 - accuracy: 0.3438
+Epoch 11/20
+196/196 [==============================] - 3s 13ms/step - loss: 7.3041 - accuracy: 0.3377
+Epoch 12/20
+196/196 [==============================] - 3s 13ms/step - loss: 7.2534 - accuracy: 0.3357
+Epoch 13/20
+196/196 [==============================] - 3s 15ms/step - loss: 7.2310 - accuracy: 0.3314
+Epoch 14/20
+196/196 [==============================] - 3s 14ms/step - loss: 7.1797 - accuracy: 0.3346
+Epoch 15/20
+196/196 [==============================] - 3s 13ms/step - loss: 7.1578 - accuracy: 0.3212
+Epoch 16/20
+196/196 [==============================] - 3s 15ms/step - loss: 7.1192 - accuracy: 0.3313
+Epoch 17/20
+196/196 [==============================] - 3s 14ms/step - loss: 7.1151 - accuracy: 0.3210
+Epoch 18/20
+196/196 [==============================] - 3s 13ms/step - loss: 7.0945 - accuracy: 0.3193
+Epoch 19/20
+196/196 [==============================] - 3s 15ms/step - loss: 7.0793 - accuracy: 0.3189
+Epoch 20/20
+196/196 [==============================] - 3s 15ms/step - loss: 7.0458 - accuracy: 0.3230
+49/49 [==============================] - 0s 5ms/step - loss: 1.5427 - accuracy: 0.3085
+
+
+For 26: Test ACC=[1.5426570177078247, 0.3085276186466217]
+Confusion Matrix
+[[2780  411  687  476 1073]
+ [1190  575  431  663 1535]
+ [ 537  138  215  207  991]
+ [  81   51   36  230  122]
+ [  11    5   11    4   64]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.60      0.51      0.55      5427
+           1       0.49      0.13      0.21      4394
+           2       0.16      0.10      0.12      2088
+           3       0.15      0.44      0.22       520
+           4       0.02      0.67      0.03        95
+
+    accuracy                           0.31     12524
+   macro avg       0.28      0.37      0.23     12524
+weighted avg       0.47      0.31      0.34     12524
+
+trainingshape 27
+(68049, 7)
+(68049, 7, 1)
+testingshape 27
+(17015, 7)
+(17015, 7, 1)
+nb occurences
+Counter({0: 29756, 1: 21742, 2: 13276, 3: 3101, 4: 174})
+weights={0: 2.2869001209840034, 1: 3.1298408610063473, 2: 5.125715576981018, 3: 21.94421154466301, 4: 391.08620689655174}
+Model: "sequential_22"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_44 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_45 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_22 (Dense)             (None, 5)                 45
+_________________________________________________________________
+activation_22 (Activation)   (None, 5)                 0
+=================================================================
+Total params: 741
+Trainable params: 741
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+266/266 [==============================] - 4s 15ms/step - loss: 8.0300 - accuracy: 0.1503
+Epoch 2/20
+266/266 [==============================] - 4s 14ms/step - loss: 7.7777 - accuracy: 0.1802
+Epoch 3/20
+266/266 [==============================] - 3s 11ms/step - loss: 7.6052 - accuracy: 0.2388
+Epoch 4/20
+266/266 [==============================] - 4s 14ms/step - loss: 7.4225 - accuracy: 0.3136
+Epoch 5/20
+266/266 [==============================] - 4s 14ms/step - loss: 7.2947 - accuracy: 0.3386
+Epoch 6/20
+266/266 [==============================] - 4s 15ms/step - loss: 7.1463 - accuracy: 0.3432
+Epoch 7/20
+266/266 [==============================] - 4s 14ms/step - loss: 7.0347 - accuracy: 0.3639
+Epoch 8/20
+266/266 [==============================] - 4s 14ms/step - loss: 6.9347 - accuracy: 0.3712
+Epoch 9/20
+266/266 [==============================] - 4s 15ms/step - loss: 6.8647 - accuracy: 0.3727
+Epoch 10/20
+266/266 [==============================] - 4s 14ms/step - loss: 6.7957 - accuracy: 0.3788
+Epoch 11/20
+266/266 [==============================] - 4s 14ms/step - loss: 6.7567 - accuracy: 0.3835
+Epoch 12/20
+266/266 [==============================] - 4s 14ms/step - loss: 6.7006 - accuracy: 0.3767
+Epoch 13/20
+266/266 [==============================] - 4s 15ms/step - loss: 6.6616 - accuracy: 0.3860
+Epoch 14/20
+266/266 [==============================] - 4s 14ms/step - loss: 6.6306 - accuracy: 0.3821
+Epoch 15/20
+266/266 [==============================] - 4s 14ms/step - loss: 6.6036 - accuracy: 0.3871
+Epoch 16/20
+266/266 [==============================] - 4s 14ms/step - loss: 6.5525 - accuracy: 0.3885
+Epoch 17/20
+266/266 [==============================] - 4s 14ms/step - loss: 6.5127 - accuracy: 0.3880
+Epoch 18/20
+266/266 [==============================] - 4s 13ms/step - loss: 6.4636 - accuracy: 0.3894
+Epoch 19/20
+266/266 [==============================] - 4s 14ms/step - loss: 6.4356 - accuracy: 0.3958
+Epoch 20/20
+266/266 [==============================] - 4s 14ms/step - loss: 6.4079 - accuracy: 0.4013
+67/67 [==============================] - 0s 3ms/step - loss: 1.3678 - accuracy: 0.3874
+
+
+For 27: Test ACC=[1.3678127527236938, 0.38736408948898315]
+Confusion Matrix
+[[1827 1820 2578  827  388]
+ [ 498 2819 1078  769  272]
+ [ 143  875 1699  460  142]
+ [  45  201  258  218   54]
+ [   1    6    5    4   28]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.73      0.25      0.37      7440
+           1       0.49      0.52      0.51      5436
+           2       0.30      0.51      0.38      3319
+           3       0.10      0.28      0.14       776
+           4       0.03      0.64      0.06        44
+
+    accuracy                           0.39     17015
+   macro avg       0.33      0.44      0.29     17015
+weighted avg       0.54      0.39      0.40     17015
+
+trainingshape 28
+(22896, 7)
+(22896, 7, 1)
+testingshape 28
+(5726, 7)
+(5726, 7, 1)
+nb occurences
+Counter({0: 10764, 1: 7462, 2: 3882, 3: 788})
+weights={0: 2.1270903010033444, 1: 3.068346287858483, 2: 5.897990726429676, 3: 29.055837563451774}
+Model: "sequential_23"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_46 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_47 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_23 (Dense)             (None, 4)                 36
+_________________________________________________________________
+activation_23 (Activation)   (None, 4)                 0
+=================================================================
+Total params: 732
+Trainable params: 732
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+90/90 [==============================] - 1s 17ms/step - loss: 5.5704 - accuracy: 0.2197
+Epoch 2/20
+90/90 [==============================] - 2s 17ms/step - loss: 5.3807 - accuracy: 0.3848
+Epoch 3/20
+90/90 [==============================] - 1s 15ms/step - loss: 5.2414 - accuracy: 0.3187
+Epoch 4/20
+90/90 [==============================] - 1s 14ms/step - loss: 5.1282 - accuracy: 0.3520
+Epoch 5/20
+90/90 [==============================] - 1s 17ms/step - loss: 5.0493 - accuracy: 0.3636
+Epoch 6/20
+90/90 [==============================] - 1s 14ms/step - loss: 4.9942 - accuracy: 0.3828
+Epoch 7/20
+90/90 [==============================] - 1s 14ms/step - loss: 4.9524 - accuracy: 0.3793
+Epoch 8/20
+90/90 [==============================] - 1s 14ms/step - loss: 4.9202 - accuracy: 0.3905
+Epoch 9/20
+90/90 [==============================] - 1s 15ms/step - loss: 4.8818 - accuracy: 0.3991
+Epoch 10/20
+90/90 [==============================] - 1s 12ms/step - loss: 4.8524 - accuracy: 0.4121
+Epoch 11/20
+90/90 [==============================] - 1s 13ms/step - loss: 4.8219 - accuracy: 0.4285
+Epoch 12/20
+90/90 [==============================] - 1s 15ms/step - loss: 4.7852 - accuracy: 0.4335
+Epoch 13/20
+90/90 [==============================] - 1s 14ms/step - loss: 4.7500 - accuracy: 0.4463
+Epoch 14/20
+90/90 [==============================] - 1s 15ms/step - loss: 4.7092 - accuracy: 0.4574
+Epoch 15/20
+90/90 [==============================] - 1s 15ms/step - loss: 4.6785 - accuracy: 0.4662
+Epoch 16/20
+90/90 [==============================] - 1s 16ms/step - loss: 4.6430 - accuracy: 0.4699
+Epoch 17/20
+90/90 [==============================] - 1s 13ms/step - loss: 4.6135 - accuracy: 0.4752
+Epoch 18/20
+90/90 [==============================] - 1s 12ms/step - loss: 4.5753 - accuracy: 0.4870
+Epoch 19/20
+90/90 [==============================] - 1s 12ms/step - loss: 4.5545 - accuracy: 0.4849
+Epoch 20/20
+90/90 [==============================] - 1s 12ms/step - loss: 4.5205 - accuracy: 0.4933
+23/23 [==============================] - 0s 3ms/step - loss: 1.1715 - accuracy: 0.4838
+
+
+For 28: Test ACC=[1.1714909076690674, 0.4837583005428314]
+Confusion Matrix
+[[1285  526  703  177]
+ [ 375  838  572   81]
+ [ 174  221  551   25]
+ [  32   33   37   96]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.69      0.48      0.56      2691
+           1       0.52      0.45      0.48      1866
+           2       0.30      0.57      0.39       971
+           3       0.25      0.48      0.33       198
+
+    accuracy                           0.48      5726
+   macro avg       0.44      0.49      0.44      5726
+weighted avg       0.55      0.48      0.50      5726
+
+trainingshape 29
+(65069, 7)
+(65069, 7, 1)
+testingshape 29
+(16268, 7)
+(16268, 7, 1)
+nb occurences
+Counter({0: 35284, 1: 17194, 2: 11268, 3: 1103, 4: 220})
+weights={0: 1.84415032309262, 1: 3.7844015354193323, 2: 5.774671636492723, 3: 58.99274705349048, 4: 295.7681818181818}
+Model: "sequential_24"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_48 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_49 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_24 (Dense)             (None, 5)                 45
+_________________________________________________________________
+activation_24 (Activation)   (None, 5)                 0
+=================================================================
+Total params: 741
+Trainable params: 741
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+255/255 [==============================] - 3s 13ms/step - loss: 7.6651 - accuracy: 0.2739
+Epoch 2/20
+255/255 [==============================] - 3s 13ms/step - loss: 6.7742 - accuracy: 0.3027
+Epoch 3/20
+255/255 [==============================] - 3s 12ms/step - loss: 6.6134 - accuracy: 0.3056
+Epoch 4/20
+255/255 [==============================] - 3s 13ms/step - loss: 6.5360 - accuracy: 0.2898
+Epoch 5/20
+255/255 [==============================] - 4s 15ms/step - loss: 6.4926 - accuracy: 0.3425
+Epoch 6/20
+255/255 [==============================] - 4s 15ms/step - loss: 6.4435 - accuracy: 0.3109
+Epoch 7/20
+255/255 [==============================] - 4s 15ms/step - loss: 6.4121 - accuracy: 0.3352
+Epoch 8/20
+255/255 [==============================] - 3s 14ms/step - loss: 6.3735 - accuracy: 0.3339
+Epoch 9/20
+255/255 [==============================] - 4s 15ms/step - loss: 6.3287 - accuracy: 0.3173
+Epoch 10/20
+255/255 [==============================] - 4s 15ms/step - loss: 6.2934 - accuracy: 0.2809
+Epoch 11/20
+255/255 [==============================] - 3s 13ms/step - loss: 6.2552 - accuracy: 0.3095
+Epoch 12/20
+255/255 [==============================] - 3s 13ms/step - loss: 6.2106 - accuracy: 0.3068
+Epoch 13/20
+255/255 [==============================] - 4s 14ms/step - loss: 6.1701 - accuracy: 0.3429
+Epoch 14/20
+255/255 [==============================] - 4s 16ms/step - loss: 6.1136 - accuracy: 0.3412
+Epoch 15/20
+255/255 [==============================] - 4s 15ms/step - loss: 6.0675 - accuracy: 0.3598
+Epoch 16/20
+255/255 [==============================] - 4s 14ms/step - loss: 6.0128 - accuracy: 0.3597
+Epoch 17/20
+255/255 [==============================] - 4s 15ms/step - loss: 5.9634 - accuracy: 0.3686
+Epoch 18/20
+255/255 [==============================] - 4s 15ms/step - loss: 5.9082 - accuracy: 0.3644
+Epoch 19/20
+255/255 [==============================] - 4s 15ms/step - loss: 5.8710 - accuracy: 0.3746
+Epoch 20/20
+255/255 [==============================] - 4s 15ms/step - loss: 5.8320 - accuracy: 0.3609
+64/64 [==============================] - 0s 5ms/step - loss: 1.2593 - accuracy: 0.3750
+
+
+For 29: Test ACC=[1.2592964172363281, 0.3750307261943817]
+Confusion Matrix
+[[2785 3739  612 1624   61]
+ [ 867 2130  282 1008   12]
+ [ 471  836 1038  460   12]
+ [  28   97   20  112   19]
+ [   0    6    0   13   36]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.67      0.32      0.43      8821
+           1       0.31      0.50      0.38      4299
+           2       0.53      0.37      0.44      2817
+           3       0.03      0.41      0.06       276
+           4       0.26      0.65      0.37        55
+
+    accuracy                           0.38     16268
+   macro avg       0.36      0.45      0.34     16268
+weighted avg       0.54      0.38      0.41     16268
+
+trainingshape 30
+(21093, 7)
+(21093, 7, 1)
+testingshape 30
+(5275, 7)
+(5275, 7, 1)
+nb occurences
+Counter({0: 12405, 1: 4860, 2: 3438, 3: 390})
+weights={0: 1.7003627569528417, 1: 4.340123456790123, 2: 6.135253054101222, 3: 54.08461538461538}
+Model: "sequential_25"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_50 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_51 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_25 (Dense)             (None, 4)                 36
+_________________________________________________________________
+activation_25 (Activation)   (None, 4)                 0
+=================================================================
+Total params: 732
+Trainable params: 732
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+83/83 [==============================] - 1s 17ms/step - loss: 5.4161 - accuracy: 0.4868
+Epoch 2/20
+83/83 [==============================] - 1s 12ms/step - loss: 5.2103 - accuracy: 0.5274
+Epoch 3/20
+83/83 [==============================] - 1s 12ms/step - loss: 4.9837 - accuracy: 0.5614
+Epoch 4/20
+83/83 [==============================] - 1s 12ms/step - loss: 4.7942 - accuracy: 0.6092
+Epoch 5/20
+83/83 [==============================] - 1s 12ms/step - loss: 4.6791 - accuracy: 0.5368
+Epoch 6/20
+83/83 [==============================] - 1s 15ms/step - loss: 4.5971 - accuracy: 0.5682
+Epoch 7/20
+83/83 [==============================] - 1s 10ms/step - loss: 4.5383 - accuracy: 0.5476
+Epoch 8/20
+83/83 [==============================] - 1s 13ms/step - loss: 4.4941 - accuracy: 0.5561
+Epoch 9/20
+83/83 [==============================] - 1s 14ms/step - loss: 4.4550 - accuracy: 0.5458
+Epoch 10/20
+83/83 [==============================] - 1s 16ms/step - loss: 4.4223 - accuracy: 0.5882
+Epoch 11/20
+83/83 [==============================] - 1s 13ms/step - loss: 4.3933 - accuracy: 0.5931
+Epoch 12/20
+83/83 [==============================] - 1s 16ms/step - loss: 4.3672 - accuracy: 0.6110
+Epoch 13/20
+83/83 [==============================] - 1s 16ms/step - loss: 4.3469 - accuracy: 0.6092
+Epoch 14/20
+83/83 [==============================] - 1s 16ms/step - loss: 4.3266 - accuracy: 0.5979
+Epoch 15/20
+83/83 [==============================] - 1s 12ms/step - loss: 4.3036 - accuracy: 0.5476
+Epoch 16/20
+83/83 [==============================] - 1s 14ms/step - loss: 4.2885 - accuracy: 0.5668
+Epoch 17/20
+83/83 [==============================] - 1s 15ms/step - loss: 4.2757 - accuracy: 0.6279
+Epoch 18/20
+83/83 [==============================] - 1s 16ms/step - loss: 4.2594 - accuracy: 0.6033
+Epoch 19/20
+83/83 [==============================] - 1s 12ms/step - loss: 4.2487 - accuracy: 0.6172
+Epoch 20/20
+83/83 [==============================] - 1s 13ms/step - loss: 4.2357 - accuracy: 0.6407
+21/21 [==============================] - 0s 5ms/step - loss: 0.9431 - accuracy: 0.5663
+
+
+For 30: Test ACC=[0.943081796169281, 0.5662559270858765]
+Confusion Matrix
+[[2147  204  185  566]
+ [  73  245  270  627]
+ [  33   52  544  231]
+ [   8   17   22   51]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.95      0.69      0.80      3102
+           1       0.47      0.20      0.28      1215
+           2       0.53      0.63      0.58       860
+           3       0.03      0.52      0.06        98
+
+    accuracy                           0.57      5275
+   macro avg       0.50      0.51      0.43      5275
+weighted avg       0.75      0.57      0.63      5275
+
+trainingshape 31
+(48768, 7)
+(48768, 7, 1)
+testingshape 31
+(12195, 7)
+(12195, 7, 1)
+nb occurences
+Counter({0: 27244, 1: 15837, 2: 5224, 3: 463})
+weights={0: 1.790045514608721, 1: 3.0793710930100398, 2: 9.335375191424196, 3: 105.33045356371491}
+Model: "sequential_26"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_52 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_53 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_26 (Dense)             (None, 4)                 36
+_________________________________________________________________
+activation_26 (Activation)   (None, 4)                 0
+=================================================================
+Total params: 732
+Trainable params: 732
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+191/191 [==============================] - 3s 15ms/step - loss: 5.4830 - accuracy: 0.4096
+Epoch 2/20
+191/191 [==============================] - 2s 13ms/step - loss: 5.3007 - accuracy: 0.4083
+Epoch 3/20
+191/191 [==============================] - 2s 12ms/step - loss: 5.1417 - accuracy: 0.3972
+Epoch 4/20
+191/191 [==============================] - 3s 15ms/step - loss: 5.0555 - accuracy: 0.3581
+Epoch 5/20
+191/191 [==============================] - 3s 15ms/step - loss: 5.0093 - accuracy: 0.3914
+Epoch 6/20
+191/191 [==============================] - 3s 14ms/step - loss: 4.9597 - accuracy: 0.3667
+Epoch 7/20
+191/191 [==============================] - 3s 16ms/step - loss: 4.9294 - accuracy: 0.3735
+Epoch 8/20
+191/191 [==============================] - 3s 15ms/step - loss: 4.9083 - accuracy: 0.3793
+Epoch 9/20
+191/191 [==============================] - 3s 15ms/step - loss: 4.8837 - accuracy: 0.3766
+Epoch 10/20
+191/191 [==============================] - 3s 16ms/step - loss: 4.8669 - accuracy: 0.3910
+Epoch 11/20
+191/191 [==============================] - 3s 14ms/step - loss: 4.8523 - accuracy: 0.3756
+Epoch 12/20
+191/191 [==============================] - 2s 11ms/step - loss: 4.8442 - accuracy: 0.4051
+Epoch 13/20
+191/191 [==============================] - 2s 9ms/step - loss: 4.8128 - accuracy: 0.3947
+Epoch 14/20
+191/191 [==============================] - 2s 9ms/step - loss: 4.7981 - accuracy: 0.4260
+Epoch 15/20
+191/191 [==============================] - 2s 10ms/step - loss: 4.7954 - accuracy: 0.4113
+Epoch 16/20
+191/191 [==============================] - 3s 15ms/step - loss: 4.7694 - accuracy: 0.4067
+Epoch 17/20
+191/191 [==============================] - 3s 15ms/step - loss: 4.7605 - accuracy: 0.4364
+Epoch 18/20
+191/191 [==============================] - 3s 14ms/step - loss: 4.7438 - accuracy: 0.4163
+Epoch 19/20
+191/191 [==============================] - 3s 15ms/step - loss: 4.7334 - accuracy: 0.4220
+Epoch 20/20
+191/191 [==============================] - 2s 9ms/step - loss: 4.7158 - accuracy: 0.4211
+48/48 [==============================] - 0s 5ms/step - loss: 1.2236 - accuracy: 0.4267
+
+
+For 31: Test ACC=[1.2235631942749023, 0.4266502559185028]
+Confusion Matrix
+[[3012 1095  749 1956]
+ [ 502 1679  591 1188]
+ [ 422  196  449  240]
+ [  14   32    7   63]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.76      0.44      0.56      6812
+           1       0.56      0.42      0.48      3960
+           2       0.25      0.34      0.29      1307
+           3       0.02      0.54      0.04       116
+
+    accuracy                           0.43     12195
+   macro avg       0.40      0.44      0.34     12195
+weighted avg       0.63      0.43      0.50     12195
+
+trainingshape 32
+(36088, 7)
+(36088, 7, 1)
+testingshape 32
+(9024, 7)
+(9024, 7, 1)
+nb occurences
+Counter({0: 22150, 1: 10231, 2: 3491, 3: 216})
+weights={0: 1.629255079006772, 1: 3.5273189326556547, 2: 10.337439129189343, 3: 167.07407407407408}
+Model: "sequential_27"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_54 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_55 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_27 (Dense)             (None, 4)                 36
+_________________________________________________________________
+activation_27 (Activation)   (None, 4)                 0
+=================================================================
+Total params: 732
+Trainable params: 732
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+141/141 [==============================] - 2s 16ms/step - loss: 5.5773 - accuracy: 0.1583
+Epoch 2/20
+141/141 [==============================] - 2s 12ms/step - loss: 5.4826 - accuracy: 0.5724
+Epoch 3/20
+141/141 [==============================] - 2s 12ms/step - loss: 5.4006 - accuracy: 0.4784
+Epoch 4/20
+141/141 [==============================] - 2s 13ms/step - loss: 5.2194 - accuracy: 0.2876
+Epoch 5/20
+141/141 [==============================] - 2s 12ms/step - loss: 5.0629 - accuracy: 0.2577
+Epoch 6/20
+141/141 [==============================] - 2s 12ms/step - loss: 4.9690 - accuracy: 0.2821
+Epoch 7/20
+141/141 [==============================] - 2s 13ms/step - loss: 4.9197 - accuracy: 0.3104
+Epoch 8/20
+141/141 [==============================] - 2s 12ms/step - loss: 4.8910 - accuracy: 0.3833
+Epoch 9/20
+141/141 [==============================] - 2s 12ms/step - loss: 4.8510 - accuracy: 0.3673
+Epoch 10/20
+141/141 [==============================] - 2s 13ms/step - loss: 4.8296 - accuracy: 0.3899
+Epoch 11/20
+141/141 [==============================] - 2s 12ms/step - loss: 4.8061 - accuracy: 0.4593
+Epoch 12/20
+141/141 [==============================] - 2s 12ms/step - loss: 4.7865 - accuracy: 0.4697
+Epoch 13/20
+141/141 [==============================] - 2s 13ms/step - loss: 4.7653 - accuracy: 0.4898
+Epoch 14/20
+141/141 [==============================] - 2s 12ms/step - loss: 4.7251 - accuracy: 0.4908
+Epoch 15/20
+141/141 [==============================] - 2s 13ms/step - loss: 4.6585 - accuracy: 0.4871
+Epoch 16/20
+141/141 [==============================] - 2s 11ms/step - loss: 4.5919 - accuracy: 0.5375
+Epoch 17/20
+141/141 [==============================] - 2s 14ms/step - loss: 4.5373 - accuracy: 0.5461
+Epoch 18/20
+141/141 [==============================] - 2s 16ms/step - loss: 4.5044 - accuracy: 0.5273
+Epoch 19/20
+141/141 [==============================] - 2s 15ms/step - loss: 4.4793 - accuracy: 0.5386
+Epoch 20/20
+141/141 [==============================] - 2s 16ms/step - loss: 4.4548 - accuracy: 0.5821
+36/36 [==============================] - 0s 5ms/step - loss: 1.1060 - accuracy: 0.6451
+
+
+For 32: Test ACC=[1.105979084968567, 0.6450576186180115]
+Confusion Matrix
+[[4934  325  155  124]
+ [1559  804  176   19]
+ [ 608  199   56   10]
+ [  27    0    1   27]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.69      0.89      0.78      5538
+           1       0.61      0.31      0.41      2558
+           2       0.14      0.06      0.09       873
+           3       0.15      0.49      0.23        55
+
+    accuracy                           0.65      9024
+   macro avg       0.40      0.44      0.38      9024
+weighted avg       0.61      0.65      0.61      9024
+
+trainingshape 33
+(17950, 7)
+(17950, 7, 1)
+testingshape 33
+(4489, 7)
+(4489, 7, 1)
+nb occurences
+Counter({0: 11318, 1: 5432, 2: 1200})
+weights={0: 1.5859692525181128, 1: 3.3044918998527244, 2: 14.958333333333334}
+Model: "sequential_28"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_56 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_57 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_28 (Dense)             (None, 3)                 27
+_________________________________________________________________
+activation_28 (Activation)   (None, 3)                 0
+=================================================================
+Total params: 723
+Trainable params: 723
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+71/71 [==============================] - 1s 17ms/step - loss: 3.2638 - accuracy: 0.3003
+Epoch 2/20
+71/71 [==============================] - 1s 12ms/step - loss: 3.1671 - accuracy: 0.5794
+Epoch 3/20
+71/71 [==============================] - 1s 12ms/step - loss: 3.0566 - accuracy: 0.5684
+Epoch 4/20
+71/71 [==============================] - 1s 13ms/step - loss: 2.9893 - accuracy: 0.5388
+Epoch 5/20
+71/71 [==============================] - 1s 9ms/step - loss: 2.9648 - accuracy: 0.5440
+Epoch 6/20
+71/71 [==============================] - 1s 11ms/step - loss: 2.9473 - accuracy: 0.5252
+Epoch 7/20
+71/71 [==============================] - 1s 16ms/step - loss: 2.9357 - accuracy: 0.4814
+Epoch 8/20
+71/71 [==============================] - 1s 14ms/step - loss: 2.9271 - accuracy: 0.5152
+Epoch 9/20
+71/71 [==============================] - 1s 14ms/step - loss: 2.9222 - accuracy: 0.5074
+Epoch 10/20
+71/71 [==============================] - 1s 14ms/step - loss: 2.9146 - accuracy: 0.4896
+Epoch 11/20
+71/71 [==============================] - 1s 14ms/step - loss: 2.9070 - accuracy: 0.4904
+Epoch 12/20
+71/71 [==============================] - 1s 16ms/step - loss: 2.9020 - accuracy: 0.4770
+Epoch 13/20
+71/71 [==============================] - 1s 14ms/step - loss: 2.8952 - accuracy: 0.4765
+Epoch 14/20
+71/71 [==============================] - 1s 14ms/step - loss: 2.8903 - accuracy: 0.4733
+Epoch 15/20
+71/71 [==============================] - 1s 14ms/step - loss: 2.8882 - accuracy: 0.4880
+Epoch 16/20
+71/71 [==============================] - 1s 15ms/step - loss: 2.8959 - accuracy: 0.4878
+Epoch 17/20
+71/71 [==============================] - 1s 15ms/step - loss: 2.8850 - accuracy: 0.4744
+Epoch 18/20
+71/71 [==============================] - 1s 14ms/step - loss: 2.8771 - accuracy: 0.4696
+Epoch 19/20
+71/71 [==============================] - 1s 15ms/step - loss: 2.8754 - accuracy: 0.4836
+Epoch 20/20
+71/71 [==============================] - 1s 14ms/step - loss: 2.8795 - accuracy: 0.4746
+18/18 [==============================] - 0s 5ms/step - loss: 0.9586 - accuracy: 0.4420
+
+
+For 33: Test ACC=[0.9586173892021179, 0.44196924567222595]
+Confusion Matrix
+[[1056  676 1098]
+ [ 206  773  380]
+ [  71   74  155]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.79      0.37      0.51      2830
+           1       0.51      0.57      0.54      1359
+           2       0.09      0.52      0.16       300
+
+    accuracy                           0.44      4489
+   macro avg       0.46      0.49      0.40      4489
+weighted avg       0.66      0.44      0.49      4489
+
+trainingshape 34
+(39836, 7)
+(39836, 7, 1)
+testingshape 34
+(9960, 7)
+(9960, 7, 1)
+nb occurences
+Counter({0: 24622, 1: 12820, 2: 2394})
+weights={0: 1.6179026886524246, 1: 3.1073322932917318, 2: 16.639933166248955}
+Model: "sequential_29"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_58 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_59 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_29 (Dense)             (None, 3)                 27
+_________________________________________________________________
+activation_29 (Activation)   (None, 3)                 0
+=================================================================
+Total params: 723
+Trainable params: 723
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+156/156 [==============================] - 3s 17ms/step - loss: 3.1636 - accuracy: 0.5981
+Epoch 2/20
+156/156 [==============================] - 2s 14ms/step - loss: 2.7805 - accuracy: 0.7194
+Epoch 3/20
+156/156 [==============================] - 2s 14ms/step - loss: 2.7141 - accuracy: 0.6137
+Epoch 4/20
+156/156 [==============================] - 1s 9ms/step - loss: 2.6636 - accuracy: 0.5089
+Epoch 5/20
+156/156 [==============================] - 2s 12ms/step - loss: 2.5991 - accuracy: 0.6552
+Epoch 6/20
+156/156 [==============================] - 2s 13ms/step - loss: 2.5718 - accuracy: 0.6670
+Epoch 7/20
+156/156 [==============================] - 2s 13ms/step - loss: 2.5647 - accuracy: 0.6674
+Epoch 8/20
+156/156 [==============================] - 2s 14ms/step - loss: 2.5595 - accuracy: 0.6712
+Epoch 9/20
+156/156 [==============================] - 2s 14ms/step - loss: 2.5546 - accuracy: 0.6687
+Epoch 10/20
+156/156 [==============================] - 2s 15ms/step - loss: 2.5510 - accuracy: 0.6714
+Epoch 11/20
+156/156 [==============================] - 2s 11ms/step - loss: 2.5472 - accuracy: 0.6721
+Epoch 12/20
+156/156 [==============================] - 2s 14ms/step - loss: 2.5455 - accuracy: 0.6704
+Epoch 13/20
+156/156 [==============================] - 2s 16ms/step - loss: 2.5425 - accuracy: 0.6725
+Epoch 14/20
+156/156 [==============================] - 2s 14ms/step - loss: 2.5391 - accuracy: 0.6762
+Epoch 15/20
+156/156 [==============================] - 2s 15ms/step - loss: 2.5347 - accuracy: 0.6730
+Epoch 16/20
+156/156 [==============================] - 2s 15ms/step - loss: 2.5307 - accuracy: 0.6739
+Epoch 17/20
+156/156 [==============================] - 2s 14ms/step - loss: 2.5280 - accuracy: 0.6753
+Epoch 18/20
+156/156 [==============================] - 2s 16ms/step - loss: 2.5249 - accuracy: 0.6736
+Epoch 19/20
+156/156 [==============================] - 2s 14ms/step - loss: 2.5209 - accuracy: 0.6741
+Epoch 20/20
+156/156 [==============================] - 2s 15ms/step - loss: 2.5163 - accuracy: 0.6762
+39/39 [==============================] - 0s 4ms/step - loss: 0.8359 - accuracy: 0.6656
+
+
+For 34: Test ACC=[0.8359313011169434, 0.6655622720718384]
+Confusion Matrix
+[[4277  168 1711]
+ [ 703 2010  492]
+ [ 218   39  342]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.82      0.69      0.75      6156
+           1       0.91      0.63      0.74      3205
+           2       0.13      0.57      0.22       599
+
+    accuracy                           0.67      9960
+   macro avg       0.62      0.63      0.57      9960
+weighted avg       0.81      0.67      0.72      9960
+
+trainingshape 35
+(11204, 7)
+(11204, 7, 1)
+testingshape 35
+(2802, 7)
+(2802, 7, 1)
+nb occurences
+Counter({0: 8019, 1: 2636, 2: 549})
+weights={0: 1.39718169347799, 1: 4.250379362670714, 2: 20.408014571949}
+Model: "sequential_30"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_60 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_61 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_30 (Dense)             (None, 3)                 27
+_________________________________________________________________
+activation_30 (Activation)   (None, 3)                 0
+=================================================================
+Total params: 723
+Trainable params: 723
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+44/44 [==============================] - 1s 16ms/step - loss: 3.5119 - accuracy: 0.4702
+Epoch 2/20
+44/44 [==============================] - 1s 13ms/step - loss: 3.2932 - accuracy: 0.5512
+Epoch 3/20
+44/44 [==============================] - 1s 13ms/step - loss: 3.2566 - accuracy: 0.4564
+Epoch 4/20
+44/44 [==============================] - 1s 13ms/step - loss: 3.2325 - accuracy: 0.4805
+Epoch 5/20
+44/44 [==============================] - 1s 12ms/step - loss: 3.1994 - accuracy: 0.3548
+Epoch 6/20
+44/44 [==============================] - 1s 12ms/step - loss: 3.1528 - accuracy: 0.5097
+Epoch 7/20
+44/44 [==============================] - 1s 12ms/step - loss: 3.1135 - accuracy: 0.5082
+Epoch 8/20
+44/44 [==============================] - 1s 12ms/step - loss: 3.0706 - accuracy: 0.4463
+Epoch 9/20
+44/44 [==============================] - 1s 14ms/step - loss: 3.0378 - accuracy: 0.5329
+Epoch 10/20
+44/44 [==============================] - 0s 8ms/step - loss: 3.0103 - accuracy: 0.5515
+Epoch 11/20
+44/44 [==============================] - 0s 8ms/step - loss: 2.9812 - accuracy: 0.5806
+Epoch 12/20
+44/44 [==============================] - 1s 13ms/step - loss: 2.9526 - accuracy: 0.5630
+Epoch 13/20
+44/44 [==============================] - 1s 14ms/step - loss: 2.9529 - accuracy: 0.5652
+Epoch 14/20
+44/44 [==============================] - 1s 14ms/step - loss: 2.9107 - accuracy: 0.5826
+Epoch 15/20
+44/44 [==============================] - 1s 14ms/step - loss: 2.9031 - accuracy: 0.5655
+Epoch 16/20
+44/44 [==============================] - 1s 14ms/step - loss: 2.8920 - accuracy: 0.5673
+Epoch 17/20
+44/44 [==============================] - 1s 15ms/step - loss: 2.8716 - accuracy: 0.5867
+Epoch 18/20
+44/44 [==============================] - 1s 18ms/step - loss: 2.8532 - accuracy: 0.5792
+Epoch 19/20
+44/44 [==============================] - 1s 14ms/step - loss: 2.8454 - accuracy: 0.5677
+Epoch 20/20
+44/44 [==============================] - 1s 14ms/step - loss: 2.8352 - accuracy: 0.5715
+11/11 [==============================] - 0s 3ms/step - loss: 0.8996 - accuracy: 0.6046
+
+
+For 35: Test ACC=[0.8996293544769287, 0.6045681834220886]
+Confusion Matrix
+[[1228  480  297]
+ [ 127  430  102]
+ [  60   42   36]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.87      0.61      0.72      2005
+           1       0.45      0.65      0.53       659
+           2       0.08      0.26      0.13       138
+
+    accuracy                           0.60      2802
+   macro avg       0.47      0.51      0.46      2802
+weighted avg       0.73      0.60      0.65      2802
+
+trainingshape 36
+(32911, 7)
+(32911, 7, 1)
+testingshape 36
+(8229, 7)
+(8229, 7, 1)
+nb occurences
+Counter({0: 24052, 1: 7912, 2: 947})
+weights={0: 1.3683269582571096, 1: 4.1596309403437814, 2: 34.75290390707497}
+Model: "sequential_31"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_62 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_63 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_31 (Dense)             (None, 3)                 27
+_________________________________________________________________
+activation_31 (Activation)   (None, 3)                 0
+=================================================================
+Total params: 723
+Trainable params: 723
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+129/129 [==============================] - 2s 15ms/step - loss: 3.1718 - accuracy: 0.5103
+Epoch 2/20
+129/129 [==============================] - 2s 16ms/step - loss: 2.8170 - accuracy: 0.5571
+Epoch 3/20
+129/129 [==============================] - 2s 14ms/step - loss: 2.6821 - accuracy: 0.5753
+Epoch 4/20
+129/129 [==============================] - 1s 8ms/step - loss: 2.5869 - accuracy: 0.5931
+Epoch 5/20
+129/129 [==============================] - 1s 9ms/step - loss: 2.5043 - accuracy: 0.6128
+Epoch 6/20
+129/129 [==============================] - 2s 16ms/step - loss: 2.4358 - accuracy: 0.6292
+Epoch 7/20
+129/129 [==============================] - 2s 13ms/step - loss: 2.3938 - accuracy: 0.6341
+Epoch 8/20
+129/129 [==============================] - 2s 13ms/step - loss: 2.3675 - accuracy: 0.6389
+Epoch 9/20
+129/129 [==============================] - 2s 16ms/step - loss: 2.3443 - accuracy: 0.6425
+Epoch 10/20
+129/129 [==============================] - 2s 13ms/step - loss: 2.3402 - accuracy: 0.6437
+Epoch 11/20
+129/129 [==============================] - 2s 15ms/step - loss: 2.3212 - accuracy: 0.6451
+Epoch 12/20
+129/129 [==============================] - 2s 14ms/step - loss: 2.3032 - accuracy: 0.6484
+Epoch 13/20
+129/129 [==============================] - 2s 13ms/step - loss: 2.2928 - accuracy: 0.6515
+Epoch 14/20
+129/129 [==============================] - 2s 14ms/step - loss: 2.2801 - accuracy: 0.6559
+Epoch 15/20
+129/129 [==============================] - 2s 14ms/step - loss: 2.2654 - accuracy: 0.6590
+Epoch 16/20
+129/129 [==============================] - 2s 15ms/step - loss: 2.2582 - accuracy: 0.6566
+Epoch 17/20
+129/129 [==============================] - 2s 16ms/step - loss: 2.2457 - accuracy: 0.6609
+Epoch 18/20
+129/129 [==============================] - 2s 15ms/step - loss: 2.2384 - accuracy: 0.6626
+Epoch 19/20
+129/129 [==============================] - 2s 14ms/step - loss: 2.2267 - accuracy: 0.6649
+Epoch 20/20
+129/129 [==============================] - 2s 16ms/step - loss: 2.2190 - accuracy: 0.6679
+33/33 [==============================] - 0s 5ms/step - loss: 0.7310 - accuracy: 0.6689
+
+
+For 36: Test ACC=[0.7309596538543701, 0.6688540577888489]
+Confusion Matrix
+[[4045 1438  531]
+ [ 383 1299  296]
+ [  21   56  160]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.91      0.67      0.77      6014
+           1       0.47      0.66      0.54      1978
+           2       0.16      0.68      0.26       237
+
+    accuracy                           0.67      8229
+   macro avg       0.51      0.67      0.53      8229
+weighted avg       0.78      0.67      0.70      8229
+
+trainingshape 37
+(13030, 7)
+(13030, 7, 1)
+testingshape 37
+(3259, 7)
+(3259, 7, 1)
+nb occurences
+Counter({0: 10200, 1: 2629, 2: 201})
+weights={0: 1.2774509803921568, 1: 4.95625713198935, 2: 64.82587064676616}
+Model: "sequential_32"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_64 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_65 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_32 (Dense)             (None, 3)                 27
+_________________________________________________________________
+activation_32 (Activation)   (None, 3)                 0
+=================================================================
+Total params: 723
+Trainable params: 723
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+51/51 [==============================] - 1s 17ms/step - loss: 3.3428 - accuracy: 0.7234
+Epoch 2/20
+51/51 [==============================] - 1s 13ms/step - loss: 3.2875 - accuracy: 0.2797
+Epoch 3/20
+51/51 [==============================] - 1s 13ms/step - loss: 3.2692 - accuracy: 0.5054
+Epoch 4/20
+51/51 [==============================] - 1s 12ms/step - loss: 3.2550 - accuracy: 0.2147
+Epoch 5/20
+51/51 [==============================] - 1s 12ms/step - loss: 3.2412 - accuracy: 0.2021
+Epoch 6/20
+51/51 [==============================] - 1s 12ms/step - loss: 3.2309 - accuracy: 0.1003
+Epoch 7/20
+51/51 [==============================] - 1s 12ms/step - loss: 3.2258 - accuracy: 0.2534
+Epoch 8/20
+51/51 [==============================] - 1s 15ms/step - loss: 3.2215 - accuracy: 0.1047
+Epoch 9/20
+51/51 [==============================] - 1s 12ms/step - loss: 3.2145 - accuracy: 0.4071
+Epoch 10/20
+51/51 [==============================] - 1s 12ms/step - loss: 3.2067 - accuracy: 0.1992
+Epoch 11/20
+51/51 [==============================] - 1s 12ms/step - loss: 3.1990 - accuracy: 0.1736
+Epoch 12/20
+51/51 [==============================] - 1s 12ms/step - loss: 3.1879 - accuracy: 0.1682
+Epoch 13/20
+51/51 [==============================] - 1s 12ms/step - loss: 3.1790 - accuracy: 0.2513
+Epoch 14/20
+51/51 [==============================] - 1s 12ms/step - loss: 3.1738 - accuracy: 0.2839
+Epoch 15/20
+51/51 [==============================] - 1s 13ms/step - loss: 3.1540 - accuracy: 0.2423
+Epoch 16/20
+51/51 [==============================] - 1s 10ms/step - loss: 3.1455 - accuracy: 0.1903
+Epoch 17/20
+51/51 [==============================] - 1s 10ms/step - loss: 3.1281 - accuracy: 0.2860
+Epoch 18/20
+51/51 [==============================] - 1s 14ms/step - loss: 3.1109 - accuracy: 0.2694
+Epoch 19/20
+51/51 [==============================] - 1s 14ms/step - loss: 3.0976 - accuracy: 0.2460
+Epoch 20/20
+51/51 [==============================] - 1s 15ms/step - loss: 3.0832 - accuracy: 0.3165
+13/13 [==============================] - 2s 149ms/step - loss: 1.0720 - accuracy: 0.3615
+
+
+For 37: Test ACC=[1.0719859600067139, 0.3614605665206909]
+Confusion Matrix
+[[ 608 1517  425]
+ [  39  556   63]
+ [   7   30   14]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.93      0.24      0.38      2550
+           1       0.26      0.84      0.40       658
+           2       0.03      0.27      0.05        51
+
+    accuracy                           0.36      3259
+   macro avg       0.41      0.45      0.28      3259
+weighted avg       0.78      0.36      0.38      3259
+
+trainingshape 38
+(14172, 7)
+(14172, 7, 1)
+testingshape 38
+(3545, 7)
+(3545, 7, 1)
+nb occurences
+Counter({0: 11651, 1: 2344, 2: 177})
+weights={0: 1.216376276714445, 1: 6.046075085324232, 2: 80.0677966101695}
+Model: "sequential_33"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_66 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_67 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_33 (Dense)             (None, 3)                 27
+_________________________________________________________________
+activation_33 (Activation)   (None, 3)                 0
+=================================================================
+Total params: 723
+Trainable params: 723
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+56/56 [==============================] - 1s 16ms/step - loss: 3.2680 - accuracy: 0.3444
+Epoch 2/20
+56/56 [==============================] - 1s 17ms/step - loss: 3.1318 - accuracy: 0.5190
+Epoch 3/20
+56/56 [==============================] - 1s 17ms/step - loss: 3.0003 - accuracy: 0.6298
+Epoch 4/20
+56/56 [==============================] - 1s 15ms/step - loss: 2.9113 - accuracy: 0.5327
+Epoch 5/20
+56/56 [==============================] - 1s 16ms/step - loss: 2.8555 - accuracy: 0.6241
+Epoch 6/20
+56/56 [==============================] - 1s 14ms/step - loss: 2.8213 - accuracy: 0.5109
+Epoch 7/20
+56/56 [==============================] - 1s 12ms/step - loss: 2.8066 - accuracy: 0.5145
+Epoch 8/20
+56/56 [==============================] - 1s 12ms/step - loss: 2.7797 - accuracy: 0.5625
+Epoch 9/20
+56/56 [==============================] - 1s 12ms/step - loss: 2.7699 - accuracy: 0.4498
+Epoch 10/20
+56/56 [==============================] - 1s 13ms/step - loss: 2.7637 - accuracy: 0.4819
+Epoch 11/20
+56/56 [==============================] - 1s 13ms/step - loss: 2.7442 - accuracy: 0.5095
+Epoch 12/20
+56/56 [==============================] - 1s 14ms/step - loss: 2.7122 - accuracy: 0.4825
+Epoch 13/20
+56/56 [==============================] - 0s 8ms/step - loss: 2.7244 - accuracy: 0.5212
+Epoch 14/20
+56/56 [==============================] - 1s 13ms/step - loss: 2.6866 - accuracy: 0.5116
+Epoch 15/20
+56/56 [==============================] - 1s 14ms/step - loss: 2.6608 - accuracy: 0.4948
+Epoch 16/20
+56/56 [==============================] - 1s 14ms/step - loss: 2.6421 - accuracy: 0.5056
+Epoch 17/20
+56/56 [==============================] - 1s 14ms/step - loss: 2.6241 - accuracy: 0.5082
+Epoch 18/20
+56/56 [==============================] - 1s 14ms/step - loss: 2.5960 - accuracy: 0.5338
+Epoch 19/20
+56/56 [==============================] - 1s 17ms/step - loss: 2.5880 - accuracy: 0.5010
+Epoch 20/20
+56/56 [==============================] - 1s 15ms/step - loss: 2.5416 - accuracy: 0.5369
+14/14 [==============================] - 0s 4ms/step - loss: 0.9199 - accuracy: 0.4770
+
+
+For 38: Test ACC=[0.9198982119560242, 0.4770098626613617]
+Confusion Matrix
+[[1232  768  913]
+ [  51  438   98]
+ [   7   17   21]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.96      0.42      0.59      2913
+           1       0.36      0.75      0.48       587
+           2       0.02      0.47      0.04        45
+
+    accuracy                           0.48      3545
+   macro avg       0.44      0.55      0.37      3545
+weighted avg       0.84      0.48      0.56      3545
+
+trainingshape 39
+(19534, 7)
+(19534, 7, 1)
+testingshape 39
+(4885, 7)
+(4885, 7, 1)
+nb occurences
+Counter({0: 17090, 1: 2444})
+weights={0: 1.1430076067875952, 1: 7.9926350245499185}
+Model: "sequential_34"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_68 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_69 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_34 (Dense)             (None, 2)                 18
+_________________________________________________________________
+activation_34 (Activation)   (None, 2)                 0
+=================================================================
+Total params: 714
+Trainable params: 714
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+77/77 [==============================] - 1s 15ms/step - loss: 1.3439 - accuracy: 0.5829
+Epoch 2/20
+77/77 [==============================] - 1s 15ms/step - loss: 1.2846 - accuracy: 0.6316
+Epoch 3/20
+77/77 [==============================] - 1s 14ms/step - loss: 1.2517 - accuracy: 0.6283
+Epoch 4/20
+77/77 [==============================] - 1s 16ms/step - loss: 1.2260 - accuracy: 0.6422
+Epoch 5/20
+77/77 [==============================] - 1s 16ms/step - loss: 1.2209 - accuracy: 0.6273
+Epoch 6/20
+77/77 [==============================] - 1s 15ms/step - loss: 1.2044 - accuracy: 0.6297
+Epoch 7/20
+77/77 [==============================] - 1s 15ms/step - loss: 1.1928 - accuracy: 0.6314
+Epoch 8/20
+77/77 [==============================] - 1s 16ms/step - loss: 1.1914 - accuracy: 0.6386
+Epoch 9/20
+77/77 [==============================] - 1s 16ms/step - loss: 1.1864 - accuracy: 0.6399
+Epoch 10/20
+77/77 [==============================] - 1s 14ms/step - loss: 1.1792 - accuracy: 0.6368
+Epoch 11/20
+77/77 [==============================] - 1s 14ms/step - loss: 1.1749 - accuracy: 0.6309
+Epoch 12/20
+77/77 [==============================] - 1s 14ms/step - loss: 1.1716 - accuracy: 0.6336
+Epoch 13/20
+77/77 [==============================] - 1s 15ms/step - loss: 1.1661 - accuracy: 0.6317
+Epoch 14/20
+77/77 [==============================] - 1s 15ms/step - loss: 1.1727 - accuracy: 0.6305
+Epoch 15/20
+77/77 [==============================] - 1s 15ms/step - loss: 1.1600 - accuracy: 0.6337
+Epoch 16/20
+77/77 [==============================] - 1s 15ms/step - loss: 1.1579 - accuracy: 0.6340
+Epoch 17/20
+77/77 [==============================] - 1s 15ms/step - loss: 1.1583 - accuracy: 0.6446
+Epoch 18/20
+77/77 [==============================] - 1s 12ms/step - loss: 1.1619 - accuracy: 0.6276
+Epoch 19/20
+77/77 [==============================] - 1s 12ms/step - loss: 1.1456 - accuracy: 0.6391
+Epoch 20/20
+77/77 [==============================] - 1s 12ms/step - loss: 1.1240 - accuracy: 0.6632
+20/20 [==============================] - 0s 3ms/step - loss: 0.6755 - accuracy: 0.5339
+
+
+For 39: Test ACC=[0.6755004525184631, 0.5338792204856873]
+Confusion Matrix
+[[2092 2181]
+ [  96  516]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.96      0.49      0.65      4273
+           1       0.19      0.84      0.31       612
+
+    accuracy                           0.53      4885
+   macro avg       0.57      0.67      0.48      4885
+weighted avg       0.86      0.53      0.61      4885
+
+trainingshape 40
+(5403, 7)
+(5403, 7, 1)
+testingshape 40
+(1352, 7)
+(1352, 7, 1)
+nb occurences
+Counter({0: 4740, 1: 663})
+weights={0: 1.139873417721519, 1: 8.149321266968325}
+Model: "sequential_35"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_70 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_71 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_35 (Dense)             (None, 2)                 18
+_________________________________________________________________
+activation_35 (Activation)   (None, 2)                 0
+=================================================================
+Total params: 714
+Trainable params: 714
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+22/22 [==============================] - 0s 15ms/step - loss: 1.5027 - accuracy: 0.8773
+Epoch 2/20
+22/22 [==============================] - 0s 14ms/step - loss: 1.4000 - accuracy: 0.8745
+Epoch 3/20
+22/22 [==============================] - 0s 14ms/step - loss: 1.3864 - accuracy: 0.5606
+Epoch 4/20
+22/22 [==============================] - 0s 13ms/step - loss: 1.3851 - accuracy: 0.2995
+Epoch 5/20
+22/22 [==============================] - 0s 14ms/step - loss: 1.3851 - accuracy: 0.6598
+Epoch 6/20
+22/22 [==============================] - 0s 14ms/step - loss: 1.3866 - accuracy: 0.3204
+Epoch 7/20
+22/22 [==============================] - 0s 13ms/step - loss: 1.3844 - accuracy: 0.4138
+Epoch 8/20
+22/22 [==============================] - 0s 14ms/step - loss: 1.3846 - accuracy: 0.3117
+Epoch 9/20
+22/22 [==============================] - 0s 16ms/step - loss: 1.3838 - accuracy: 0.4022
+Epoch 10/20
+22/22 [==============================] - 0s 18ms/step - loss: 1.3838 - accuracy: 0.4868
+Epoch 11/20
+22/22 [==============================] - 0s 16ms/step - loss: 1.3840 - accuracy: 0.3526
+Epoch 12/20
+22/22 [==============================] - 0s 15ms/step - loss: 1.3838 - accuracy: 0.6004
+Epoch 13/20
+22/22 [==============================] - 0s 15ms/step - loss: 1.3845 - accuracy: 0.2297
+Epoch 14/20
+22/22 [==============================] - 0s 15ms/step - loss: 1.3842 - accuracy: 0.7318
+Epoch 15/20
+22/22 [==============================] - 0s 14ms/step - loss: 1.3858 - accuracy: 0.2969
+Epoch 16/20
+22/22 [==============================] - 0s 14ms/step - loss: 1.3836 - accuracy: 0.2941
+Epoch 17/20
+22/22 [==============================] - 0s 14ms/step - loss: 1.3834 - accuracy: 0.3009
+Epoch 18/20
+22/22 [==============================] - 0s 13ms/step - loss: 1.3818 - accuracy: 0.4479
+Epoch 19/20
+22/22 [==============================] - 0s 14ms/step - loss: 1.3816 - accuracy: 0.4192
+Epoch 20/20
+22/22 [==============================] - 0s 13ms/step - loss: 1.3814 - accuracy: 0.4551
+6/6 [==============================] - 0s 7ms/step - loss: 0.6848 - accuracy: 0.4519
+
+
+For 40: Test ACC=[0.6847913265228271, 0.45192307233810425]
+Confusion Matrix
+[[526 660]
+ [ 81  85]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.87      0.44      0.59      1186
+           1       0.11      0.51      0.19       166
+
+    accuracy                           0.45      1352
+   macro avg       0.49      0.48      0.39      1352
+weighted avg       0.77      0.45      0.54      1352
+
+trainingshape 41
+(12937, 7)
+(12937, 7, 1)
+testingshape 41
+(3236, 7)
+(3236, 7, 1)
+nb occurences
+Counter({0: 11960, 1: 977})
+weights={0: 1.0816889632107023, 1: 13.241555783009213}
+Model: "sequential_36"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+gru_72 (GRU)                 (None, 7, 8)              264
+_________________________________________________________________
+gru_73 (GRU)                 (None, 8)                 432
+_________________________________________________________________
+dense_36 (Dense)             (None, 2)                 18
+_________________________________________________________________
+activation_36 (Activation)   (None, 2)                 0
+=================================================================
+Total params: 714
+Trainable params: 714
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+51/51 [==============================] - 1s 17ms/step - loss: 1.3849 - accuracy: 0.6143
+Epoch 2/20
+51/51 [==============================] - 1s 13ms/step - loss: 1.3737 - accuracy: 0.3720
+Epoch 3/20
+51/51 [==============================] - 0s 7ms/step - loss: 1.3659 - accuracy: 0.3263
+Epoch 4/20
+51/51 [==============================] - 1s 12ms/step - loss: 1.3641 - accuracy: 0.2953
+Epoch 5/20
+51/51 [==============================] - 1s 11ms/step - loss: 1.3629 - accuracy: 0.2789
+Epoch 6/20
+51/51 [==============================] - 1s 14ms/step - loss: 1.3615 - accuracy: 0.3731
+Epoch 7/20
+51/51 [==============================] - 1s 14ms/step - loss: 1.3575 - accuracy: 0.3583
+Epoch 8/20
+51/51 [==============================] - 1s 14ms/step - loss: 1.3499 - accuracy: 0.3985
+Epoch 9/20
+51/51 [==============================] - 1s 14ms/step - loss: 1.3429 - accuracy: 0.4573
+Epoch 10/20
+51/51 [==============================] - 1s 14ms/step - loss: 1.3357 - accuracy: 0.4717
+Epoch 11/20
+51/51 [==============================] - 1s 16ms/step - loss: 1.3286 - accuracy: 0.4961
+Epoch 12/20
+51/51 [==============================] - 1s 16ms/step - loss: 1.3203 - accuracy: 0.4856
+Epoch 13/20
+51/51 [==============================] - 1s 14ms/step - loss: 1.3093 - accuracy: 0.4959
+Epoch 14/20
+51/51 [==============================] - 1s 14ms/step - loss: 1.2959 - accuracy: 0.4879
+Epoch 15/20
+51/51 [==============================] - 1s 14ms/step - loss: 1.2810 - accuracy: 0.5010
+Epoch 16/20
+51/51 [==============================] - 1s 14ms/step - loss: 1.2577 - accuracy: 0.4955
+Epoch 17/20
+51/51 [==============================] - 1s 14ms/step - loss: 1.2294 - accuracy: 0.5532
+Epoch 18/20
+51/51 [==============================] - 1s 18ms/step - loss: 1.1944 - accuracy: 0.6670
+Epoch 19/20
+51/51 [==============================] - 1s 14ms/step - loss: 1.1712 - accuracy: 0.7071
+Epoch 20/20
+51/51 [==============================] - 1s 14ms/step - loss: 1.1614 - accuracy: 0.7244
+13/13 [==============================] - 0s 3ms/step - loss: 0.5239 - accuracy: 0.7695
+
+
+For 41: Test ACC=[0.523864209651947, 0.7694684863090515]
+Confusion Matrix
+[[2321  670]
+ [  76  169]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.97      0.78      0.86      2991
+           1       0.20      0.69      0.31       245
+
+    accuracy                           0.77      3236
+   macro avg       0.58      0.73      0.59      3236
+weighted avg       0.91      0.77      0.82      3236
+
+delairra@LAPTOP-2L5S26NL:/mnt/c/Users/delai/Desktop/root/Cour

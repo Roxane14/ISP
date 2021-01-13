@@ -1,0 +1,119 @@
+One layer LSTM with value of 8:
+
+Counter({0: 47352, 1: 32371, 2: 4131})
+weights={0: 0.5902883369938616, 1: 0.8634683307075264, 2: 6.766239005890422}
+
+For 12: Test ACC=[0.8832718133926392, 0.5284999012947083]
+Confusion Matrix
+[[4864 3406 3569]
+ [1323 5576 1194]
+ [ 157  236  640]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.77      0.41      0.54     11839
+           1       0.60      0.69      0.64      8093
+           2       0.12      0.62      0.20      1033
+
+    accuracy                           0.53     20965
+   macro avg       0.50      0.57      0.46     20965
+weighted avg       0.67      0.53      0.56     20965
+
+
+GRU size 8:
+
+
+For 12: Test ACC=[0.9143737554550171, 0.5574051737785339]
+Confusion Matrix
+[[5574 3264 3001]
+ [1336 5538 1219]
+ [ 209  250  574]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.78      0.47      0.59     11839
+           1       0.61      0.68      0.65      8093
+           2       0.12      0.56      0.20      1033
+
+    accuracy                           0.56     20965
+   macro avg       0.50      0.57      0.48     20965
+weighted avg       0.68      0.56      0.59     20965
+
+GRU size 8 with 2 layers:
+
+For 12: Test ACC=[0.944405734539032, 0.6378726363182068]
+Confusion Matrix
+[[9674 2025  140]
+ [4025 3578  490]
+ [ 501  411  121]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.68      0.82      0.74     11839
+           1       0.59      0.44      0.51      8093
+           2       0.16      0.12      0.14      1033
+
+    accuracy                           0.64     20965
+   macro avg       0.48      0.46      0.46     20965
+weighted avg       0.62      0.64      0.62     20965
+
+
+GRU size 8 with 2 layers and bs = 64*4 and epoch = 20 :
+nb occurences
+Counter({0: 47352, 1: 32371, 2: 4131})
+weights={0: 0.5902883369938616, 1: 0.8634683307075264, 2: 6.766239005890422}
+For 12: Test ACC=[0.8244590163230896, 0.6300023794174194]
+Confusion Matrix
+[[7240 1747 2852]
+ [1595 5294 1204]
+ [ 219  140  674]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.80      0.61      0.69     11839
+           1       0.74      0.65      0.69      8093
+           2       0.14      0.65      0.23      1033
+
+    accuracy                           0.63     20965
+   macro avg       0.56      0.64      0.54     20965
+weighted avg       0.74      0.63      0.67     20965
+
+
+GRU same, but without weird total sign:
+For 12: Test ACC=[0.7714835405349731, 0.6924397945404053]
+Confusion Matrix
+[[8217 2255 1367]
+ [1189 5649 1255]
+ [ 208  174  651]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.85      0.69      0.77     11839
+           1       0.70      0.70      0.70      8093
+           2       0.20      0.63      0.30      1033
+
+    accuracy                           0.69     20965
+   macro avg       0.58      0.67      0.59     20965
+weighted avg       0.76      0.69      0.72     20965
+
+
+
+GRU SAME but BS = 64*6 and epoch = 40:
+
+For 12: Test ACC=[0.7500674724578857, 0.680467426776886]
+Confusion Matrix
+[[8077 1543 2219]
+ [1468 5537 1088]
+ [ 250  131  652]]
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.82      0.68      0.75     11839
+           1       0.77      0.68      0.72      8093
+           2       0.16      0.63      0.26      1033
+
+    accuracy                           0.68     20965
+   macro avg       0.59      0.67      0.58     20965
+weighted avg       0.77      0.68      0.71     20965
+
+

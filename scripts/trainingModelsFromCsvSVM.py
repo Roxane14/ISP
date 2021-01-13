@@ -33,7 +33,7 @@ inputsSeq=[None for i in range(nbOfNote)]
 outputsSeq=[None for i in range(nbOfNote)]
 inputsSeq_test=[None for i in range(nbOfNote)]
 outputsSeq_test=[None for i in range(nbOfNote)]
-csvDir = "../outputresources/csvs_no_outliers2DATAFIX/"
+csvDir = "../outputresources/csvs_no_outliers2DATAFIX200MIN/"
 nbPossiblePosPerNote = [None for i in range (nbOfNote)]
 
 # load input and output sequences
@@ -87,7 +87,7 @@ for i in range(nbOfNote):
 
 # Load full sequence of all songs
 globseqIds = []
-with open("../outputresources/globseqIdsDATAFIX.txt", 'r') as f:
+with open("../outputresources/globseqIdsDATAFIX200MIN.txt", 'r') as f:
     lines = f.readlines()
     for l in lines:
         ids = [int(x) for x in l.split()]
@@ -173,12 +173,12 @@ for i in range(nbOfNote):
                                  cmap=plt.cm.Blues,
                                  normalize=None)
         disp.ax_.set_title(title)    
-        plt.savefig("../outputresources/svmconfmat3betteroutliersremovallinkedtoCsvs_no_outliers2DATAFIX/" + title+".png")
+        plt.savefig("../outputresources/svmconfmat3betteroutliersremovallinkedtoCsvs_no_outliers2DATAFIX200MIN/" + title+".png")
         print(title)
         print(disp.confusion_matrix)
 
 
 for i in range(nbOfNote):
     if not i in dummies:
-        dump(models[i], f"../outputresources/modelsSVMs_fromCsvs_no_outliersDATAFIX2/{i}.joblib")
+        dump(models[i], f"../outputresources/modelsSVMs_fromCsvs_no_outliersDATAFIX2_200MIN/{i}.joblib")
 

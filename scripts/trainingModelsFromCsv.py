@@ -65,7 +65,7 @@ inputsSeq=[None for i in range(nbOfNote)]
 outputsSeq=[None for i in range(nbOfNote)]
 inputsSeq_test=[None for i in range(nbOfNote)]
 outputsSeq_test=[None for i in range(nbOfNote)]
-csvDir = "../outputresources/csvs_no_outliers2DATAFIX/"
+csvDir = "../outputresources/csvs_no_outliers2DATAFIX200MIN/"
 nbPossiblePosPerNote = [None for i in range (nbOfNote)]
 
 # load input and output sequences
@@ -123,7 +123,7 @@ for i in range(nbOfNote):
 
 # Load full sequence of all songs
 globseqIds = []
-with open("../outputresources/globseqIdsDATAFIX.txt", 'r') as f:
+with open("../outputresources/globseqIdsDATAFIX200MIN.txt", 'r') as f:
     lines = f.readlines()
     for l in lines:
         ids = [int(x) for x in l.split()]
@@ -185,7 +185,7 @@ for i in range(nbOfNote):
         model = None
         model = Sequential()
         # model.add(Embedding(numTuple + 1, 32, input_length=seqLength))
-        model.add(LSTM(4 ,input_shape=(training.shape[1], training.shape[2])))
+        model.add(LSTM(8 ,input_shape=(training.shape[1], training.shape[2])))
         model.add(Dense(nbPossiblePosPerNote[i]))
         model.add(Activation('softmax'))
         # learning_rate = 0.01
@@ -235,9 +235,9 @@ for i in range(nbOfNote):
         
         # Saving model and weights
         model_json = model.to_json()
-        with open(f'../outputresources/modelsLSTMlr001epoch20bs16/model{i}.json', 'w') as json_file:
+        with open(f'../outputresources/modelsLSTMlr001epoch20bs16_200MIN/model{i}.json', 'w') as json_file:
                 json_file.write(model_json)
-        weights_file = f"../outputresources/modelsLSTMlr001epoch20bs16/weights{i}.hdf5" #f"../outputresources/modelsSVMs_fromCsvs_no_outliers2/{i}.joblib"
+        weights_file = f"../outputresources/modelsLSTMlr001epoch20bs16_200MIN/weights{i}.hdf5" #f"../outputresources/modelsSVMs_fromCsvs_no_outliers2/{i}.joblib"
         model.save_weights(weights_file,overwrite=True)
 
 
