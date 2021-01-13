@@ -44,7 +44,7 @@ def use_rnns(input_file, models_dir= "../outputresources/modelsLSTMlr001epoch20b
     notename2id = load("scripts/notename2idcsvs_no_outliers2.joblib")
 
     #id2sf = load("scripts/id2sfcsvs_no_outliers2.joblib")
-    sf2id = load("sf2idcsvs_no_outliers2.joblib")
+    sf2id = load("scripts/sf2idcsvs_no_outliers2.joblib")
 
 # def use_rnns(input_file, models_dir="outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/"):
     models = [None for i in range(nbOfNote)]
