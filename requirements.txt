@@ -3,4 +3,4 @@ pandas==1.0.5
 music21==6.3.0
 requests==2.24.0
 beautifulsoup4==4.9.3
-tensorflow-cpu
+tensorflow
