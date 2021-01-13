@@ -1,21 +1,23 @@
-import glob
-import time
+#import glob
+#import time
 import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
+#import matplotlib.pyplot as plt
+#import pandas as pd
 
 from music21 import converter, instrument, note, chord, environment, tempo
-from music21 import tablature, scale
-from FretToPitch import getAssociatedNote
-from PitchToFrets import getPossibleTuples
-from preprocess import extractTuples
+#from music21 import tablature, scale
+#from FretToPitch import getAssociatedNote
+#from PitchToFrets import getPossibleTuples
+#from preprocess import extractTuples
 
-from sklearn import svm
-from joblib import dump, load
+#from sklearn import svm
+#from joblib import dump
+from joblib import load
 
-from keras.models import model_from_json, load_model
+#from keras.models import model_from_json
+from keras.models import load_model
 # from tensorflow import keras
-import json
+#import json
 """
 Objective of this script is to take models that have been saved after training
 in order to:
@@ -44,12 +46,11 @@ def use_rnns(input_file, models_dir= "../outputresources/modelsLSTMlr001epoch20b
     id2sf = load("id2sfcsvs_no_outliers2.joblib")
     sf2id = load("sf2idcsvs_no_outliers2.joblib")
 
-    possiblePosPerNote = load("possiblePosPerNote.joblib")
-    
+# def use_rnns(input_file, models_dir="outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/"):
     models = [None for i in range(nbOfNote)]
     for i in range(nbOfNote):
         try:
-            model = load_model(f'../outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/model{i}')
+            model = load_model(f'outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/model{i}')
             # model = model_from_json(models_dir+f"model{i}.json")
             # json_file = open(models_dir+f"model{i}.json", 'r')
             # architecture = json.load(json_file)
