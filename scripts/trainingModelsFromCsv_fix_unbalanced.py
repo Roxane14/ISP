@@ -161,8 +161,8 @@ models = [None for i in range(nbOfNote)]
 
 ##########
 # Training models
-bsize = 64*4
-epoch_it = 10*2
+bsize = 64*2
+epoch_it = 10*4
 
 for i in range(nbOfNote):
     if not i in dummies:
@@ -287,7 +287,7 @@ for i in range(nbOfNote):
         # SAVING model
         
         # Saving model and weights
-        model.save(f'../outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/model{i}')
+        model.save(f'../outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata3/model{i}')
         # model_json = model.to_json()
         # with open(f'../outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata/model{i}.json', 'w') as json_file:
         #         json_file.write(model_json)

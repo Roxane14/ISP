@@ -153,7 +153,7 @@ def use_svms(input_file, models_dir):
 
 
 if __name__=='__main__':
-    models_dir = "../outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/"#modelsSVMs_fromCsvs_no_outliersDATAFIX2/" #modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata/"
+    models_dir = "../outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata3/"#modelsSVMs_fromCsvs_no_outliersDATAFIX2/" #modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata/"
     input_file = "../Tab/testing/ledzepSolo.mid"
     translation = use_rnns(input_file, models_dir)
     print(translation)
