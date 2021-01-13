@@ -1,21 +1,23 @@
-import glob
-import time
+#import glob
+#import time
 import numpy as np
 #import matplotlib.pyplot as plt
-import pandas as pd
+#import pandas as pd
 
-from music21 import converter, instrument, note, chord, environment, tempo
-from music21 import tablature, scale
-from FretToPitch import getAssociatedNote
-from PitchToFrets import getPossibleTuples
-from preprocess import extractTuples
+#from music21 import converter, instrument, note, chord, environment, tempo
+#from music21 import tablature, scale
+#from FretToPitch import getAssociatedNote
+#from PitchToFrets import getPossibleTuples
+#from preprocess import extractTuples
 
-from sklearn import svm
-from joblib import dump, load
+#from sklearn import svm
+#from joblib import dump
+from joblib import load
 
-from keras.models import model_from_json, load_model
+#from keras.models import model_from_json
+from keras.models import load_model
 # from tensorflow import keras
-import json
+#import json
 """
 Objective of this script is to take models that have been saved after training
 in order to:
