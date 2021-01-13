@@ -4,7 +4,7 @@ import numpy as np
 #import matplotlib.pyplot as plt
 #import pandas as pd
 
-#from music21 import converter, instrument, note, chord, environment, tempo
+from music21 import converter, instrument, note, chord, environment, tempo
 #from music21 import tablature, scale
 #from FretToPitch import getAssociatedNote
 #from PitchToFrets import getPossibleTuples
@@ -31,26 +31,28 @@ nbOfNote = 49
 
 dummies=[]
 seqLength = 7
+dirPath = "C:/Users/Roxy8/OneDrive/Documents/cours/5 - master IA/ISP/Git_ISP/scripts/"
+dirPath2 = "C:/Users/Roxy8/OneDrive/Documents/cours/5 - master IA/ISP/Git_ISP/"
 
 ###############
 # get metadata
-tuple2sf = load("tuple2sfcsvs_no_outliers2.joblib")
-sf2tuple = load("sf2tuplecsvs_no_outliers2.joblib")
+tuple2sf = load(dirPath+"tuple2sfcsvs_no_outliers2.joblib")
+sf2tuple = load(dirPath+"sf2tuplecsvs_no_outliers2.joblib")
 # dump(tuple2id, "tuple2idcsvs_no_outliers2.joblib")
 # dump(id2tuple, "id2tuplecsvs_no_outliers2.joblib")
-id2notename = load("id2notenamecsvs_no_outliers2.joblib")
-notename2id = load("notename2idcsvs_no_outliers2.joblib")
+id2notename = load(dirPath+"id2notenamecsvs_no_outliers2.joblib")
+notename2id = load(dirPath+"notename2idcsvs_no_outliers2.joblib")
 
-id2sf = load("id2sfcsvs_no_outliers2.joblib")
-sf2id = load("sf2idcsvs_no_outliers2.joblib")
+id2sf = load(dirPath+"id2sfcsvs_no_outliers2.joblib")
+sf2id = load(dirPath+"sf2idcsvs_no_outliers2.joblib")
 
-possiblePosPerNote = load("possiblePosPerNote.joblib")
+possiblePosPerNote = load(dirPath+"possiblePosPerNote.joblib")
 
-def use_rnns(input_file, models_dir= "../outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/"):
+def use_rnns(input_file, models_dir=dirPath2+"outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/"):
     models = [None for i in range(nbOfNote)]
     for i in range(nbOfNote):
         try:
-            model = load_model(f'../outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/model{i}')
+            model = load_model(dirPath2+ f'outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/model{i}')
             # model = model_from_json(models_dir+f"model{i}.json")
             # json_file = open(models_dir+f"model{i}.json", 'r')
             # architecture = json.load(json_file)
@@ -109,7 +111,7 @@ def use_svms(input_file, models_dir):
     models = [None for i in range(nbOfNote)]
     for i in range(nbOfNote):
         try:
-            models[i] = load(f"{models_dir}{i}.joblib")
+            models[i] = load(dirPath+f"{models_dir}{i}.joblib")
         except Exception as e:
             print(e)
             models[i] = None
