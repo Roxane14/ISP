@@ -75,7 +75,8 @@ elif session_state.page == 1:
     
     st.header("Second step: see the tablature and choose the way you want to get it.")
         
-    session_state.tab = getTabFromFile(session_state.file.getvalue(), session_state.file.name())
+    file_name = session_state.file.name.split(".")[0]
+    session_state.tab = getTabFromFile(session_state.file.getvalue(), file_name)
     
     st.write('This is the begining of the tab file:')
     st.text(session_state.tab[:1000])
