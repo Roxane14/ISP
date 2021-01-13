@@ -44,7 +44,7 @@ sf2id = load("sf2idcsvs_no_outliers2.joblib")
 
 possiblePosPerNote = load("possiblePosPerNote.joblib")
 
-def use_rnns(input_file, models_dir):
+def use_rnns(input_file, models_dir= "../outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/"):
     models = [None for i in range(nbOfNote)]
     for i in range(nbOfNote):
         try:
