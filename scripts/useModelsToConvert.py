@@ -7,7 +7,7 @@ import numpy as np
 from music21 import converter, instrument, note, chord, environment, tempo
 #from music21 import tablature, scale
 #from FretToPitch import getAssociatedNote
-#from PitchToFrets import getPossibleTuples
+from PitchToFrets import getPossibleTuples
 #from preprocess import extractTuples
 
 #from sklearn import svm
@@ -85,7 +85,7 @@ def use_rnns(input_file, models_dir= "../outputresources/modelsLSTMlr001epoch20b
         if nID in dummies:
             # "predict" the usual assiciated pos
             # TODO: dictionnary for each dummy note id => gives usual position
-            predicted_sf = tuple(possiblePosPerNote[nID][0])
+            predicted_sf = tuple(getPossibleTuples[nID][0])
         else:
             seq_shaped = np.reshape(seq, (1, seqLength, 1))
             predicted_pos_probs = models[nID].predict(seq_shaped)
