@@ -18,7 +18,9 @@ def use_rnns(file):
     
     pitches = converter.parse(file).pitches
     for pitch in pitches:
-        tuples.append(getPossibleTuples(str(pitch))[0])
+        t = getPossibleTuples(str(pitch))
+        if(len(t)>0):
+            tuples.append([0])
     
     
     return tuples
