@@ -25,26 +25,27 @@ in order to:
 - transform this list of (note, position) to list of tablature vector and display it
 
 """
-nbOfNote = 49
-
-dummies=[]
-seqLength = 7
-
-###############
-# get metadata
-tuple2sf = load("tuple2sfcsvs_no_outliers2.joblib")
-sf2tuple = load("sf2tuplecsvs_no_outliers2.joblib")
-# dump(tuple2id, "tuple2idcsvs_no_outliers2.joblib")
-# dump(id2tuple, "id2tuplecsvs_no_outliers2.joblib")
-id2notename = load("id2notenamecsvs_no_outliers2.joblib")
-notename2id = load("notename2idcsvs_no_outliers2.joblib")
-
-id2sf = load("id2sfcsvs_no_outliers2.joblib")
-sf2id = load("sf2idcsvs_no_outliers2.joblib")
-
-possiblePosPerNote = load("possiblePosPerNote.joblib")
 
 def use_rnns(input_file, models_dir= "../outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/"):
+    nbOfNote = 49
+
+    dummies=[]
+    seqLength = 7
+
+    ###############
+    # get metadata
+    tuple2sf = load("tuple2sfcsvs_no_outliers2.joblib")
+    sf2tuple = load("sf2tuplecsvs_no_outliers2.joblib")
+    # dump(tuple2id, "tuple2idcsvs_no_outliers2.joblib")
+    # dump(id2tuple, "id2tuplecsvs_no_outliers2.joblib")
+    id2notename = load("id2notenamecsvs_no_outliers2.joblib")
+    notename2id = load("notename2idcsvs_no_outliers2.joblib")
+
+    id2sf = load("id2sfcsvs_no_outliers2.joblib")
+    sf2id = load("sf2idcsvs_no_outliers2.joblib")
+
+    possiblePosPerNote = load("possiblePosPerNote.joblib")
+    
     models = [None for i in range(nbOfNote)]
     for i in range(nbOfNote):
         try:
@@ -102,6 +103,25 @@ def use_rnns(input_file, models_dir= "../outputresources/modelsLSTMlr001epoch20b
     return output_sfs
 
 def use_svms(input_file, models_dir):
+    nbOfNote = 49
+
+    dummies=[]
+    seqLength = 7
+
+    ###############
+    # get metadata
+    tuple2sf = load("tuple2sfcsvs_no_outliers2.joblib")
+    sf2tuple = load("sf2tuplecsvs_no_outliers2.joblib")
+    # dump(tuple2id, "tuple2idcsvs_no_outliers2.joblib")
+    # dump(id2tuple, "id2tuplecsvs_no_outliers2.joblib")
+    id2notename = load("id2notenamecsvs_no_outliers2.joblib")
+    notename2id = load("notename2idcsvs_no_outliers2.joblib")
+
+    id2sf = load("id2sfcsvs_no_outliers2.joblib")
+    sf2id = load("sf2idcsvs_no_outliers2.joblib")
+
+    possiblePosPerNote = load("possiblePosPerNote.joblib")
+    
     ##########
     # LOAD models
     models = [None for i in range(nbOfNote)]
