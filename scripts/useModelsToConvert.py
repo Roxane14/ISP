@@ -36,7 +36,7 @@ def use_rnns(input_file, models_dir= "../outputresources/modelsLSTMlr001epoch20b
 
     ###############
     # get metadata
-    tuple2sf = load("tuple2sfcsvs_no_outliers2.joblib")
+    tuple2sf = load("scripts/tuple2sfcsvs_no_outliers2.joblib")
     sf2tuple = load("sf2tuplecsvs_no_outliers2.joblib")
     # dump(tuple2id, "tuple2idcsvs_no_outliers2.joblib")
     # dump(id2tuple, "id2tuplecsvs_no_outliers2.joblib")
