@@ -13,8 +13,8 @@ from useModelsToConvert import use_rnns
 
 def getTabFromFile(file):
     
-    #tupples = use_rnns(file)
-    tupples = use_rnns("../Tab/Example_Tab/example_1.mid")
+    tupples = use_rnns(file)
+    #tupples = use_rnns("../Tab/Example_Tab/example_1.mid")
     
     tab = ["E|","B|","G|","D|","A|","E|"]
     
