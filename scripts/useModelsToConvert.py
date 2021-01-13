@@ -1,7 +1,7 @@
 import glob
 import time
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import pandas as pd
 
 from music21 import converter, instrument, note, chord, environment, tempo
