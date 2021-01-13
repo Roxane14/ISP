@@ -36,21 +36,21 @@ def use_rnns(input_file, models_dir= "../outputresources/modelsLSTMlr001epoch20b
 
     ###############
     # get metadata
-    tuple2sf = load("scripts/tuple2sfcsvs_no_outliers2.joblib")
+    tuple2sf = load("tuple2sfcsvs_no_outliers2.joblib")
     #sf2tuple = load("sf2tuplecsvs_no_outliers2.joblib")
     # dump(tuple2id, "tuple2idcsvs_no_outliers2.joblib")
     # dump(id2tuple, "id2tuplecsvs_no_outliers2.joblib")
     #id2notename = load("id2notenamecsvs_no_outliers2.joblib")
-    notename2id = load("scripts/notename2idcsvs_no_outliers2.joblib")
+    notename2id = load("notename2idcsvs_no_outliers2.joblib")
 
     #id2sf = load("scripts/id2sfcsvs_no_outliers2.joblib")
-    sf2id = load("scripts/sf2idcsvs_no_outliers2.joblib")
+    sf2id = load("sf2idcsvs_no_outliers2.joblib")
 
 # def use_rnns(input_file, models_dir="outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/"):
     models = [None for i in range(nbOfNote)]
     for i in range(nbOfNote):
         try:
-            model = load_model(f'outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/model{i}')
+            model = load_model(f'../outputresources/modelsLSTMlr001epoch20bs16_200MIN_fixunbalanceddata2/model{i}')
             # model = model_from_json(models_dir+f"model{i}.json")
             # json_file = open(models_dir+f"model{i}.json", 'r')
             # architecture = json.load(json_file)
